@@ -4,29 +4,59 @@ import (
 	"bufio"
 	"context"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"os"
 	"os/signal"
 	"path/filepath"
 	"syscall"
+	"time"
 
 	"github.com/anthropics/anthropic-sdk-go"
 	"github.com/invopop/jsonschema"
 )
 
 func main() {
+	// Define command line flags
+	var debug bool
+	flag.BoolVar(&debug, "d", false, "enable debug mode")
+	flag.Parse()
+
 	client := anthropic.NewClient()
 
-	scanner := bufio.NewScanner(os.Stdin)
-	getUserMessage := func() (string, bool) {
-		if !scanner.Scan() {
+	// Get remaining arguments as prompts
+	prompts := flag.Args()
+
+	var getUserMessage func() (string, bool)
+
+	if len(prompts) > 0 {
+		// If prompts are provided as arguments, use them sequentially
+		promptIndex := 0
+		getUserMessage = func() (string, bool) {
+			if promptIndex < len(prompts) {
+				prompt := prompts[promptIndex]
+				fmt.Fprintf(os.Stderr, "Prompt %d of %d: %s\n", promptIndex+1, len(prompts), prompt)
+				promptIndex++
+				return prompt, true
+			}
+			fmt.Fprintf(os.Stderr, "--- All prompts used.\n")
 			return "", false
 		}
-		return scanner.Text(), true
+	} else {
+		// No prompts provided, use interactive mode from the start
+		scanner := bufio.NewScanner(os.Stdin)
+		getUserMessage = func() (string, bool) {
+			if !scanner.Scan() {
+				return "", false
+			}
+			return scanner.Text(), true
+		}
 	}
 
+	getUserMessage = wrapAndSavePrompts(getUserMessage, "prompts.txt")
+
 	tools := []ToolDefinition{ReadFileDefinition, ListFilesDefinition}
-	agent := NewAgent(&client, getUserMessage, tools)
+	agent := NewAgent(&client, getUserMessage, tools, debug)
 
 	if err := agent.Run(context.TODO()); err != nil {
 		fmt.Printf("Error: %s\n", err.Error())
@@ -38,6 +68,7 @@ type Agent struct {
 	client         *anthropic.Client
 	getUserMessage func() (string, bool)
 	tools          []ToolDefinition
+	debug          bool
 }
 
 // NewAgent creates a new Agent instance with the provided client, user message function, and tools
@@ -45,11 +76,13 @@ func NewAgent(
 	client *anthropic.Client,
 	getUserMessage func() (string, bool),
 	tools []ToolDefinition,
+	debug bool,
 ) *Agent {
 	return &Agent{
 		client:         client,
 		getUserMessage: getUserMessage,
 		tools:          tools,
+		debug:          debug,
 	}
 }
 
@@ -62,7 +95,7 @@ func (a *Agent) Run(ctx context.Context) error {
 	fmt.Println("Chat with Claude (use 'ctrl-c' to quit)")
 
 	// Create a context that will be canceled on SIGINT (Ctrl+C).
-	ctx = WithSignalCancellation(ctx, syscall.SIGINT)
+	ctx = withSignalCancellation(ctx, syscall.SIGINT, syscall.SIGTERM)
 
 	readUserInput := true
 	for {
@@ -145,12 +178,16 @@ func (a *Agent) runInference(ctx context.Context, conversation []anthropic.Messa
 		})
 	}
 
+	startTime := time.Now()
 	message, err := a.client.Messages.New(ctx, anthropic.MessageNewParams{
 		Model:     anthropic.ModelClaude3_7SonnetLatest,
 		MaxTokens: int64(1024),
 		Messages:  conversation,
 		Tools:     anthropicTools,
 	})
+	duration := time.Since(startTime)
+	fmt.Fprintf(os.Stderr, "anthropic call took %4.1f seconds\n", duration.Seconds())
+
 	return message, err
 }
 
@@ -261,9 +298,9 @@ func GenerateSchema[T any]() anthropic.ToolInputSchemaParam {
 	}
 }
 
-// WithSignalCancellation creates a context that is canceled when one of the specified signals is received.
+// withSignalCancellation creates a context that is canceled when one of the specified signals is received.
 // It's a common pattern for graceful shutdown.
-func WithSignalCancellation(parent context.Context, sigs ...os.Signal) context.Context {
+func withSignalCancellation(parent context.Context, sigs ...os.Signal) context.Context {
 	// Create a new context that we can cancel manually.
 	// The parent context is passed so that cancellation propagates downwards.
 	ctx, cancel := context.WithCancel(parent)
@@ -284,7 +321,8 @@ func WithSignalCancellation(parent context.Context, sigs ...os.Signal) context.C
 	go func() {
 		// Wait for a signal.
 		sig := <-sigChan
-		fmt.Printf("\n[Signal Handler] Received signal: %s. Cancelling context and shutting down...\n", sig)
+		fmt.Printf("\n[Signal Handler] Received signal: %s. Cancelling context & shutting down...\n",
+			sig)
 
 		// Once a signal is received, call the cancel function.
 		// This will cause the context's Done() channel to be closed.
@@ -297,4 +335,24 @@ func WithSignalCancellation(parent context.Context, sigs ...os.Signal) context.C
 	}()
 
 	return ctx
+}
+
+// wrapAndSavePrompts creates a wrapper around a getUserMessage function
+// to save the prompts to a file.
+func wrapAndSavePrompts(innerGetUserMessage func() (string, bool), filePath string) func() (string, bool) {
+	return func() (string, bool) {
+		prompt, ok := innerGetUserMessage()
+		if ok && prompt != "" {
+			f, err := os.OpenFile(filePath, os.O_CREATE|os.O_WRONLY, 0644)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Error opening prompts file: %v\n", err)
+			} else {
+				defer f.Close()
+				if _, err := f.WriteString(prompt + "\n"); err != nil {
+					fmt.Fprintf(os.Stderr, "Error writing to prompts file: %v\n", err)
+				}
+			}
+		}
+		return prompt, ok
+	}
 }
