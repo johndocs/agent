@@ -275,8 +275,13 @@ func listFiles(input json.RawMessage) (string, error) {
 		if err != nil {
 			return err
 		}
-		if strings.HasPrefix(filepath.Base(path), ".") || strings.HasPrefix(relPath, ".") {
+		basePath := filepath.Base(path)
+		if strings.HasPrefix(basePath, ".") || strings.HasPrefix(relPath, ".") {
 			// Skip hidden files and directories
+			return nil
+		}
+		if basePath == "diff.txt" || basePath == "prompts.txt" || strings.HasPrefix(relPath, "log.") {
+			// Skip files that record output of previous runs
 			return nil
 		}
 		if info.IsDir() {

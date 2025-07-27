@@ -21,12 +21,25 @@ to the model, and then Claude uses that information to formulate its final respo
 It can accept initial prompts as command-line arguments or interactively.
 
 
-## Example usage
+## Example Usage and Variation Between Runs
 
-This shows the variation in output between runs.
+This shows the variation in output between runs. The log files are in the [logs](logs) directory.
+[diff.txt](logs/diff.txt) shows the diff between the 2 runs.
 
 ```
-% go run . -d "What is this directory?" "Please examine the contents of all files" "Provide a short overview of this project for the README.txt ## Summary"  > ../logs/log.txt 2> ../logs/loge.txt
+% find logs -type f -exec wc -l {} +
+     142 logs/log.e.2.txt
+     156 logs/log.1.txt
+     155 logs/log.e.1.txt
+     114 logs/log.2.txt
+     213 logs/diff.txt
+     780 total
+
+```
+
+### Command (See [run.sh](run.sh))
+```
+% go run . -d "What is this directory?" "Please examine the contents of all files" "Provide a short overview of this project for the README.txt ## Summary"
 ```
 
 ### Output first run
