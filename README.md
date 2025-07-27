@@ -305,7 +305,7 @@ This shows the variation in output between runs. The log files are in the [logs]
 
 ## File editing
 
-Run [run_fizzbuzz.sh](run_fizzbuzz.sh) to create [fizzbuzz.go](fizzbuzz.go)
+Run [run_fizzbuzz.sh](run_fizzbuzz.sh) to create [fizzbuzz.js](fizzbuzz.js).
 
 ```
 % node fizzbuzz.go
