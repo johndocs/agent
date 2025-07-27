@@ -7,8 +7,8 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	"os/signal"
 	"path/filepath"
+	"strings"
 	"syscall"
 	"time"
 
@@ -16,9 +16,11 @@ import (
 	"github.com/invopop/jsonschema"
 )
 
+var debug bool
+
 func main() {
 	// Define command line flags
-	var debug bool
+
 	flag.BoolVar(&debug, "d", false, "enable debug mode")
 	flag.Parse()
 
@@ -105,6 +107,7 @@ func (a *Agent) Run(ctx context.Context) error {
 			if !ok {
 				break
 			}
+			fmt.Fprintf(os.Stderr, "*User input: %s\n", userInput)
 
 			userMessage := anthropic.NewUserMessage(anthropic.NewTextBlock(userInput))
 			conversation = append(conversation, userMessage)
@@ -186,7 +189,19 @@ func (a *Agent) runInference(ctx context.Context, conversation []anthropic.Messa
 		Tools:     anthropicTools,
 	})
 	duration := time.Since(startTime)
-	fmt.Fprintf(os.Stderr, "anthropic call took %4.1f seconds\n", duration.Seconds())
+
+	description := ""
+	if debug && len(conversation) > 0 {
+		lastMessage := conversation[len(conversation)-1]
+		contentDesc := describeContents(lastMessage.Content)
+
+		description = fmt.Sprintf("last message: role=%s, content=[%s]",
+			lastMessage.Role, contentDesc)
+	}
+	fmt.Fprintf(os.Stderr, "anthropic call: %4.1f seconds %d messages %s\n",
+		duration.Seconds(), len(conversation), description)
+	fmt.Fprintf(os.Stderr, "  key counts (top): %v\n", keyCountsTop)
+	fmt.Fprintf(os.Stderr, "  key counts (all): %v\n", keyCountsAll)
 
 	return message, err
 }
@@ -253,31 +268,36 @@ func ListFiles(input json.RawMessage) (string, error) {
 	}
 
 	var files []string
-	if err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
+	walk := func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
-
 		relPath, err := filepath.Rel(dir, path)
 		if err != nil {
 			return err
 		}
-
-		if relPath != "." {
-			if info.IsDir() {
-				files = append(files, relPath+"/")
-			} else {
-				files = append(files, relPath)
-			}
+		if strings.HasPrefix(filepath.Base(path), ".") || strings.HasPrefix(relPath, ".") {
+			// Skip hidden files and directories
+			return nil
+		}
+		if info.IsDir() {
+			files = append(files, relPath+"/")
+		} else {
+			files = append(files, relPath)
 		}
 		return nil
-	}); err != nil {
+	}
+	if err := filepath.Walk(dir, walk); err != nil {
 		return "", err
 	}
 
 	result, err := json.Marshal(files)
 	if err != nil {
 		return "", err
+	}
+
+	if debug {
+		fmt.Printf("ListFiles result %q: %s\n", dir, string(result))
 	}
 
 	return string(result), nil
@@ -295,64 +315,5 @@ func GenerateSchema[T any]() anthropic.ToolInputSchemaParam {
 
 	return anthropic.ToolInputSchemaParam{
 		Properties: schema.Properties,
-	}
-}
-
-// withSignalCancellation creates a context that is canceled when one of the specified signals is received.
-// It's a common pattern for graceful shutdown.
-func withSignalCancellation(parent context.Context, sigs ...os.Signal) context.Context {
-	// Create a new context that we can cancel manually.
-	// The parent context is passed so that cancellation propagates downwards.
-	ctx, cancel := context.WithCancel(parent)
-
-	// Create a channel to receive OS signals.
-	// A buffer of 1 is recommended so the signal package doesn't block.
-	sigChan := make(chan os.Signal, 1)
-
-	// Register the given signals to be sent to the channel.
-	// If no signals are provided, we'll default to SIGINT and SIGTERM.
-	if len(sigs) == 0 {
-		sigs = []os.Signal{syscall.SIGINT, syscall.SIGTERM}
-	}
-	signal.Notify(sigChan, sigs...)
-
-	// Start a new goroutine.
-	// This goroutine will block until a signal is received.
-	go func() {
-		// Wait for a signal.
-		sig := <-sigChan
-		fmt.Printf("\n[Signal Handler] Received signal: %s. Cancelling context & shutting down...\n",
-			sig)
-
-		// Once a signal is received, call the cancel function.
-		// This will cause the context's Done() channel to be closed.
-		cancel()
-
-		// It's good practice to clean up the signal notification.
-		signal.Stop(sigChan)
-
-		os.Exit(0)
-	}()
-
-	return ctx
-}
-
-// wrapAndSavePrompts creates a wrapper around a getUserMessage function
-// to save the prompts to a file.
-func wrapAndSavePrompts(innerGetUserMessage func() (string, bool), filePath string) func() (string, bool) {
-	return func() (string, bool) {
-		prompt, ok := innerGetUserMessage()
-		if ok && prompt != "" {
-			f, err := os.OpenFile(filePath, os.O_CREATE|os.O_WRONLY, 0644)
-			if err != nil {
-				fmt.Fprintf(os.Stderr, "Error opening prompts file: %v\n", err)
-			} else {
-				defer f.Close()
-				if _, err := f.WriteString(prompt + "\n"); err != nil {
-					fmt.Fprintf(os.Stderr, "Error writing to prompts file: %v\n", err)
-				}
-			}
-		}
-		return prompt, ok
 	}
 }
