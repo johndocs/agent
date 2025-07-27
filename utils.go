@@ -148,17 +148,16 @@ func wrapAndSavePrompts(innerGetUserMessage func() (string, bool), filePath stri
 	}
 }
 
+// createNewFile creates a new file at the specified path with the given content.
 func createNewFile(filePath, content string) (string, error) {
-	dir := path.Dir(filePath)
-	if dir != "." {
+	if dir := path.Dir(filePath); dir != "." {
 		err := os.MkdirAll(dir, 0755)
 		if err != nil {
 			return "", fmt.Errorf("failed to create directory: %w", err)
 		}
 	}
 
-	err := os.WriteFile(filePath, []byte(content), 0644)
-	if err != nil {
+	if err := os.WriteFile(filePath, []byte(content), 0644); err != nil {
 		return "", fmt.Errorf("failed to create file: %w", err)
 	}
 
