@@ -28,16 +28,15 @@ This shows the variation in output between runs. The log files are in the [logs]
 
 ```
 % find logs -type f -exec wc -l {} +
-     142 logs/log.e.2.txt
-     156 logs/log.1.txt
-     155 logs/log.e.1.txt
-     114 logs/log.2.txt
-     213 logs/diff.txt
-     780 total
-
+     207 logs.directory_contents/log.e.2.txt
+      76 logs.directory_contents/log.1.txt
+     181 logs.directory_contents/log.e.1.txt
+     123 logs.directory_contents/log.2.txt
+     191 logs.directory_contents/diff.txt
+     778 total
 ```
 
-### Command (See [run.sh](run.sh))
+### Command (See [run_directory_contents.sh.sh](run_directory_contents.sh.sh))
 ```
 % go run . -d "What is this directory?" "Please examine the contents of all files" "Provide a short overview of this project for the README.txt ## Summary"
 ```

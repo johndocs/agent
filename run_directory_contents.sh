@@ -5,12 +5,13 @@
 
 set -e
 
-LOG_DIR="logs"
+LOG_DIR="logs.directory_contents"
 LOG1="$LOG_DIR/log.1.txt"
 LOG2="$LOG_DIR/log.2.txt"
 LOGE1="$LOG_DIR/log.e.1.txt"
 LOGE2="$LOG_DIR/log.e.2.txt"
 DIFF="$LOG_DIR/diff.txt"
+rm -r "$LOG_DIR"
 mkdir -p "$LOG_DIR"
 
 # The command and its arguments are defined in an array to improve readability and avoid long lines.

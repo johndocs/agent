@@ -59,7 +59,7 @@ func main() {
 
 	getUserMessage = wrapAndSavePrompts(getUserMessage, "prompts.txt")
 
-	tools := []ToolDefinition{readFileDefinition, listFilesDefinition}
+	tools := []ToolDefinition{readFileDefinition, listFilesDefinition, editFileDefinition}
 	agent := newAgent(&client, getUserMessage, tools)
 
 	if err := agent.Run(context.TODO()); err != nil {
@@ -280,7 +280,10 @@ func listFiles(input json.RawMessage) (string, error) {
 			// Skip hidden files and directories
 			return nil
 		}
-		if basePath == "README.md" || basePath == "prompts.txt" || strings.HasPrefix(relPath, "log.") {
+		if basePath == "README.md" ||
+			basePath == "prompts.txt" ||
+			basePath == "fizzbuzz.js" ||
+			strings.HasPrefix(relPath, "log.") {
 			// Skip files that record output of previous runs
 			return nil
 		}
@@ -305,6 +308,58 @@ func listFiles(input json.RawMessage) (string, error) {
 	}
 
 	return string(result), nil
+}
+
+var editFileDefinition = ToolDefinition{
+	Name: "edit_file",
+	Description: `Make edits to a text file.
+
+Replaces 'old_str' with 'new_str' in the given file. 'old_str' and 'new_str' MUST be different from each other.
+
+If the file specified with path doesn't exist, it will be created.
+`,
+	InputSchema: EditFileInputSchema,
+	Function:    editFile,
+}
+
+type EditFileInput struct {
+	Path   string `json:"path" jsonschema_description:"The path to the file"`
+	OldStr string `json:"old_str" jsonschema_description:"Text to search for - must match exactly and must only have one match exactly"`
+	NewStr string `json:"new_str" jsonschema_description:"Text to replace old_str with"`
+}
+
+var EditFileInputSchema = generateSchema[EditFileInput]()
+
+func editFile(input json.RawMessage) (string, error) {
+	var editFileInput EditFileInput
+	if err := json.Unmarshal(input, &editFileInput); err != nil {
+		return "", err
+	}
+
+	if editFileInput.Path == "" || editFileInput.OldStr == editFileInput.NewStr {
+		return "", fmt.Errorf("invalid input parameters")
+	}
+
+	content, err := os.ReadFile(editFileInput.Path)
+	if err != nil {
+		if os.IsNotExist(err) && editFileInput.OldStr == "" {
+			return createNewFile(editFileInput.Path, editFileInput.NewStr)
+		}
+		return "", err
+	}
+
+	oldContent := string(content)
+	newContent := strings.Replace(oldContent, editFileInput.OldStr, editFileInput.NewStr, -1)
+
+	if oldContent == newContent && editFileInput.OldStr != "" {
+		return "", fmt.Errorf("old_str not found in file")
+	}
+
+	if err := os.WriteFile(editFileInput.Path, []byte(newContent), 0644); err != nil {
+		return "", err
+	}
+
+	return "OK", nil
 }
 
 // generateSchema generates a JSON schema for type `T` using the jsonschema package.
