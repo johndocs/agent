@@ -1,5 +1,7 @@
 package main
 
+// Utilities for the main Agent that interacts with the Claude model using anthropic-sdk-go.
+
 import (
 	"context"
 	"encoding/json"
@@ -83,8 +85,8 @@ func addKeyCounts(m, o map[string]int) {
 	}
 }
 
-// withSignalCancellation creates a context that is canceled when one of the specified signals is received.
-// It's a common pattern for graceful shutdown.
+// withSignalCancellation creates a context that is canceled when one of the specified signals is
+// received. It's a common pattern for graceful shutdown.
 func withSignalCancellation(parent context.Context, sigs ...os.Signal) context.Context {
 	// Create a new context that we can cancel manually.
 	// The parent context is passed so that cancellation propagates downwards.
@@ -126,7 +128,7 @@ func withSignalCancellation(parent context.Context, sigs ...os.Signal) context.C
 func wrapAndSavePrompts(innerGetUserMessage func() (string, bool), filePath string,
 ) func() (string, bool) {
 	if err := os.Remove(filePath); err != nil && !os.IsNotExist(err) {
-		panic(fmt.Errorf("Error removing existing prompts file: %w\n", err))
+		panic(fmt.Errorf("error removing existing prompts file: %w", err))
 	}
 	return func() (string, bool) {
 		prompt, ok := innerGetUserMessage()

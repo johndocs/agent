@@ -1,5 +1,7 @@
 package main
 
+// Run main Agent that interacts with the Claude model using anthropic-sdk-go.
+
 import (
 	"bufio"
 	"context"
@@ -57,8 +59,8 @@ func main() {
 
 	getUserMessage = wrapAndSavePrompts(getUserMessage, "prompts.txt")
 
-	tools := []ToolDefinition{ReadFileDefinition, ListFilesDefinition}
-	agent := NewAgent(&client, getUserMessage, tools, debug)
+	tools := []ToolDefinition{readFileDefinition, listFilesDefinition}
+	agent := newAgent(&client, getUserMessage, tools)
 
 	if err := agent.Run(context.TODO()); err != nil {
 		fmt.Printf("Error: %s\n", err.Error())
@@ -70,21 +72,18 @@ type Agent struct {
 	client         *anthropic.Client
 	getUserMessage func() (string, bool)
 	tools          []ToolDefinition
-	debug          bool
 }
 
-// NewAgent creates a new Agent instance with the provided client, user message function, and tools
-func NewAgent(
+// newAgent creates a new Agent instance with the provided client, user message function, and tools
+func newAgent(
 	client *anthropic.Client,
 	getUserMessage func() (string, bool),
 	tools []ToolDefinition,
-	debug bool,
 ) *Agent {
 	return &Agent{
 		client:         client,
 		getUserMessage: getUserMessage,
 		tools:          tools,
-		debug:          debug,
 	}
 }
 
@@ -214,22 +213,22 @@ type ToolDefinition struct {
 	Function    func(input json.RawMessage) (string, error)
 }
 
-// ReadFileDefinition defines a tool for reading the contents of a file at a specified relative path.
-var ReadFileDefinition = ToolDefinition{
+// readFileDefinition defines a tool for reading the contents of a file at a specified relative path.
+var readFileDefinition = ToolDefinition{
 	Name:        "read_file",
 	Description: "Read the contents of a given relative file path. Use this when you want to see what's inside a file. Do not use this with directory names.",
-	InputSchema: ReadFileInputSchema,
-	Function:    ReadFile,
+	InputSchema: readFileInputSchema,
+	Function:    readFile,
 }
 
-var ReadFileInputSchema = GenerateSchema[ReadFileInput]()
+var readFileInputSchema = generateSchema[ReadFileInput]()
 
 type ReadFileInput struct {
 	Path string `json:"path" jsonschema_description:"The relative path of a file in the working directory."`
 }
 
-// ReadFile reads the contents of a file at the specified relative path and returns it as a string.
-func ReadFile(input json.RawMessage) (string, error) {
+// readFile reads the contents of a file at the specified relative path and returns it as a string.
+func readFile(input json.RawMessage) (string, error) {
 	var readFileInput ReadFileInput
 	if err := json.Unmarshal(input, &readFileInput); err != nil {
 		panic(err)
@@ -242,21 +241,21 @@ func ReadFile(input json.RawMessage) (string, error) {
 	return string(content), nil
 }
 
-var ListFilesDefinition = ToolDefinition{
+var listFilesDefinition = ToolDefinition{
 	Name:        "list_files",
 	Description: "List files and directories at a given path. If no path is provided, lists files in the current directory.",
-	InputSchema: ListFilesInputSchema,
-	Function:    ListFiles,
+	InputSchema: listFilesInputSchema,
+	Function:    listFiles,
 }
 
-var ListFilesInputSchema = GenerateSchema[ListFilesInput]()
+var listFilesInputSchema = generateSchema[ListFilesInput]()
 
 type ListFilesInput struct {
 	Path string `json:"path,omitempty" jsonschema_description:"Optional relative path to list files from. Defaults to current directory if not provided."`
 }
 
-// ListFiles lists all files and directories in the specified path, returning a JSON array of file paths.
-func ListFiles(input json.RawMessage) (string, error) {
+// listFiles lists all files and directories in the specified path, returning a JSON array of file paths.
+func listFiles(input json.RawMessage) (string, error) {
 	var listFilesInput ListFilesInput
 	if err := json.Unmarshal(input, &listFilesInput); err != nil {
 		panic(err)
@@ -303,8 +302,8 @@ func ListFiles(input json.RawMessage) (string, error) {
 	return string(result), nil
 }
 
-// GenerateSchema generates a JSON schema for type `T` using the jsonschema package.
-func GenerateSchema[T any]() anthropic.ToolInputSchemaParam {
+// generateSchema generates a JSON schema for type `T` using the jsonschema package.
+func generateSchema[T any]() anthropic.ToolInputSchemaParam {
 	reflector := jsonschema.Reflector{
 		AllowAdditionalProperties: false,
 		DoNotReference:            true,
