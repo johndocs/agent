@@ -9,6 +9,7 @@ import (
 	"os"
 	"os/signal"
 	"path"
+	"path/filepath"
 	"strings"
 	"syscall"
 
@@ -109,7 +110,7 @@ func withSignalCancellation(parent context.Context, sigs ...os.Signal) context.C
 	go func() {
 		// Wait for a signal.
 		sig := <-sigChan
-		fmt.Printf("\n[Signal Handler] Received signal: %s. Cancelling context & shutting down...\n",
+		oprintf("\n[Signal Handler] Received signal: %s. Cancelling context & shutting down...\n",
 			sig)
 
 		// Once a signal is received, call the cancel function.
@@ -136,15 +137,47 @@ func wrapAndSavePrompts(innerGetUserMessage func() (string, bool), filePath stri
 		if ok && prompt != "" {
 			f, err := os.OpenFile(filePath, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 			if err != nil {
-				fmt.Fprintf(os.Stderr, "Error opening prompts file: %v\n", err)
+				eprintf("Error opening prompts file: %v\n", err)
 			} else {
 				defer f.Close()
 				if _, err := f.WriteString(prompt + "\n"); err != nil {
-					fmt.Fprintf(os.Stderr, "Error writing to prompts file: %v\n", err)
+					eprintf("Error writing to prompts file: %v\n", err)
 				}
 			}
 		}
 		return prompt, ok
+	}
+}
+
+// prependSystemPrompt wraps a getUserMessage function. It first returns prompts
+// from the provided list. Once the list is exhausted, it falls back to calling
+// the inner getUserMessage function. It also prepends a system prompt to the
+// very first message.
+func prependSystemPrompt(getUserMessage func() (string, bool), promptList []string,
+) func() (string, bool) {
+	promptIndex := 0
+
+	return func() (string, bool) {
+		var userMessage string
+		var ok bool
+
+		// First, try to get a prompt from the list
+		if promptIndex < len(promptList) {
+			userMessage = promptList[promptIndex]
+			eprintf("Prompt %d of %d: %s\n", promptIndex+1, len(promptList), userMessage)
+			promptIndex++
+			ok = true
+		} else {
+			// If the list is exhausted, get input from the user
+			if promptIndex == len(promptList) && len(promptList) > 0 {
+				// Print this message only once after the last prompt from the list is used.
+				eprintf("--- All prepend prompts used. Switching to interactive mode. ---\n")
+				promptIndex++ // Increment to prevent this message from printing again.
+			}
+			userMessage, ok = getUserMessage()
+		}
+
+		return userMessage, ok
 	}
 }
 
@@ -162,4 +195,45 @@ func createNewFile(filePath, content string) (string, error) {
 	}
 
 	return fmt.Sprintf("Successfully created file %s", filePath), nil
+}
+
+func makePrintfFunctions(outputDir string, logNum int) error {
+	var err error
+	oprintf, err = newPrintf(filepath.Join(outputDir, fmt.Sprintf("log.%0d.txt", logNum)))
+	if err != nil {
+		return fmt.Errorf("error creating stdout logger: %w", err)
+	}
+	eprintf, err = newPrintf(filepath.Join(outputDir, fmt.Sprintf("log.e.%0d.txt", logNum)))
+	if err != nil {
+		return fmt.Errorf("error creating stderr logger: %w", err)
+	}
+	return nil
+}
+
+var (
+	oprintf, eprintf func(format string, args ...any)
+)
+
+// newPrintf returns a function that prints formatted messages to the specified file path.
+// This function is useful for logging or debugging purposes.
+func newPrintf(filePath string) (func(format string, a ...any), error) {
+	dir := filepath.Dir(filePath)
+	if dir != "." {
+		if err := os.MkdirAll(dir, 0755); err != nil {
+			return nil, fmt.Errorf("error creating directory %s: %w", dir, err)
+		}
+	}
+	f, err := os.OpenFile(filePath, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
+	if err != nil {
+		return nil, fmt.Errorf("error opening file %s: %w", filePath, err)
+	}
+
+	return func(format string, a ...any) {
+		if _, err := fmt.Fprintf(f, format, a...); err != nil {
+			panic(fmt.Errorf("error writing to file %s: %w", filePath, err))
+		}
+		if _, err := fmt.Printf(format, a...); err != nil {
+			panic(fmt.Errorf("error writing to stdout: %w", err))
+		}
+	}, nil
 }

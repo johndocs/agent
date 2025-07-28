@@ -6,27 +6,34 @@
 set -e
 
 LOG_DIR="logs.directory_contents"
-LOG1="$LOG_DIR/log.1.txt"
-LOG2="$LOG_DIR/log.2.txt"
-LOGE1="$LOG_DIR/log.e.1.txt"
-LOGE2="$LOG_DIR/log.e.2.txt"
 DIFF="$LOG_DIR/diff.txt"
-rm -r "$LOG_DIR"
+rm -r "$LOG_DIR" 2>/dev/null || true
 mkdir -p "$LOG_DIR"
 
+# Function to create the command array.
+# It takes one argument: the log number.
+# It sets the global CMD array.
+create_cmd_array() {
+    local log_num=$1
+    CMD=(
+        go run . -d -o "$LOG_DIR" -l "$log_num"
+        "What is this directory?"
+        "Please examine the contents of all files"
+        "Provide a short overview of this project for the README.md ## Summary"
+    )
+}
+
 # The command and its arguments are defined in an array to improve readability and avoid long lines.
-CMD=(
-    go run . -d
-    "What is this directory?"
-    "Please examine the contents of all files"
-    "Provide a short overview of this project for the README.txt ## Summary"
-)
+create_cmd_array 1
+CMD1=("${CMD[@]}")
+create_cmd_array 2
+CMD2=("${CMD[@]}")
 
-echo "Running first time..."
-time "${CMD[@]}" > "$LOG1" 2> "$LOGE1"
+echo "Running first time... ${CMD1[@]}"
+time "${CMD1[@]}"
 
-echo "Running second time..."
-time "${CMD[@]}" > "$LOG2" 2> "$LOGE2"
+echo "Running second time... ${CMD2[@]}"
+time "${CMD2[@]}"
 
 echo
 echo "---"

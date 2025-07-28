@@ -9,6 +9,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strings"
 	"syscall"
@@ -18,13 +19,35 @@ import (
 	"github.com/invopop/jsonschema"
 )
 
-var debug bool
+const (
+	maxPromptTokens = 200_000 // Maximum allowed tokens in a single request
+	maxTotalTokens  = 70_000  // Stay safely below the 80k tokens/minute rate limit
+)
+
+var (
+	debug bool
+)
 
 func main() {
+	var (
+		outputDir string
+		logNum    int
+	)
 	// Define command line flags
-
+	flag.StringVar(&outputDir, "o", "logs", "Log output directory")
+	flag.IntVar(&logNum, "l", 0, "Log file number (for debugging)")
 	flag.BoolVar(&debug, "d", false, "enable debug mode")
 	flag.Parse()
+
+	if err := makePrintfFunctions(outputDir, logNum); err != nil {
+		fmt.Fprintf(os.Stderr, "Error initializing logging: %v\n", err)
+		os.Exit(1)
+	}
+
+	// oprintf("***stdout: Starting Agent with output directory: %s\n", outputDir)
+	// eprintf("***stderr: Debug mode: %v\n", debug)
+	// oprintf("args: %d %q\n", len(flag.Args()), flag.Args())
+	// os.Exit(0) // Exit early for debugging purposes
 
 	client := anthropic.NewClient()
 
@@ -33,37 +56,42 @@ func main() {
 
 	var getUserMessage func() (string, bool)
 
-	if len(prompts) > 0 {
-		// If prompts are provided as arguments, use them sequentially
-		promptIndex := 0
-		getUserMessage = func() (string, bool) {
-			if promptIndex < len(prompts) {
-				prompt := prompts[promptIndex]
-				fmt.Fprintf(os.Stderr, "Prompt %d of %d: %s\n", promptIndex+1, len(prompts), prompt)
-				promptIndex++
-				return prompt, true
-			}
-			fmt.Fprintf(os.Stderr, "--- All prompts used.\n")
-			return "", false
+	promptIndex := 0
+	scanner := bufio.NewScanner(os.Stdin)
+	getUserMessage = func() (string, bool) {
+		if promptIndex < len(prompts) {
+			prompt := prompts[promptIndex]
+			eprintf("Prompt %d of %d: %s\n", promptIndex+1, len(prompts), prompt)
+			promptIndex++
+			return prompt, true
 		}
-	} else {
-		// No prompts provided, use interactive mode from the start
-		scanner := bufio.NewScanner(os.Stdin)
-		getUserMessage = func() (string, bool) {
-			if !scanner.Scan() {
-				return "", false
-			}
+		// After all prompts are used, switch to interactive mode.
+		if promptIndex == len(prompts) && len(prompts) > 0 {
+			eprintf("--- All prompts used. Switching to interactive mode. ---\n")
+			// Increment promptIndex to prevent this message from showing again.
+			promptIndex++
+		}
+
+		// Interactive mode: read from stdin.
+		if scanner.Scan() {
 			return scanner.Text(), true
 		}
+		return "", false
 	}
 
+	getUserMessage = prependSystemPrompt(getUserMessage, []string{
+		"If you create a new file, put it in the ./bin directory.",
+		"If you create a new data file, such as JSON file, put it in the ./data directory.",
+		"If you create a program, check that it works by running it first.",
+	})
 	getUserMessage = wrapAndSavePrompts(getUserMessage, "prompts.txt")
 
-	tools := []ToolDefinition{readFileDefinition, listFilesDefinition, editFileDefinition}
+	tools := []ToolDefinition{readFileDefinition, listFilesDefinition, editFileDefinition,
+		execProgramDefinition}
 	agent := newAgent(&client, getUserMessage, tools)
 
 	if err := agent.Run(context.TODO()); err != nil {
-		fmt.Printf("Error: %s\n", err.Error())
+		eprintf(fmt.Sprintf("Error: %s\n", err.Error()))
 	}
 }
 
@@ -101,12 +129,12 @@ func (a *Agent) Run(ctx context.Context) error {
 	readUserInput := true
 	for {
 		if readUserInput {
-			fmt.Print("\u001b[94mYou\u001b[0m: ")
+			oprintf("\u001b[94mYou\u001b[0m: ")
 			userInput, ok := a.getUserMessage()
 			if !ok {
 				break
 			}
-			fmt.Fprintf(os.Stderr, "*User input: %s\n", userInput)
+			eprintf("*User input: %s\n", userInput)
 
 			userMessage := anthropic.NewUserMessage(anthropic.NewTextBlock(userInput))
 			conversation = append(conversation, userMessage)
@@ -114,15 +142,25 @@ func (a *Agent) Run(ctx context.Context) error {
 
 		message, err := a.runInference(ctx, conversation)
 		if err != nil {
-			return err
+			return fmt.Errorf("failed to run inference: %w", err)
 		}
-		conversation = append(conversation, message.ToParam())
+
+		// Only add the assistant's message to the conversation if it's not empty.
+		if len(message.Content) > 0 {
+			conversation = append(conversation, message.ToParam())
+		} else {
+			// If the message is empty, there's nothing to process, so we should
+			// probably ask for user input again.
+			eprintf("--- Assistant returned empty message, asking for user input. ---\n")
+			readUserInput = true
+			continue
+		}
 
 		var toolResults []anthropic.ContentBlockParamUnion
 		for _, content := range message.Content {
 			switch content.Type {
 			case "text":
-				fmt.Printf("\u001b[93mClaude\u001b[0m: %s\n", content.Text)
+				oprintf("\u001b[93mClaude\u001b[0m: %s\n", content.Text)
 			case "tool_use":
 				result := a.executeTool(content.ID, content.Name, content.Input)
 				toolResults = append(toolResults, result)
@@ -147,7 +185,7 @@ func (a *Agent) executeTool(id, name string, input json.RawMessage,
 		return anthropic.NewToolResultBlock(id, "tool not found", true)
 	}
 
-	fmt.Printf("\u001b[92mtool\u001b[0m: %s(%s)\n", name, input)
+	oprintf("\u001b[92mtool\u001b[0m: %s(%s)\n", name, input)
 	response, err := tool.Function(input)
 	if err != nil {
 		return anthropic.NewToolResultBlock(id, err.Error(), true)
@@ -169,6 +207,13 @@ func (a *Agent) getTool(name string) (ToolDefinition, bool) {
 // It includes the defined tools in the request so that Claude can invoke them if needed.
 func (a *Agent) runInference(ctx context.Context, conversation []anthropic.MessageParam,
 ) (*anthropic.Message, error) {
+	// Loop to shorten the conversation if it's too long, while preserving the first message (system prompt).
+	for estimateTokenCount(conversation) > maxTotalTokens && len(conversation) > 2 {
+		// Remove the second element (the oldest message after the system prompt)
+		conversation = append(conversation[:1], conversation[2:]...)
+		eprintf("--- Conversation history too long, removing oldest message. ---\n")
+	}
+
 	var anthropicTools []anthropic.ToolUnionParam
 	for _, tool := range a.tools {
 		anthropicTools = append(anthropicTools, anthropic.ToolUnionParam{
@@ -178,6 +223,14 @@ func (a *Agent) runInference(ctx context.Context, conversation []anthropic.Messa
 				InputSchema: tool.InputSchema,
 			},
 		})
+	}
+
+	// Estimate and log the token count before making the API call.
+	estimatedTokens := estimateTokenCount(conversation)
+
+	if estimatedTokens > maxPromptTokens {
+		panic(fmt.Errorf("prompt is too long: %d tokens > %d maximum",
+			estimatedTokens, maxPromptTokens))
 	}
 
 	startTime := time.Now()
@@ -193,14 +246,14 @@ func (a *Agent) runInference(ctx context.Context, conversation []anthropic.Messa
 	if debug && len(conversation) > 0 {
 		lastMessage := conversation[len(conversation)-1]
 		contentDesc := describeContents(lastMessage.Content)
-
 		description = fmt.Sprintf("last message: role=%s, content=[%s]",
 			lastMessage.Role, contentDesc)
 	}
-	fmt.Fprintf(os.Stderr, "anthropic call: %4.1f seconds %d messages %s\n",
-		duration.Seconds(), len(conversation), description)
-	fmt.Fprintf(os.Stderr, "  key counts (top): %v\n", keyCountsTop)
-	fmt.Fprintf(os.Stderr, "  key counts (all): %v\n", keyCountsAll)
+	eprintf("anthropic call: %4.1f seconds, %d messages, ~%d tokens\n",
+		duration.Seconds(), len(conversation), estimatedTokens)
+	eprintf("  key counts (top): %v\n", keyCountsTop)
+	eprintf("  key counts (all): %v\n", keyCountsAll)
+	eprintf("  %s\n", description)
 
 	return message, err
 }
@@ -304,7 +357,7 @@ func listFiles(input json.RawMessage) (string, error) {
 	}
 
 	if debug {
-		fmt.Printf("ListFiles result %q: %s\n", dir, string(result))
+		oprintf("ListFiles result %q: %s\n", dir, string(result))
 	}
 
 	return string(result), nil
@@ -362,6 +415,44 @@ func editFile(input json.RawMessage) (string, error) {
 	return "OK", nil
 }
 
+var execProgramDefinition = ToolDefinition{
+	Name: "exec_program",
+	Description: `Executes a program, binary, or script with the given arguments.
+WARNING: This tool allows the execution of arbitrary code, which can be dangerous.
+The command output (stdout) will be returned. If the command fails, stderr will be included in the error message.`,
+	InputSchema: execProgramInputSchema,
+	Function:    execProgram,
+}
+
+var execProgramInputSchema = generateSchema[ExecProgramInput]()
+
+type ExecProgramInput struct {
+	Command string   `json:"command" jsonschema_description:"The program/binary/script to execute."`
+	Args    []string `json:"args,omitempty" jsonschema_description:"A list of arguments to pass to the command."`
+}
+
+// execProgram executes a command with the provided arguments and returns its output.
+// If the command fails, it returns an error with the stderr output.
+func execProgram(input json.RawMessage) (string, error) {
+	var execInput ExecProgramInput
+	if err := json.Unmarshal(input, &execInput); err != nil {
+		panic(err)
+	}
+
+	if execInput.Command == "" {
+		return "", fmt.Errorf("command cannot be empty")
+	}
+
+	cmd := exec.Command(execInput.Command, execInput.Args...)
+
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		return "", fmt.Errorf("command failed: %w. Output: %s", err, string(output))
+	}
+
+	return string(output), nil
+}
+
 // generateSchema generates a JSON schema for type `T` using the jsonschema package.
 func generateSchema[T any]() anthropic.ToolInputSchemaParam {
 	reflector := jsonschema.Reflector{
@@ -375,4 +466,21 @@ func generateSchema[T any]() anthropic.ToolInputSchemaParam {
 	return anthropic.ToolInputSchemaParam{
 		Properties: schema.Properties,
 	}
+}
+
+// estimateTokenCount provides a rough estimation of the number of tokens in a conversation.
+// It uses a simple character count, assuming ~4 characters per token.
+func estimateTokenCount(messages []anthropic.MessageParam) int {
+	var totalChars int
+	for _, message := range messages {
+		for _, content := range message.Content {
+			// This is a simplified way to get the character count.
+			// We marshal each content block to JSON and count the characters.
+			if data, err := json.Marshal(content); err == nil {
+				totalChars += len(data)
+			}
+		}
+	}
+	// A common heuristic is 4 characters per token.
+	return totalChars / 4
 }
