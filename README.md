@@ -36,7 +36,7 @@ This shows the variation in output between runs. The log files are in the [logs]
      778 total
 ```
 
-### Command (See [run_directory_contents.sh.sh](run_directory_contents.sh.sh))
+### Command (See [run_directory_contents.sh](run_directory_contents.sh))
 ```
 % go run . -d "What is this directory?" "Please examine the contents of all files" "Provide a short overview of this project for the README.txt ## Summary"
 ```
