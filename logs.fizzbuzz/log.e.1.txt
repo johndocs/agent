@@ -1,0 +1,544 @@
+Prompt 1 of 3: If you create a new file, put it in the ./bin directory.
+*User input: If you create a new file, put it in the ./bin directory.
+anthropic call:  2.1 seconds, 1 messages, ~20 tokens
+  key counts (top): map[text:1 type:1]
+  key counts (all): map[text:1 type:1]
+  last message: role=user, content=[{
+  "text": "If you create a new file, put it in the ./bin directory.",
+  "type": "text"
+}]
+anthropic call:  4.3 seconds, 3 messages, ~424 tokens
+  key counts (top): map[content:1 is_error:1 text:1 tool_use_id:1 type:2]
+  key counts (all): map[content:1 is_error:1 text:2 tool_use_id:1 type:3]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_018HPi2NqhdZhj29pvvFBz8B",
+  "is_error": false,
+  "content": [
+    {
+      "text": "[\"bin/\",\"bin/example.txt\",\"bin/find_git_repos.sh\",\"bin/hello.go\",\"bin/new_file.txt\",\"bin/placeholder.txt\",\"bin/repo_search.go.new\",\"bin/repo_search_tool.go\",\"bin/search_repo.go\",\"bin/test.txt\",\"data/\",\"data/example.json\",\"data/new_data.json\",\"go.mod\",\"go.sum\",\"logs/\",\"logs/log.0.txt\",\"logs/log.e.0.txt\",\"logs.directory_contents/\",\"logs.directory_contents/log.1.txt\",\"logs.directory_contents/log.e.1.txt\",\"logs.fizzbuzz/\",\"logs.fizzbuzz/log.1.txt\",\"logs.fizzbuzz/log.e.1.txt\",\"main.go\",\"repositories/\",\"repositories/files.RealKIE.json\",\"repositories/files.agent.json\",\"repositories/files.aoc2023a-old.json\",\"repositories/files.bluesky.json\",\"repositories/files.bug-predict.json\",\"repositories/files.build-pdfium.json\",\"repositories/files.courses.json\",\"repositories/files.zendesk.json\",\"repositories/repo.RealKIE.json\",\"repositories/repo.agent.json\",\"repositories/repo.aoc2023a-old.json\",\"repositories/repo.bluesky.json\",\"repositories/repo.bug-predict.json\",\"repositories/repo.build-pdfium.json\",\"repositories/repo.courses.json\",\"repositories/repo.zendesk.json\",\"repositories/summary.json\",\"run_directory_contents.sh\",\"run_fizzbuzz.sh\",\"run_search.sh\",\"utils.go\"]",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  2.7 seconds, 5 messages, ~643 tokens
+  key counts (top): map[content:2 is_error:2 text:1 tool_use_id:2 type:3]
+  key counts (all): map[content:2 is_error:2 text:3 tool_use_id:2 type:5]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_017PoQ3KsBgkzCw7MyCzMikV",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Successfully created file ./bin/new_bin_file.txt",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 2 of 3: If you create a new data file, such as JSON file, put it in the ./data directory.
+*User input: If you create a new data file, such as JSON file, put it in the ./data directory.
+anthropic call:  2.2 seconds, 7 messages, ~769 tokens
+  key counts (top): map[content:2 is_error:2 text:2 tool_use_id:2 type:4]
+  key counts (all): map[content:2 is_error:2 text:4 tool_use_id:2 type:6]
+  last message: role=user, content=[{
+  "text": "If you create a new data file, such as JSON file, put it in the ./data directory.",
+  "type": "text"
+}]
+anthropic call:  3.1 seconds, 9 messages, ~883 tokens
+  key counts (top): map[content:3 is_error:3 text:2 tool_use_id:3 type:5]
+  key counts (all): map[content:3 is_error:3 text:5 tool_use_id:3 type:8]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01YQXQ1m4JWoXh6zLyYcgGkw",
+  "is_error": false,
+  "content": [
+    {
+      "text": "[\"example.json\",\"new_data.json\"]",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 3 of 3: If you create a program, check that it works by running it first.
+*User input: If you create a program, check that it works by running it first.
+anthropic call:  4.2 seconds, 11 messages, ~1037 tokens
+  key counts (top): map[content:3 is_error:3 text:3 tool_use_id:3 type:6]
+  key counts (all): map[content:3 is_error:3 text:6 tool_use_id:3 type:9]
+  last message: role=user, content=[{
+  "text": "If you create a program, check that it works by running it first.",
+  "type": "text"
+}]
+--- All prepend prompts used. Switching to interactive mode. ---
+Prompt 1 of 9: hey claude, create fizzbuzz.js that I can run with Nodejs and that has fizzbuzz in it and executes it.
+*User input: hey claude, create fizzbuzz.js that I can run with Nodejs and that has fizzbuzz in it and executes it.
+anthropic call:  6.2 seconds, 13 messages, ~1264 tokens
+  key counts (top): map[content:3 is_error:3 text:4 tool_use_id:3 type:7]
+  key counts (all): map[content:3 is_error:3 text:7 tool_use_id:3 type:10]
+  last message: role=user, content=[{
+  "text": "hey claude, create fizzbuzz.js that I can run with Nodejs and that has fizzbuzz in it and executes it.",
+  "type": "text"
+}]
+anthropic call:  2.0 seconds, 15 messages, ~1599 tokens
+  key counts (top): map[content:4 is_error:4 text:4 tool_use_id:4 type:8]
+  key counts (all): map[content:4 is_error:4 text:8 tool_use_id:4 type:12]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01RbocXiYZT3XMxa1sYBWt8g",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Successfully created file ./bin/fizzbuzz.js",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.9 seconds, 17 messages, ~1821 tokens
+  key counts (top): map[content:5 is_error:5 text:4 tool_use_id:5 type:9]
+  key counts (all): map[content:5 is_error:5 text:9 tool_use_id:5 type:14]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0193efTqrXM73mQaGRxxXTjH",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Running FizzBuzz from 1 to 100:\n1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n64\nBuzz\nFizz\n67\n68\nFizz\nBuzz\n71\nFizz\n73\n74\nFizzBuzz\n76\n77\nFizz\n79\nBuzz\nFizz\n82\n83\nFizz\nBuzz\n86\nFizz\n88\n89\nFizzBuzz\n91\n92\nFizz\n94\nBuzz\nFizz\n97\n98\nFizz\nBuzz\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 2 of 9: Change fizzbuzz.js  it so that it prints the numbers from 12 to 26, but for multiples of 4 print 'If you want something done well' instead of the number and for the multiples of 3 print 'Do it yourself'. For numbers which are multiples of both, print 'I am not an animal'.
+*User input: Change fizzbuzz.js  it so that it prints the numbers from 12 to 26, but for multiples of 4 print 'If you want something done well' instead of the number and for the multiples of 3 print 'Do it yourself'. For numbers which are multiples of both, print 'I am not an animal'.
+anthropic call:  8.7 seconds, 19 messages, ~2090 tokens
+  key counts (top): map[content:5 is_error:5 text:5 tool_use_id:5 type:10]
+  key counts (all): map[content:5 is_error:5 text:10 tool_use_id:5 type:15]
+  last message: role=user, content=[{
+  "text": "Change fizzbuzz.js  it so that it prints the numbers from 12 to 26, but for multiples of 4 print 'If you want something done well' instead of the number and for the multiples of 3 print 'Do it yourself'. For numbers which are multiples of both, print 'I am not an animal'.",
+  "type": "text"
+}]
+anthropic call:  2.2 seconds, 21 messages, ~2655 tokens
+  key counts (top): map[content:6 is_error:6 text:5 tool_use_id:6 type:11]
+  key counts (all): map[content:6 is_error:6 text:11 tool_use_id:6 type:17]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01YWoCskkcgKTdEmKauzBE57",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.5 seconds, 23 messages, ~2799 tokens
+  key counts (top): map[content:7 is_error:7 text:5 tool_use_id:7 type:12]
+  key counts (all): map[content:7 is_error:7 text:12 tool_use_id:7 type:19]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_018sWZ7CFijpkxh638rZe1hk",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Running custom sequence from 12 to 26:\nI am not an animal\n13\n14\nDo it yourself\nIf you want something done well\n17\nDo it yourself\n19\nIf you want something done well\nDo it yourself\n22\n23\nI am not an animal\n25\n26\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 3 of 9: Edit fizzbuzz.js so that it it prints from 13 to 27.
+*User input: Edit fizzbuzz.js so that it it prints from 13 to 27.
+anthropic call:  3.0 seconds, 25 messages, ~3082 tokens
+  key counts (top): map[content:7 is_error:7 text:6 tool_use_id:7 type:13]
+  key counts (all): map[content:7 is_error:7 text:13 tool_use_id:7 type:20]
+  last message: role=user, content=[{
+  "text": "Edit fizzbuzz.js so that it it prints from 13 to 27.",
+  "type": "text"
+}]
+anthropic call:  3.0 seconds, 27 messages, ~3208 tokens
+  key counts (top): map[content:8 is_error:8 text:6 tool_use_id:8 type:14]
+  key counts (all): map[content:8 is_error:8 text:14 tool_use_id:8 type:22]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01CZg4wBYw2J6mZssiVpU7jo",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.0 seconds, 29 messages, ~3369 tokens
+  key counts (top): map[content:9 is_error:9 text:6 tool_use_id:9 type:15]
+  key counts (all): map[content:9 is_error:9 text:15 tool_use_id:9 type:24]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Fyooqm5FhLsA4V6tdcn4bs",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.3 seconds, 31 messages, ~3511 tokens
+  key counts (top): map[content:10 is_error:10 text:6 tool_use_id:10 type:16]
+  key counts (all): map[content:10 is_error:10 text:16 tool_use_id:10 type:26]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01AtEv7frs5vsfTv7AVXfh7X",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Running custom sequence from 13 to 27:\n13\n14\nDo it yourself\nIf you want something done well\n17\nDo it yourself\n19\nIf you want something done well\nDo it yourself\n22\n23\nI am not an animal\n25\n26\nDo it yourself\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 4 of 9: Edit fizzbuzz.js so instead of 'If you want something done well' and 'Do it yourselfz', it prints 'Read main.go' and 'List the files in this directory'.
+*User input: Edit fizzbuzz.js so instead of 'If you want something done well' and 'Do it yourselfz', it prints 'Read main.go' and 'List the files in this directory'.
+anthropic call:  4.8 seconds, 33 messages, ~3764 tokens
+  key counts (top): map[content:10 is_error:10 text:7 tool_use_id:10 type:17]
+  key counts (all): map[content:10 is_error:10 text:17 tool_use_id:10 type:27]
+  last message: role=user, content=[{
+  "text": "Edit fizzbuzz.js so instead of 'If you want something done well' and 'Do it yourselfz', it prints 'Read main.go' and 'List the files in this directory'.",
+  "type": "text"
+}]
+anthropic call:  4.2 seconds, 35 messages, ~4020 tokens
+  key counts (top): map[content:11 is_error:11 text:7 tool_use_id:11 type:18]
+  key counts (all): map[content:11 is_error:11 text:18 tool_use_id:11 type:29]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01VavNGPrR9zTH3EZCUits2F",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  2.3 seconds, 37 messages, ~4252 tokens
+  key counts (top): map[content:12 is_error:12 text:7 tool_use_id:12 type:19]
+  key counts (all): map[content:12 is_error:12 text:19 tool_use_id:12 type:31]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01SX44nDoiHxsiH4yD1Dngtu",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.9 seconds, 39 messages, ~4403 tokens
+  key counts (top): map[content:13 is_error:13 text:7 tool_use_id:13 type:20]
+  key counts (all): map[content:13 is_error:13 text:20 tool_use_id:13 type:33]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01A6qdtd3vGwrp2X6FUJrJzU",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Running custom sequence from 13 to 27:\n13\n14\nList the files in this directory\nRead main.go\n17\nList the files in this directory\n19\nRead main.go\nList the files in this directory\n22\n23\nI am not an animal\n25\n26\nList the files in this directory\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 5 of 9: Edit fizzbuzz.js so instead of 'Read main.go' and 'List the files in this directory', it prints 'Fizz' and 'Buzz' and instead of 'I am not an animal', it prints 'FizzBuzz'.
+*User input: Edit fizzbuzz.js so instead of 'Read main.go' and 'List the files in this directory', it prints 'Fizz' and 'Buzz' and instead of 'I am not an animal', it prints 'FizzBuzz'.
+anthropic call:  5.6 seconds, 41 messages, ~4635 tokens
+  key counts (top): map[content:13 is_error:13 text:8 tool_use_id:13 type:21]
+  key counts (all): map[content:13 is_error:13 text:21 tool_use_id:13 type:34]
+  last message: role=user, content=[{
+  "text": "Edit fizzbuzz.js so instead of 'Read main.go' and 'List the files in this directory', it prints 'Fizz' and 'Buzz' and instead of 'I am not an animal', it prints 'FizzBuzz'.",
+  "type": "text"
+}]
+anthropic call:  4.7 seconds, 43 messages, ~4904 tokens
+  key counts (top): map[content:14 is_error:14 text:8 tool_use_id:14 type:22]
+  key counts (all): map[content:14 is_error:14 text:22 tool_use_id:14 type:36]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01CSMcjtC6ptKE1i1FFAhVcQ",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.8 seconds, 45 messages, ~5124 tokens
+  key counts (top): map[content:15 is_error:15 text:8 tool_use_id:15 type:23]
+  key counts (all): map[content:15 is_error:15 text:23 tool_use_id:15 type:38]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_018Q2MTSxivexFv1LwBZoRpD",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.2 seconds, 47 messages, ~5241 tokens
+  key counts (top): map[content:16 is_error:16 text:8 tool_use_id:16 type:24]
+  key counts (all): map[content:16 is_error:16 text:24 tool_use_id:16 type:40]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TFBnYsN68ZjUEwokFtv1bq",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Running custom sequence from 13 to 27:\n13\n14\nBuzz\nFizz\n17\nBuzz\n19\nFizz\nBuzz\n22\n23\nFizzBuzz\n25\n26\nBuzz\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 6 of 9: Edit fizzbuzz.js so that it prints the numbers in descending order.
+*User input: Edit fizzbuzz.js so that it prints the numbers in descending order.
+anthropic call:  3.7 seconds, 49 messages, ~5447 tokens
+  key counts (top): map[content:16 is_error:16 text:9 tool_use_id:16 type:25]
+  key counts (all): map[content:16 is_error:16 text:25 tool_use_id:16 type:41]
+  last message: role=user, content=[{
+  "text": "Edit fizzbuzz.js so that it prints the numbers in descending order.",
+  "type": "text"
+}]
+anthropic call:  3.5 seconds, 51 messages, ~5603 tokens
+  key counts (top): map[content:17 is_error:17 text:9 tool_use_id:17 type:26]
+  key counts (all): map[content:17 is_error:17 text:26 tool_use_id:17 type:43]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01QSJdXjrUZXugwwuTVFUNYQ",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.6 seconds, 53 messages, ~5765 tokens
+  key counts (top): map[content:18 is_error:18 text:9 tool_use_id:18 type:27]
+  key counts (all): map[content:18 is_error:18 text:27 tool_use_id:18 type:45]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01V6FFBA58T7ESyUb9ngaZYG",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  2.7 seconds, 55 messages, ~5969 tokens
+  key counts (top): map[content:19 is_error:19 text:9 tool_use_id:19 type:28]
+  key counts (all): map[content:19 is_error:19 text:28 tool_use_id:19 type:47]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01BVyxi5rGdtFcL8BMhkdfkm",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.3 seconds, 57 messages, ~6087 tokens
+  key counts (top): map[content:20 is_error:20 text:9 tool_use_id:20 type:29]
+  key counts (all): map[content:20 is_error:20 text:29 tool_use_id:20 type:49]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01DiZi2C2nP6to3quTgUZjMC",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Running custom sequence from 27 down to 13:\nBuzz\n26\n25\nFizzBuzz\n23\n22\nBuzz\nFizz\n19\nBuzz\n17\nFizz\nBuzz\n14\n13\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 7 of 9: Change fizzbuzz.js so the 'Fizz' multiple is three and the 'Buzz' multiple is five and it prints numbers from 100 to 1
+*User input: Change fizzbuzz.js so the 'Fizz' multiple is three and the 'Buzz' multiple is five and it prints numbers from 100 to 1
+anthropic call:  5.0 seconds, 59 messages, ~6348 tokens
+  key counts (top): map[content:20 is_error:20 text:10 tool_use_id:20 type:30]
+  key counts (all): map[content:20 is_error:20 text:30 tool_use_id:20 type:50]
+  last message: role=user, content=[{
+  "text": "Change fizzbuzz.js so the 'Fizz' multiple is three and the 'Buzz' multiple is five and it prints numbers from 100 to 1",
+  "type": "text"
+}]
+anthropic call:  5.5 seconds, 61 messages, ~6601 tokens
+  key counts (top): map[content:21 is_error:21 text:10 tool_use_id:21 type:31]
+  key counts (all): map[content:21 is_error:21 text:31 tool_use_id:21 type:52]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01BXtEVLyEhMeKoHRhErBQxD",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.8 seconds, 63 messages, ~6858 tokens
+  key counts (top): map[content:22 is_error:22 text:10 tool_use_id:22 type:32]
+  key counts (all): map[content:22 is_error:22 text:32 tool_use_id:22 type:54]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TEhihSUdspEeTUCftP7Hqj",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  2.8 seconds, 65 messages, ~7019 tokens
+  key counts (top): map[content:23 is_error:23 text:10 tool_use_id:23 type:33]
+  key counts (all): map[content:23 is_error:23 text:33 tool_use_id:23 type:56]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_011pemmxhkkb8TnfChR3fXBB",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.1 seconds, 67 messages, ~7244 tokens
+  key counts (top): map[content:24 is_error:24 text:10 tool_use_id:24 type:34]
+  key counts (all): map[content:24 is_error:24 text:34 tool_use_id:24 type:58]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_012aWoP8RSGGyt6nB823EdVp",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Running FizzBuzz from 100 down to 1:\nBuzz\nFizz\n98\n97\nFizz\nBuzz\n94\nFizz\n92\n91\nFizzBuzz\n89\n88\nFizz\n86\nBuzz\nFizz\n83\n82\nFizz\nBuzz\n79\nFizz\n77\n76\nFizzBuzz\n74\n73\nFizz\n71\nBuzz\nFizz\n68\n67\nFizz\nBuzz\n64\nFizz\n62\n61\nFizzBuzz\n59\n58\nFizz\n56\nBuzz\nFizz\n53\n52\nFizz\nBuzz\n49\nFizz\n47\n46\nFizzBuzz\n44\n43\nFizz\n41\nBuzz\nFizz\n38\n37\nFizz\nBuzz\n34\nFizz\n32\n31\nFizzBuzz\n29\n28\nFizz\n26\nBuzz\nFizz\n23\n22\nFizz\nBuzz\n19\nFizz\n17\n16\nFizzBuzz\n14\n13\nFizz\n11\nBuzz\nFizz\n8\n7\nFizz\nBuzz\n4\nFizz\n2\n1\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 8 of 9: Edit fizzbuzz.js so that it prints the prime factors of each number at the end of the line.
+*User input: Edit fizzbuzz.js so that it prints the prime factors of each number at the end of the line.
+anthropic call:  5.7 seconds, 69 messages, ~7507 tokens
+  key counts (top): map[content:24 is_error:24 text:11 tool_use_id:24 type:35]
+  key counts (all): map[content:24 is_error:24 text:35 tool_use_id:24 type:59]
+  last message: role=user, content=[{
+  "text": "Edit fizzbuzz.js so that it prints the prime factors of each number at the end of the line.",
+  "type": "text"
+}]
+anthropic call:  8.2 seconds, 71 messages, ~7790 tokens
+  key counts (top): map[content:25 is_error:25 text:11 tool_use_id:25 type:36]
+  key counts (all): map[content:25 is_error:25 text:36 tool_use_id:25 type:61]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01AL33pf9aABr2ipCz6EYEo1",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.6 seconds, 73 messages, ~8242 tokens
+  key counts (top): map[content:26 is_error:26 text:11 tool_use_id:26 type:37]
+  key counts (all): map[content:26 is_error:26 text:37 tool_use_id:26 type:63]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01AdVqrxBeLP84EFcb7ewcCu",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  8.9 seconds, 75 messages, ~8756 tokens
+  key counts (top): map[content:27 is_error:27 text:11 tool_use_id:27 type:38]
+  key counts (all): map[content:27 is_error:27 text:38 tool_use_id:27 type:65]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01JhqtfoyxFMecZDoUtCTWVM",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Running FizzBuzz from 100 down to 1:\nBuzz [2 × 2 × 5 × 5]\nFizz [3 × 3 × 11]\n98 [2 × 7 × 7]\n97 [97]\nFizz [2 × 2 × 2 × 2 × 2 × 3]\nBuzz [5 × 19]\n94 [2 × 47]\nFizz [3 × 31]\n92 [2 × 2 × 23]\n91 [7 × 13]\nFizzBuzz [2 × 3 × 3 × 5]\n89 [89]\n88 [2 × 2 × 2 × 11]\nFizz [3 × 29]\n86 [2 × 43]\nBuzz [5 × 17]\nFizz [2 × 2 × 3 × 7]\n83 [83]\n82 [2 × 41]\nFizz [3 × 3 × 3 × 3]\nBuzz [2 × 2 × 2 × 2 × 5]\n79 [79]\nFizz [2 × 3 × 13]\n77 [7 × 11]\n76 [2 × 2 × 19]\nFizzBuzz [3 × 5 × 5]\n74 [2 × 37]\n73 [73]\nFizz [2 × 2 × 2 × 3 × 3]\n71 [71]\nBuzz [2 × 5 × 7]\nFizz [3 × 23]\n68 [2 × 2 × 17]\n67 [67]\nFizz [2 × 3 × 11]\nBuzz [5 × 13]\n64 [2 × 2 × 2 × 2 × 2 × 2]\nFizz [3 × 3 × 7]\n62 [2 × 31]\n61 [61]\nFizzBuzz [2 × 2 × 3 × 5]\n59 [59]\n58 [2 × 29]\nFizz [3 × 19]\n56 [2 × 2 × 2 × 7]\nBuzz [5 × 11]\nFizz [2 × 3 × 3 × 3]\n53 [53]\n52 [2 × 2 × 13]\nFizz [3 × 17]\nBuzz [2 × 5 × 5]\n49 [7 × 7]\nFizz [2 × 2 × 2 × 2 × 3]\n47 [47]\n46 [2 × 23]\nFizzBuzz [3 × 3 × 5]\n44 [2 × 2 × 11]\n43 [43]\nFizz [2 × 3 × 7]\n41 [41]\nBuzz [2 × 2 × 2 × 5]\nFizz [3 × 13]\n38 [2 × 19]\n37 [37]\nFizz [2 × 2 × 3 × 3]\nBuzz [5 × 7]\n34 [2 × 17]\nFizz [3 × 11]\n32 [2 × 2 × 2 × 2 × 2]\n31 [31]\nFizzBuzz [2 × 3 × 5]\n29 [29]\n28 [2 × 2 × 7]\nFizz [3 × 3 × 3]\n26 [2 × 13]\nBuzz [5 × 5]\nFizz [2 × 2 × 2 × 3]\n23 [23]\n22 [2 × 11]\nFizz [3 × 7]\nBuzz [2 × 2 × 5]\n19 [19]\nFizz [2 × 3 × 3]\n17 [17]\n16 [2 × 2 × 2 × 2]\nFizzBuzz [3 × 5]\n14 [2 × 7]\n13 [13]\nFizz [2 × 2 × 3]\n11 [11]\nBuzz [2 × 5]\nFizz [3 × 3]\n8 [2 × 2 × 2]\n7 [7]\nFizz [2 × 3]\nBuzz [5]\n4 [2 × 2]\nFizz [3]\n2 [2]\n1 [1]\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 9 of 9: Edit fizzbuzz.js so that it prints the numbers in ascending order.
+*User input: Edit fizzbuzz.js so that it prints the numbers in ascending order.
+anthropic call:  6.5 seconds, 77 messages, ~9118 tokens
+  key counts (top): map[content:27 is_error:27 text:12 tool_use_id:27 type:39]
+  key counts (all): map[content:27 is_error:27 text:39 tool_use_id:27 type:66]
+  last message: role=user, content=[{
+  "text": "Edit fizzbuzz.js so that it prints the numbers in ascending order.",
+  "type": "text"
+}]
+anthropic call:  3.9 seconds, 79 messages, ~9420 tokens
+  key counts (top): map[content:28 is_error:28 text:12 tool_use_id:28 type:40]
+  key counts (all): map[content:28 is_error:28 text:40 tool_use_id:28 type:68]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01VcBRgJVsbHCtcPaqY3Jaz6",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.5 seconds, 81 messages, ~9533 tokens
+  key counts (top): map[content:29 is_error:29 text:12 tool_use_id:29 type:41]
+  key counts (all): map[content:29 is_error:29 text:41 tool_use_id:29 type:70]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01KQdhNb4PsifquE3PNRAPZ7",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.4 seconds, 83 messages, ~9692 tokens
+  key counts (top): map[content:30 is_error:30 text:12 tool_use_id:30 type:42]
+  key counts (all): map[content:30 is_error:30 text:42 tool_use_id:30 type:72]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01PvQw6YrwryK2qFzk7MGVKq",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 10.2 seconds, 85 messages, ~10204 tokens
+  key counts (top): map[content:31 is_error:31 text:12 tool_use_id:31 type:43]
+  key counts (all): map[content:31 is_error:31 text:43 tool_use_id:31 type:74]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01WmhyzoseM1CXS2U6hWqW6a",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Running FizzBuzz from 1 to 100:\n1 [1]\n2 [2]\nFizz [3]\n4 [2 × 2]\nBuzz [5]\nFizz [2 × 3]\n7 [7]\n8 [2 × 2 × 2]\nFizz [3 × 3]\nBuzz [2 × 5]\n11 [11]\nFizz [2 × 2 × 3]\n13 [13]\n14 [2 × 7]\nFizzBuzz [3 × 5]\n16 [2 × 2 × 2 × 2]\n17 [17]\nFizz [2 × 3 × 3]\n19 [19]\nBuzz [2 × 2 × 5]\nFizz [3 × 7]\n22 [2 × 11]\n23 [23]\nFizz [2 × 2 × 2 × 3]\nBuzz [5 × 5]\n26 [2 × 13]\nFizz [3 × 3 × 3]\n28 [2 × 2 × 7]\n29 [29]\nFizzBuzz [2 × 3 × 5]\n31 [31]\n32 [2 × 2 × 2 × 2 × 2]\nFizz [3 × 11]\n34 [2 × 17]\nBuzz [5 × 7]\nFizz [2 × 2 × 3 × 3]\n37 [37]\n38 [2 × 19]\nFizz [3 × 13]\nBuzz [2 × 2 × 2 × 5]\n41 [41]\nFizz [2 × 3 × 7]\n43 [43]\n44 [2 × 2 × 11]\nFizzBuzz [3 × 3 × 5]\n46 [2 × 23]\n47 [47]\nFizz [2 × 2 × 2 × 2 × 3]\n49 [7 × 7]\nBuzz [2 × 5 × 5]\nFizz [3 × 17]\n52 [2 × 2 × 13]\n53 [53]\nFizz [2 × 3 × 3 × 3]\nBuzz [5 × 11]\n56 [2 × 2 × 2 × 7]\nFizz [3 × 19]\n58 [2 × 29]\n59 [59]\nFizzBuzz [2 × 2 × 3 × 5]\n61 [61]\n62 [2 × 31]\nFizz [3 × 3 × 7]\n64 [2 × 2 × 2 × 2 × 2 × 2]\nBuzz [5 × 13]\nFizz [2 × 3 × 11]\n67 [67]\n68 [2 × 2 × 17]\nFizz [3 × 23]\nBuzz [2 × 5 × 7]\n71 [71]\nFizz [2 × 2 × 2 × 3 × 3]\n73 [73]\n74 [2 × 37]\nFizzBuzz [3 × 5 × 5]\n76 [2 × 2 × 19]\n77 [7 × 11]\nFizz [2 × 3 × 13]\n79 [79]\nBuzz [2 × 2 × 2 × 2 × 5]\nFizz [3 × 3 × 3 × 3]\n82 [2 × 41]\n83 [83]\nFizz [2 × 2 × 3 × 7]\nBuzz [5 × 17]\n86 [2 × 43]\nFizz [3 × 29]\n88 [2 × 2 × 2 × 11]\n89 [89]\nFizzBuzz [2 × 3 × 3 × 5]\n91 [7 × 13]\n92 [2 × 2 × 23]\nFizz [3 × 31]\n94 [2 × 47]\nBuzz [5 × 19]\nFizz [2 × 2 × 2 × 2 × 2 × 3]\n97 [97]\n98 [2 × 7 × 7]\nFizz [3 × 3 × 11]\nBuzz [2 × 2 × 5 × 5]\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+--- All prompts used. Switching to interactive mode. ---
