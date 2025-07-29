@@ -126,8 +126,8 @@ func withSignalCancellation(parent context.Context, sigs ...os.Signal) context.C
 	return ctx
 }
 
-// wrapAndSavePrompts creates a wrapper around a getUserMessage function to save the prompts to a file.
-func wrapAndSavePrompts(innerGetUserMessage func() (string, bool), filePath string,
+// wrapSavePrompts creates a wrapper around a getUserMessage function to save the prompts to a file.
+func wrapSavePrompts(innerGetUserMessage func() (string, bool), filePath string,
 ) func() (string, bool) {
 	if err := os.Remove(filePath); err != nil && !os.IsNotExist(err) {
 		panic(fmt.Errorf("error removing existing prompts file: %w", err))
@@ -144,6 +144,11 @@ func wrapAndSavePrompts(innerGetUserMessage func() (string, bool), filePath stri
 					eprintf("Error writing to prompts file: %v\n", err)
 				}
 			}
+			defer f.Close()
+			if _, err := f.WriteString(prompt + "\n"); err != nil {
+				panic(fmt.Errorf("error writing to prompts file: %w", err))
+			}
+
 		}
 		return prompt, ok
 	}
@@ -184,16 +189,13 @@ func prependSystemPrompt(getUserMessage func() (string, bool), promptList []stri
 // createNewFile creates a new file at the specified path with the given content.
 func createNewFile(filePath, content string) (string, error) {
 	if dir := path.Dir(filePath); dir != "." {
-		err := os.MkdirAll(dir, 0755)
-		if err != nil {
+		if err := os.MkdirAll(dir, 0755); err != nil {
 			return "", fmt.Errorf("failed to create directory: %w", err)
 		}
 	}
-
 	if err := os.WriteFile(filePath, []byte(content), 0644); err != nil {
 		return "", fmt.Errorf("failed to create file: %w", err)
 	}
-
 	return fmt.Sprintf("Successfully created file %s", filePath), nil
 }
 

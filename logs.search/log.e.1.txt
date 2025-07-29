@@ -1,0 +1,2229 @@
+Prompt 1 of 3: If you create a new file, put it in the ./bin directory.
+*User input: If you create a new file, put it in the ./bin directory.
+anthropic call:  2.1 seconds, 1 messages, ~20 tokens
+  key counts (top): map[text:1 type:1]
+  key counts (all): map[text:1 type:1]
+  last message: role=user, content=[{
+  "text": "If you create a new file, put it in the ./bin directory.",
+  "type": "text"
+}]
+anthropic call:  2.7 seconds, 3 messages, ~459 tokens
+  key counts (top): map[content:1 is_error:1 text:1 tool_use_id:1 type:2]
+  key counts (all): map[content:1 is_error:1 text:2 tool_use_id:1 type:3]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01VNwUCEDkRU5iqr1J9odaFK",
+  "is_error": false,
+  "content": [
+    {
+      "text": "[\"bin/\",\"bin/find_git_repos.sh\",\"bin0/\",\"bin0/example.txt\",\"bin0/find_git_repos.sh\",\"bin0/hello.go\",\"bin0/new_bin_file.txt\",\"bin0/new_file.txt\",\"bin0/placeholder.txt\",\"bin0/repo_search.go.new\",\"bin0/repo_search_tool.go\",\"bin0/search_repo.go\",\"bin0/test.txt\",\"data/\",\"data/example.json\",\"data/new_data.json\",\"go.mod\",\"go.sum\",\"logs/\",\"logs/log.0.txt\",\"logs/log.e.0.txt\",\"logs.directory_contents/\",\"logs.directory_contents/log.1.txt\",\"logs.directory_contents/log.e.1.txt\",\"logs.fizzbuzz/\",\"logs.fizzbuzz/log.1.txt\",\"logs.fizzbuzz/log.e.1.txt\",\"logs.search/\",\"logs.search/log.1.txt\",\"logs.search/log.e.1.txt\",\"main.go\",\"repositories/\",\"repositories/files.RealKIE.json\",\"repositories/files.agent.json\",\"repositories/files.aoc2023a-old.json\",\"repositories/files.bluesky.json\",\"repositories/files.bug-predict.json\",\"repositories/files.build-pdfium.json\",\"repositories/files.courses.json\",\"repositories/files.zendesk.json\",\"repositories/repo.RealKIE.json\",\"repositories/repo.agent.json\",\"repositories/repo.aoc2023a-old.json\",\"repositories/repo.bluesky.json\",\"repositories/repo.bug-predict.json\",\"repositories/repo.build-pdfium.json\",\"repositories/repo.courses.json\",\"repositories/repo.zendesk.json\",\"repositories/summary.json\",\"run_directory_contents.sh\",\"run_fizzbuzz.sh\",\"run_search.sh\",\"utils.go\"]",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 2 of 3: If you create a new data file, such as JSON file, put it in the ./data directory.
+*User input: If you create a new data file, such as JSON file, put it in the ./data directory.
+anthropic call:  2.5 seconds, 5 messages, ~593 tokens
+  key counts (top): map[content:1 is_error:1 text:2 tool_use_id:1 type:3]
+  key counts (all): map[content:1 is_error:1 text:3 tool_use_id:1 type:4]
+  last message: role=user, content=[{
+  "text": "If you create a new data file, such as JSON file, put it in the ./data directory.",
+  "type": "text"
+}]
+anthropic call:  3.0 seconds, 7 messages, ~711 tokens
+  key counts (top): map[content:2 is_error:2 text:2 tool_use_id:2 type:4]
+  key counts (all): map[content:2 is_error:2 text:4 tool_use_id:2 type:6]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_013J9bXPhCW8fbx147ZKF5Lt",
+  "is_error": false,
+  "content": [
+    {
+      "text": "[\"example.json\",\"new_data.json\"]",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 3 of 3: If you create a program, check that it works by running it first.
+*User input: If you create a program, check that it works by running it first.
+anthropic call:  4.1 seconds, 9 messages, ~858 tokens
+  key counts (top): map[content:2 is_error:2 text:3 tool_use_id:2 type:5]
+  key counts (all): map[content:2 is_error:2 text:5 tool_use_id:2 type:7]
+  last message: role=user, content=[{
+  "text": "If you create a program, check that it works by running it first.",
+  "type": "text"
+}]
+--- All prepend prompts used. Switching to interactive mode. ---
+Prompt 1 of 5: You will be saving the results in a directory called 'repositories'. If this direitory already exists, you will continue where you left off. You can ignore following instructions about creating and filling it.
+*User input: You will be saving the results in a directory called 'repositories'. If this direitory already exists, you will continue where you left off. You can ignore following instructions about creating and filling it.
+anthropic call:  2.9 seconds, 11 messages, ~1123 tokens
+  key counts (top): map[content:2 is_error:2 text:4 tool_use_id:2 type:6]
+  key counts (all): map[content:2 is_error:2 text:6 tool_use_id:2 type:8]
+  last message: role=user, content=[{
+  "text": "You will be saving the results in a directory called 'repositories'. If this direitory already exists, you will continue where you left off. You can ignore following instructions about creating and filling it.",
+  "type": "text"
+}]
+anthropic call:  3.0 seconds, 13 messages, ~1393 tokens
+  key counts (top): map[content:3 is_error:3 text:4 tool_use_id:3 type:7]
+  key counts (all): map[content:3 is_error:3 text:7 tool_use_id:3 type:10]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_013LoMbg4wwRXVvVHikbeKDH",
+  "is_error": false,
+  "content": [
+    {
+      "text": "[\"files.RealKIE.json\",\"files.agent.json\",\"files.aoc2023a-old.json\",\"files.bluesky.json\",\"files.bug-predict.json\",\"files.build-pdfium.json\",\"files.courses.json\",\"files.zendesk.json\",\"repo.RealKIE.json\",\"repo.agent.json\",\"repo.aoc2023a-old.json\",\"repo.bluesky.json\",\"repo.bug-predict.json\",\"repo.build-pdfium.json\",\"repo.courses.json\",\"repo.zendesk.json\",\"summary.json\"]",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 2 of 5: Find all directories under ~ that are git repositories and print their paths without the trailing '/.git'. Exclude any directories that contain more than 100 files. They are likely to be clones of large libraries.
+*User input: Find all directories under ~ that are git repositories and print their paths without the trailing '/.git'. Exclude any directories that contain more than 100 files. They are likely to be clones of large libraries.
+anthropic call:  5.2 seconds, 15 messages, ~1607 tokens
+  key counts (top): map[content:3 is_error:3 text:5 tool_use_id:3 type:8]
+  key counts (all): map[content:3 is_error:3 text:8 tool_use_id:3 type:11]
+  last message: role=user, content=[{
+  "text": "Find all directories under ~ that are git repositories and print their paths without the trailing '/.git'. Exclude any directories that contain more than 100 files. They are likely to be clones of large libraries.",
+  "type": "text"
+}]
+anthropic call:  2.1 seconds, 17 messages, ~1881 tokens
+  key counts (top): map[content:4 is_error:4 text:5 tool_use_id:4 type:9]
+  key counts (all): map[content:4 is_error:4 text:9 tool_use_id:4 type:13]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01EkZEjutR4qq7oeiq7pvHUP",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Successfully created file ./bin/find_small_git_repos.sh",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  1.9 seconds, 19 messages, ~1966 tokens
+  key counts (top): map[content:5 is_error:5 text:5 tool_use_id:5 type:10]
+  key counts (all): map[content:5 is_error:5 text:10 tool_use_id:5 type:15]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01BPvwbTDeqKFAcVwHtnZk9m",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  2.7 seconds, 21 messages, ~2101 tokens
+  key counts (top): map[content:6 is_error:6 text:5 tool_use_id:6 type:11]
+  key counts (all): map[content:6 is_error:6 text:11 tool_use_id:6 type:17]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01MsEYq4aq2VVgDvTkFcB2Li",
+  "is_error": false,
+  "content": [
+    {
+      "text": "~/code/build-pdfium\n~/code/courses\n~/code/aoc2023a-old\n~/code/zendesk\n~/code/ai/RealKIE\n~/code/bluesky\n~/code/bug-predict\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 3 of 5: Tell me about each git repositories you found. What programs and/or tools does it implement?  For each program, provide a short description of its purpose and functionality. Then suggest how it could be used. Save this information in a directory 'repositories'. For each repository, create a json file called 'repositories/repo.<repo_name>.json' so that you don't need to use up your token quota. For each repository, also provide a list of the files in the repository and their sizes in bytes. Save this information in a json file called 'repositories/files.<repo_name>.json'
+*User input: Tell me about each git repositories you found. What programs and/or tools does it implement?  For each program, provide a short description of its purpose and functionality. Then suggest how it could be used. Save this information in a directory 'repositories'. For each repository, create a json file called 'repositories/repo.<repo_name>.json' so that you don't need to use up your token quota. For each repository, also provide a list of the files in the repository and their sizes in bytes. Save this information in a json file called 'repositories/files.<repo_name>.json'
+anthropic call: 11.2 seconds, 23 messages, ~2422 tokens
+  key counts (top): map[content:6 is_error:6 text:6 tool_use_id:6 type:12]
+  key counts (all): map[content:6 is_error:6 text:12 tool_use_id:6 type:18]
+  last message: role=user, content=[{
+  "text": "Tell me about each git repositories you found. What programs and/or tools does it implement?  For each program, provide a short description of its purpose and functionality. Then suggest how it could be used. Save this information in a directory 'repositories'. For each repository, create a json file called 'repositories/repo.\u003crepo_name\u003e.json' so that you don't need to use up your token quota. For each repository, also provide a list of the files in the repository and their sizes in bytes. Save this information in a json file called 'repositories/files.\u003crepo_name\u003e.json'",
+  "type": "text"
+}]
+anthropic call:  2.2 seconds, 25 messages, ~3237 tokens
+  key counts (top): map[content:7 is_error:7 text:6 tool_use_id:7 type:13]
+  key counts (all): map[content:7 is_error:7 text:13 tool_use_id:7 type:20]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01A3bhFkb1rWELqudqQW7B2v",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Successfully created file ./bin/analyze_repos.sh",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  1.8 seconds, 27 messages, ~3323 tokens
+  key counts (top): map[content:8 is_error:8 text:6 tool_use_id:8 type:14]
+  key counts (all): map[content:8 is_error:8 text:14 tool_use_id:8 type:22]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01PzBpW9YkeBjnCn83GXBRVx",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 13.0 seconds, 29 messages, ~8613 tokens
+  key counts (top): map[content:9 is_error:9 text:6 tool_use_id:9 type:15]
+  key counts (all): map[content:9 is_error:9 text:15 tool_use_id:9 type:24]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_017y8GZ7HY3PDNaf18CvncoF",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Analyzing repository: build-pdfium\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\nAnalyzing repository: courses\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\nAnalyzing repository: aoc2023a-old\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\nAnalyzing repository: zendesk\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\nAnalyzing repository: RealKIE\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\nAnalyzing repository: bluesky\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\nAnalyzing repository: bug-predict\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\ndu: invalid option -- b\nusage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.1 seconds, 31 messages, ~9457 tokens
+  key counts (top): map[content:10 is_error:10 text:6 tool_use_id:10 type:16]
+  key counts (all): map[content:10 is_error:10 text:16 tool_use_id:10 type:26]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_016VRVExUVWYhDXmdBJbFHm8",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Successfully created file ./bin/analyze_repos_fixed.sh",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.0 seconds, 33 messages, ~9526 tokens
+  key counts (top): map[content:11 is_error:11 text:6 tool_use_id:11 type:17]
+  key counts (all): map[content:11 is_error:11 text:17 tool_use_id:11 type:28]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01WjmYrtSk725kPeAhbJHxo1",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 16.9 seconds, 35 messages, ~9650 tokens
+  key counts (top): map[content:12 is_error:12 text:6 tool_use_id:12 type:18]
+  key counts (all): map[content:12 is_error:12 text:18 tool_use_id:12 type:30]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_017kNt6wz3KxLYegb4wSfSgD",
+  "is_error": false,
+  "content": [
+    {
+      "text": "Analyzing repository: build-pdfium\nAnalyzing repository: courses\nAnalyzing repository: aoc2023a-old\nAnalyzing repository: zendesk\nAnalyzing repository: RealKIE\nAnalyzing repository: bluesky\nAnalyzing repository: bug-predict\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 15.7 seconds, 37 messages, ~9767 tokens
+  key counts (top): map[content:13 is_error:13 text:6 tool_use_id:13 type:19]
+  key counts (all): map[content:13 is_error:13 text:19 tool_use_id:13 type:32]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_014g3AVVTsepDnfUEB9ZZHkn",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.0 seconds, 39 messages, ~9850 tokens
+  key counts (top): map[content:14 is_error:14 text:6 tool_use_id:14 type:20]
+  key counts (all): map[content:14 is_error:14 text:20 tool_use_id:14 type:34]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01K2C7vwSGnR4V1gV6Q7aEYY",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.1 seconds, 41 messages, ~10036 tokens
+  key counts (top): map[content:15 is_error:15 text:6 tool_use_id:15 type:21]
+  key counts (all): map[content:15 is_error:15 text:21 tool_use_id:15 type:36]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01XMHpWXTuZiCEDMvVHsiVh6",
+  "is_error": false,
+  "content": [
+    {
+      "text": "[\"files.RealKIE.json\",\"files.agent.json\",\"files.aoc2023a-old.json\",\"files.bluesky.json\",\"files.bug-predict.json\",\"files.build-pdfium.json\",\"files.courses.json\",\"files.zendesk.json\",\"repo.RealKIE.json\",\"repo.agent.json\",\"repo.aoc2023a-old.json\",\"repo.bluesky.json\",\"repo.bug-predict.json\",\"repo.build-pdfium.json\",\"repo.courses.json\",\"repo.zendesk.json\",\"summary.json\"]",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.5 seconds, 43 messages, ~10308 tokens
+  key counts (top): map[content:16 is_error:16 text:6 tool_use_id:16 type:22]
+  key counts (all): map[content:16 is_error:16 text:22 tool_use_id:16 type:38]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_017pBq54TpA7P7NxjGonm3db",
+  "is_error": false,
+  "content": [
+    {
+      "text": "{\n  \"repository\": \"build-pdfium\",\n  \"path\": \"~/code/build-pdfium\",\n  \"files\": [\n    {\n      \"path\": \"build.sh\",\n      \"size\":     2635\n    },\n    {\n      \"path\": \"config_darwin.sh\",\n      \"size\":      958\n    },\n    {\n      \"path\": \"config_win.sh\",\n      \"size\":     1018\n    },\n    {\n      \"path\": \"files.json\",\n      \"size\":   138200\n    },\n    {\n      \"path\": \"LICENSE\",\n      \"size\":    11357\n    },\n    {\n      \"path\": \"patches/plcd.patch\",\n      \"size\":   120790\n    },\n    {\n      \"path\": \"README.md\",\n      \"size\":     2674\n    },\n    {\n      \"path\": \"repositories.json\",\n      \"size\":   101813\n    }\n  ]\n}\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.5 seconds, 45 messages, ~11101 tokens
+  key counts (top): map[content:17 is_error:17 text:6 tool_use_id:17 type:23]
+  key counts (all): map[content:17 is_error:17 text:23 tool_use_id:17 type:40]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01T8p1A5Fudf3Kdb6G8ZGPUT",
+  "is_error": false,
+  "content": [
+    {
+      [REDACTED]
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 10.2 seconds, 47 messages, ~11878 tokens
+  key counts (top): map[content:18 is_error:18 text:6 tool_use_id:18 type:24]
+  key counts (all): map[content:18 is_error:18 text:24 tool_use_id:18 type:42]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01WzJDzshXestu5EvW6oBjPn",
+  "is_error": false,
+  "content": [
+    {
+      "text": "#!/bin/sh\n\n# Build from git repo?\nbuild_from_git=false\n# echo \"gitted:0\u003e build_from_git=${build_from_git}\"; exit 1\n\n#\n# Execution starts here.\n#\n# set -x\nset -e\n\necho \"OSTYPE=${OSTYPE}\"\n\nif [[ \"$OSTYPE\" == \"darwin\"* ]]; then\n    . config_darwin.sh\nelif [[ \"$OSTYPE\" == \"cygwin\" ]]; then\n    . config_win.sh\nelif [[ \"$OSTYPE\" == \"msys\" ]]; then\n    . config_win.sh\nelif [[ \"$OSTYPE\" == \"win32\" ]]; then\n    . config_win.sh\nelse\n    echo \"Unkown OS\"; exit 1\nfi\n\nPDFIUM_DIR=\"${BUILD_DIR}/pdfium\"\n\nmkdir -p ${BUILD_DIR}\ncd ${BUILD_DIR}\nmkdir -p ${PDFIUM_DIR}\n\n# exit 1\n\npwd\necho \"##1\"\n\nif [ ! -d \"${DEPOT_TOOLS}\" ]; then\n    echo \"##2 ${DEPOT_TOOLS} does not exist\"\n    # ln -s $DEPOT_TOOLS $DEPOT_TOOLS\n    # ${git} clone https://chromium.googlesource.com/chromium/tools/depot_tools.git\nfi\n\necho \"##3 DEPOT_TOOLS=${DEPOT_TOOLS}\"\n\nexport PATH=\"${DEPOT_TOOLS}\":\"$PATH\"\necho \"PATH=${PATH}\"\n# exit 1\n\nif [ \"$build_from_git\" = true ] ; then\n    # echo \"gitted:1\u003e build_from_git=${build_from_git}\"; pwd; exit 1\n    gclient config --unmanaged https://pdfium.googlesource.com/pdfium.git\n    gclient sync --no-history\nfi\n# echo \"gitted:x\u003e build_from_git=${build_from_git}\"; exit 1\n\ncd ${PDFIUM_DIR}\n# cd ~w/pdf/google_pdfium\npwd\necho \"##----------\"\n\nif [ \"$build_from_git\" = true ] ; then\n    echo \"gitted:1\u003e build_from_git=${build_from_git}\"; exit 1\n    git reset --hard HEAD\nfi\n\n# if [ -n \"${PATCH_FILE}\" ];then\n#     git apply -v \"${PATCH_FILE}\"\n# fi\n\n# # Change pdfium library from static to shared\n# sed -i.bak 's/^component(\"pdfium\")/shared_library(\"pdfium\")/' BUILD.gn\n# sed -i.bak 's/static_component_type = \"static_library\"//' BUILD.gn\n# sed -i.bak 's/complete_static_lib = true//' BUILD.gn\n\n# # Fix symbol visibility – files are built with -fvisiblity=hidden\n# sed -i.bak 's/^#define FPDF_EXPORT$/#define FPDF_EXPORT  __attribute__((visibility(\"default\")))/' public/fpdfview.h\n\n# # go-pdfium needs fpdf_deleters.h at top of include directory tree.\n# sed -i.bak    's/^#include \"public\\/cpp\\/fpdf_deleters.h\"/#include \"fpdf_deleters.h\"/' public/cpp/fpdf_scopers.h\n# sed -i.bak 's/^#include \"public/#include \"../' public/cpp/fpdf_deleters.h\n\necho \"##10 BUILD_RES=${BUILD_RES}\"\npwd\ngn gen \"${BUILD_RES}\" --args='treat_warnings_as_errors = true is_debug = false symbol_level = 0 pdf_enable_v8 = false pdf_enable_xfa = false pdf_use_skia = false pdf_use_skia_paths = false pdf_is_standalone = true is_component_build = false pdf_is_complete_lib = true clang_use_chrome_plugins = false is_clang = true  target_cpu = \"x64\"  is_official_build=true chrome_pgo_phase = 0'\n\necho \"##11\"\nninja -C \"${BUILD_RES}\" pdfium_test\n\necho \"##12\"\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.3 seconds, 49 messages, ~12401 tokens
+  key counts (top): map[content:19 is_error:19 text:6 tool_use_id:19 type:25]
+  key counts (all): map[content:19 is_error:19 text:25 tool_use_id:19 type:44]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01GFiyi3e3U83PYeaXHjQZNc",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.8 seconds, 51 messages, ~13255 tokens
+  key counts (top): map[content:20 is_error:20 text:6 tool_use_id:20 type:26]
+  key counts (all): map[content:20 is_error:20 text:26 tool_use_id:20 type:46]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01NJ1Eqcn9kRDwg2uDptk3BQ",
+  "is_error": false,
+  "content": [
+    {
+      "text": "{\n  \"repository\": \"courses\",\n  \"path\": \"~/code/courses\",\n  \"files\": [\n    {\n      \"path\": \"files.json\",\n      \"size\":   573363\n    },\n    {\n      \"path\": \"LICENSE\",\n      \"size\":    11357\n    },\n    {\n      \"path\": \"README.md\",\n      \"size\":       29\n    },\n    {\n      \"path\": \"repositories.json\",\n      \"size\":    39889\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day1.txt\",\n      \"size\":     5275\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day10.txt\",\n      \"size\":     4563\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day11.txt\",\n      \"size\":     2984\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day12.txt\",\n      \"size\":     6479\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day13.txt\",\n      \"size\":     4071\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day14.txt\",\n      \"size\":     4278\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day15.txt\",\n      \"size\":     9327\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day16.txt\",\n      \"size\":     3940\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day17.txt\",\n      \"size\":     5752\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day18.txt\",\n      \"size\":     3516\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day19.txt\",\n      \"size\":     4134\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day2.txt\",\n      \"size\":     3090\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day20.txt\",\n      \"size\":     6468\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day21.txt\",\n      \"size\":     7458\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day22.txt\",\n      \"size\":     7449\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day23.txt\",\n      \"size\":     2775\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day24.txt\",\n      \"size\":     7636\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day25.txt\",\n      \"size\":     5372\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day3.txt\",\n      \"size\":     2571\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day4.txt\",\n      \"size\":     2183\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day5.txt\",\n      \"size\":     4827\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day6.txt\",\n      \"size\":     5732\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day7.txt\",\n      \"size\":     3393\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day8.txt\",\n      \"size\":     3985\n    },\n    {\n      \"path\": \"solveit/problem_statements/2024/day9.txt\",\n      \"size\":     4592\n    },\n    {\n      \"path\": \"solveit/scrape.py\",\n      \"size\":     1897\n    }\n  ]\n}\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.5 seconds, 53 messages, ~13332 tokens
+  key counts (top): map[content:21 is_error:21 text:6 tool_use_id:21 type:27]
+  key counts (all): map[content:21 is_error:21 text:27 tool_use_id:21 type:48]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01A7vomGQ9vLdRW8YxGFGg44",
+  "is_error": false,
+  "content": [
+    {
+      "text": "# courses\nNotes from courses\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  9.1 seconds, 55 messages, ~13899 tokens
+  key counts (top): map[content:22 is_error:22 text:6 tool_use_id:22 type:28]
+  key counts (all): map[content:22 is_error:22 text:28 tool_use_id:22 type:50]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0171XGJTehWPtc5jvE4oJfvx",
+  "is_error": false,
+  "content": [
+    {
+      "text": "import requests\nimport os\nimport httpx\nfrom functools import partial\nfrom bs4 import BeautifulSoup\n\n# John\n\ndef problem_statement_(year, day):\n    url = f\"https://adventofcode.com/{year}/day/{day}\"\n    response = requests.get(url)\n    if response.status_code != 200:\n        print(f\"Failed to retrieve data for day {day}\")\n        return None\n    soup = BeautifulSoup(response.content, \"html.parser\")\n    problem_statement = soup.find(\"article\", class_=\"day-desc\").text\n    return problem_statement\n\n\n# SolveIt\n\nsession_cookie = \"53616c7465645f5fd2b6bad9a8267570488212eb435a0d59de99794fcfdf3b471d87d6155d88f51eb376a1c2107c953323aaafa81f77baa72d616ad0e219add3\"\n\ndef get_aoc_problem(year, day, session_cookie):\n    url = f\"https://adventofcode.com/{year}/day/{day}\"\n    headers = {'Cookie': f'session={session_cookie}'}\n\n    response = httpx.get(url, headers=headers)\n    if response.status_code != 200:\n        print(f\"Error: Status code {response.status_code}\")\n        return None\n\n    soup = BeautifulSoup(response.text, 'html.parser')\n    articles = soup.find_all('article', class_='day-desc')\n    problem_text = '\\n\\n'.join(article.get_text() for article in articles)\n\n    return problem_text\n\ndef test_get_aoc_problem():\n    # Let's try it with 2020, Day 1\n    assert \"Report Repair\" in get_aoc_problem(2020, 1, session_cookie)\n\n\nproblem_statement_ = partial(get_aoc_problem, session_cookie=session_cookie)\n\ndef download_aoc_problem_statements(year):\n    dirname = f\"problem_statements/{year}\"\n    os.makedirs(dirname, exist_ok=True)\n    for day in range(1, 26):\n        problem_statement = problem_statement_(year, day)\n        if not problem_statement: continue\n        with open(f\"{dirname}/day{day}.txt\", \"w\") as f: f.write(problem_statement)\n        print(f\"Downloaded day {day} problem statement\")\n\nif __name__ == \"__main__\":\n    year = 2024\n    download_aoc_problem_statements(year)\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.9 seconds, 57 messages, ~14312 tokens
+  key counts (top): map[content:23 is_error:23 text:6 tool_use_id:23 type:29]
+  key counts (all): map[content:23 is_error:23 text:29 tool_use_id:23 type:52]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_013XNbTFqjzPAgdNJsBBzp1r",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.2 seconds, 59 messages, ~14677 tokens
+  key counts (top): map[content:24 is_error:24 text:6 tool_use_id:24 type:30]
+  key counts (all): map[content:24 is_error:24 text:30 tool_use_id:24 type:54]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01KpiNqphnzc7j74jixQw1zQ",
+  "is_error": false,
+  "content": [
+    {
+      "text": "{\n  \"repository\": \"aoc2023a-old\",\n  \"path\": \"~/code/aoc2023a-old\",\n  \"files\": [\n    {\n      \"path\": \"aoc2023-day2-1.py\",\n      \"size\":     2233\n    },\n    {\n      \"path\": \"aoc2023-day2-input-test.txt\",\n      \"size\":      321\n    },\n    {\n      \"path\": \"aoc2023-day2-input.txt\",\n      \"size\":    10589\n    },\n    {\n      \"path\": \"aoc2023-day3-1.py\",\n      \"size\":     2304\n    },\n    {\n      \"path\": \"aoc2023-day3-input-test.txt\",\n      \"size\":      110\n    },\n    {\n      \"path\": \"aoc2023-day3-input.txt\",\n      \"size\":    19740\n    },\n    {\n      \"path\": \"dc.py\",\n      \"size\":      373\n    },\n    {\n      \"path\": \"files.json\",\n      \"size\":   219334\n    },\n    {\n      \"path\": \"LICENSE\",\n      \"size\":    11357\n    },\n    {\n      \"path\": \"log.txt\",\n      \"size\":    83247\n    },\n    {\n      \"path\": \"ns.py\",\n      \"size\":      419\n    },\n    {\n      \"path\": \"README.md\",\n      \"size\":       10\n    },\n    {\n      \"path\": \"repositories.json\",\n      \"size\":    37403\n    }\n  ]\n}\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.0 seconds, 61 messages, ~15343 tokens
+  key counts (top): map[content:25 is_error:25 text:6 tool_use_id:25 type:31]
+  key counts (all): map[content:25 is_error:25 text:31 tool_use_id:25 type:56]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_011VnsVTox7RgLwZQGrsAx4N",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\"\"\"\n    https://adventofcode.com/2023/day/2\n\"\"\"\nimport re\nimport math\n\nINPUT = \"aoc2023-day2-input.txt\"\n# INPUT = \"aoc2023-day2-input-test.txt\"\n\nKEYS = [\"red\", \"green\", \"blue\"]\nMAX_CUBES = {\"red\": 12, \"green\": 13, \"blue\": 14}\n\nRE_TITLE = re.compile(r\"Game\\s+(\\d+)\")\nRE_VAL = re.compile(r\"(\\d+)\\s+(\\S+)\")\n\ndef parse_value(value_str):\n    match = RE_VAL.search(value_str)\n    if match:\n        return int(match.group(1)), match.group(2)\n    assert False, f\"Invalid value: {value_str}\"\n\ndef parse_group(game):\n    values = [parse_value(v) for v in game.split(\",\")]\n    return {k: v for v, k in values}  \n\ndef parse_line(line):\n    title_str, game_str = line.split(\":\")\n    draws_str = game_str.split(\";\")  \n    game_id = int(RE_TITLE.search(title_str).group(1)) \n    draws = [parse_group(drw) for drw in draws_str]\n    return game_id, draws\n\ndef max_cubes(draws):\n    k_max = {}\n    for value in draws:\n        for k, v in value.items():\n            k_max[k] = max(k_max.get(k, 0), v)   \n    return {k: v for k, v in k_max.items()}\n\ndef allowed_max(total):\n    return all(v \u003c= MAX_CUBES[k] for k, v in total.items())\n\ndef show(draw):\n    return [draw.get(k, 0) for k in KEYS]\n\ndef power_(draw):\n    return math.prod(draw.values())\n\nlines = open(INPUT).read().splitlines()\n\nIS_PART1 = False\n\nif IS_PART1:\n    print(f\"Max cubes: {MAX_CUBES}\")\n    allowed_ids = []\n    for i, line in enumerate(lines):\n        game_id, draws = parse_line(line)\n        draw_max = max_cubes(draws)\n        allowed = allowed_max(draw_max)\n        if allowed:\n            allowed_ids.append(game_id)\n\n        if i \u003c 5 or allowed or True: \n            print(f\"{i:4}: Game {game_id:2}:: {allowed} total={show(draw_max)} draws={[show(d) for d in draws]}\")\n\n    id_sum = sum(allowed_ids)\n    print(f\"Sum of allowed game IDs: {id_sum} {allowed_ids}\")\n\nelse:\n    power_list = []\n    for i, line in enumerate(lines):\n        game_id, draws = parse_line(line)\n        draw_max = max_cubes(draws)\n        power = power_(draw_max)\n        power_list.append(power)\n\n        print(f\"{i+1:4}: Game {game_id:2}:: power={power} total={show(draw_max)} draws={[show(d) for d in draws]}\")\n\n    power_sum = sum(power_list)\n    print(f\"Sum of powers: {power_sum} {power_list}\")\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 12.5 seconds, 63 messages, ~16022 tokens
+  key counts (top): map[content:26 is_error:26 text:6 tool_use_id:26 type:32]
+  key counts (all): map[content:26 is_error:26 text:32 tool_use_id:26 type:58]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01C2tAYkF8jhunyFb5Jtbg3V",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\"\"\"\n    https://adventofcode.com/2023/day/3\n\"\"\"\nimport re\n\nVERBOSE = False\nTEST = False\n\nif TEST:\n    INPUT = \"aoc2023-day3-input-test.txt\"\nelse:           \n    INPUT = \"aoc2023-day3-input.txt\"\n\n\ndef matches_(regex, text):\n    \"\"\"\n    Find all matches of `regex` in `text`.\n    Return a list of tuples (start, end, match) for each match.\n    \"\"\"\n    matches = list(regex.finditer(text))\n    return [(m.start(), m.end(), m.group(0)) for m in matches]\n\nlines = open(INPUT).read().splitlines()\n\n\nRE_NUMBER = re.compile(r\"(\\d+)\")\nRE_SYMBOL = re.compile(r\"[^.\\d]\")\n\nif VERBOSE:\n    for regex in [RE_NUMBER, RE_SYMBOL]:\n        print(\"----------------------\")\n        print(f\"regex: {regex}\")\n        for i, line in enumerate(lines):\n            matches = matches_(regex, line)\n            print(f\"{i:4}: '{line}' {matches} \")\n\n# Find all symbols in lines\n# symbols[i][j] exists if character `j` in line `i` is a symbol.\nsymbols = {}\nfor i, line in enumerate(lines):\n    matches = matches_(RE_SYMBOL, line)\n    if not matches:\n        continue\n    symbols[i] = set()\n    for m in matches:\n        start, end, _ = m\n        symbols[i] |= set(range(start, end))\n\nif VERBOSE:\n    print(\"----------------------\")\n    for i in sorted(symbols.keys()):\n        print(f\"{i:4}: {sorted(symbols[i])}\")\n   \n# Find all numbers in lines\n# numbers is a list of tuples (line number, start, end, value)\nnumbers = []\nfor i, line in enumerate(lines):\n    matches = matches_(RE_NUMBER, line)\n    for m in matches:\n        start, end, v = m\n        numbers.append((i, start, end, int(v)))\n\n# Find all numbers that are adjacent to symbols\n# part_numbers is a list of numbers that are are adjacent to symbols in `line`.\npart_numbers = []\nfor i, start, end, v in numbers:\n    is_part = False\n    j0 = max(0, i-1)\n    j1 = min(len(lines), i+2)\n    k0 = max(0, start-1)\n    k1 = min(len(line), end+1)\n    for j in range(j0, j1):\n        if j in symbols:\n            for k in range(k0, k1):\n                if k in symbols[j]:\n                    is_part = True\n                    break   \n            if is_part:\n                break\n    if is_part:\n        part_numbers.append(v)\n\nif VERBOSE:\n    print(\"----------------------\")\n    for  v in part_numbers:  \n        print(f\"{v}\")\nprint(f\"Sum of part numbers: {sum(part_numbers)}\")\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  3.7 seconds, 65 messages, ~16589 tokens
+  key counts (top): map[content:27 is_error:27 text:6 tool_use_id:27 type:33]
+  key counts (all): map[content:27 is_error:27 text:33 tool_use_id:27 type:60]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_015GWhieWemaStzQVJXNq6nC",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.2 seconds, 67 messages, ~17187 tokens
+  key counts (top): map[content:28 is_error:28 text:6 tool_use_id:28 type:34]
+  key counts (all): map[content:28 is_error:28 text:34 tool_use_id:28 type:62]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01VSEoHeeNdkc7pMnvF7aQxv",
+  "is_error": false,
+  "content": [
+    {
+      "text": "{\n  \"repository\": \"zendesk\",\n  \"path\": \"~/code/zendesk\",\n  \"files\": [\n    {\n      \"path\": \"analyse_summaries.py\",\n      \"size\":     4592\n    },\n    {\n      \"path\": \"classify_tfdidf.py\",\n      \"size\":    13691\n    },\n    {\n      \"path\": \"claude.png\",\n      \"size\":    79282\n    },\n    {\n      \"path\": \"cluster_tickets.py\",\n      \"size\":    15482\n    },\n    {\n      \"path\": \"config_keywords.py\",\n      \"size\":      317\n    },\n    {\n      \"path\": \"config.py\",\n      \"size\":     2395\n    },\n    {\n      \"path\": \"download_tickets.py\",\n      \"size\":     1297\n    },\n    {\n      \"path\": \"evaluate_summary.py\",\n      \"size\":     6872\n    },\n    {\n      \"path\": \"explore_gemini.py\",\n      \"size\":     2546\n    },\n    {\n      \"path\": \"files.json\",\n      \"size\":   435277\n    },\n    {\n      \"path\": \"find_closest_tickets.py\",\n      \"size\":     7538\n    },\n    {\n      \"path\": \"install.sh\",\n      \"size\":      534\n    },\n    {\n      \"path\": \"LICENSE\",\n      \"size\":    11357\n    },\n    {\n      \"path\": \"logs_parser.py\",\n      \"size\":     6392\n    },\n    {\n      \"path\": \"models.py\",\n      \"size\":     3314\n    },\n    {\n      \"path\": \"rag_classifier.py\",\n      \"size\":    14096\n    },\n    {\n      \"path\": \"rag_summariser.py\",\n      \"size\":     8789\n    },\n    {\n      \"path\": \"README.md\",\n      \"size\":     4743\n    },\n    {\n      \"path\": \"repositories.json\",\n      \"size\":   105429\n    },\n    {\n      \"path\": \"reranker.py\",\n      \"size\":    17284\n    },\n    {\n      \"path\": \"SAMPLE_SUMMARY.txt\",\n      \"size\":     2060\n    },\n    {\n      \"path\": \"summarise_tickets.py\",\n      \"size\":     5586\n    },\n    {\n      \"path\": \"ticket_processor.py\",\n      \"size\":     9857\n    },\n    {\n      \"path\": \"utils.py\",\n      \"size\":     6598\n    },\n    {\n      \"path\": \"zendesk_wrapper.py\",\n      \"size\":    15741\n    }\n  ]\n}\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.4 seconds, 69 messages, ~18500 tokens
+  key counts (top): map[content:29 is_error:29 text:6 tool_use_id:29 type:35]
+  key counts (all): map[content:29 is_error:29 text:35 tool_use_id:29 type:64]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0141YLVt7Z2ZTeVDMN5PExYd",
+  "is_error": false,
+  "content": [
+    {
+      "text": "# Zendesk\nAnalyse zendesk tickets with RAG frameworks.\nStarting with [LlamaIndex 🦙](https://www.llamaindex.ai/).\n\n**Q: I just want to use the best model. Which one(s) should I use?**\n\nThe models currently performing best on my test Zendesk tickets are\n\n```\n# Reasonably priced and gives decent results\nsummarise_tickets.py --model claude --sub haiku \u003cticket number\u003e\n\n# Possibly the best results this month.\nsummarise_tickets.py --model gemini \u003cticket number\u003e\n```\n\n## Setup\n\nReplace the settings in [config.py](config.py) with your own Zendesk tickets and names. At the least\nyou should replace `COMPANY`.\n\nSet the following environment variables.\n```\nexport ZENDESK_USER=\"user@mydomain.com\"          # e.g. john@docs2info.com\nexport ZENDESK_TOKEN=\"\u003credacted\u003e\"                # e.g. password1234\nexport ZENDESK_SUBDOMAIN=\"my zendesk subdomain\"  # e.g. LayoutExtractor\n\npython -m venv .zdenv\nsource .zdenv/bin/activate\n\npip install --upgrade pip\n\npip install llama-index\npip install llama_index_core\npip install llama-index-embeddings-huggingface\n\n# For finding close tickets\npip install --q chromadb haystack-ai jina-haystack chroma-haystack\n\n# For clustering\npip install umap-learn\npip install hdbscan\npython -m pip install -U matplotlib\n```\n\nFor Claude\n\n```\npip install llama-index-llms-anthropic\n```\n\nFor Ollama\n\n```\npip install llama-index-llms-ollama\n\n\nollama run mistral\nollama run llama2\nollama run llama3\nollama run zephyr\n\nollama pull mistral:instruct\nollama pull llama3:8b-instruct-q5_1\n\npip install dspy-ai\n```\n\nFor Gemini\n\n```\n# pip install llama-index-multi-modal-llms-gemini\npip install llama-index-vector-stores-qdrant\npip install llama-index-embeddings-gemini\npip install llama-index-llms-gemini\n# pip install -q llama-index google-generativeai\n```\n\nSet API keys for the LLMs you are using. You only need to set the ones you are running.\n```\nexport OPENAI_API_KEY=\"sk-...\"\nexport COHERE_API_KEY=\"Qht... \"\nexport LLAMA_CLOUD_API_KEY=\"llx-...\"\nexport ANTHROPIC_API_KEY=\"sk-ant...\"\n```\n\n## Run\n\n### Download Zendesk Tickets\n\nDownload all the Zendesk tickets created after [download_tickets.py.py](download_tickets.py.py)\n`START_DATE` (currently `2000-01-01`) and write them to the `data` directory.\n\n```\npython download_tickets.py\n```\n\n### Summarise ticket comments\n\n`summarise_tickets.py` summarises Zendesk tickets writes the summaries to the `summaries`\ndirectory.\n\n```\npython summarise_tickets.py --model \u003cllm model\u003e \u003cticket number\u003e\n```\n\ne.g.\n\n```\npython summarise_tickets.py --model llama  518539  # Summarise ticket 518539 using llama2 model\n```\n\n**NOTE:**\n\n`summarise_tickets.py --model llama`requires the Ollama server to be running.\n```\nollama serve\n```\n\n### Command Line Arguements\n```\n  --model MODEL         LLM model name. (llama | gemini | claude | openai)\n  --sub SUB             Sub-model name. [claude: (haiku | sonnet | opus)]\n  --overwrite           Overwrite existing summaries.\n  --max_tickets MAX_TICKETS\n                        Maximum number of tickets to process.\n  --max_size MAX_SIZE   Maximum size of ticket comments in kilobytes.\n  --pattern PATTERN     Select tickets with this pattern in the comments.\n  --high                Process only high priority tickets.\n  --all                 Process all tickets.\n  --list                List tickets. Don't summarise.\n```\n\n\ne.g.\n```\nsummarise_tickets.py --model llama  1234  # Ollama        Runs open source LLM locally!\nsummarise_tickets.py --model claude 1234  # Claude Haiku  The best cheap model!\nsummarise_tickets.py --model gemini 1234  # Gemini. Could be the best model this month!\nsummarise_tickets.py --model llama 1234   # Ollama Free and accurate but slow.\nsummarise_tickets.py --model claude -sub sonne 1234   # Even better than Haiku but costs more.\npython summarise_tickets.py --model llama --max_size 10      # Summarise all tickets of ≤ 10 kb\npython summarise_tickets.py --model llama --max_tickets 10   # Summarise your 10 tickets with the most comments\npython summarise_tickets.py --model llama --high             # Summarise all your high priority tickets\npython summarise_tickets.py --model llama --pattern \"John\\s+Doe\" # Summarise all tickets containing the pattern John Doe\npython summarise_tickets.py --model llama --pattern \"John\\s+Doe\" --list # List all tickets containing the pattern John\n```\n\n\n## Observations\n\n1. Anthropic Claude's Haiku gave great results.\n1. Ollama: Generally slower than the commercial LLMs. Inconvenient for the very large tickets.\n1. Zephyr gave the best results of the Ollama models.\n1. Anthropic: Consistent [anthropic.RateLimitError](claude.png) errors after first set of tests.\n1. Gemini finds more instances of facts than Anthropic Haiku.\n\n\n# API Keys\n\n## Gemini\n\nhttps://aistudio.google.com/app/apikey\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.3 seconds, 71 messages, ~18914 tokens
+  key counts (top): map[content:30 is_error:30 text:6 tool_use_id:30 type:36]
+  key counts (all): map[content:30 is_error:30 text:36 tool_use_id:30 type:66]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0156hDX9jFaU5SeAyxEmSBkc",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\"\"\"\n    This module is used to fetch ticket comments from Zendesk.\n    https://developer.zendesk.com/api-reference/ticketing/tickets/tickets/#show-ticket\n\"\"\"\nimport datetime\nfrom argparse import ArgumentParser\nfrom config import TICKET_INDEX_PATH, TICKET_ALIASES_PATH\nfrom utils import save_json\nfrom zendesk_wrapper import load_create_index, update_index\n\nMIN_DATE = None\nMAX_DATE = None\n\n# Uncomment these lines to set a date range for the tickets.\n# MIN_DATE = datetime.datetime(2024, 1, 1)\n# MAX_DATE = datetime.datetime(2024, 1, 5)\n\ndef main():\n    \"\"\" Entry point of the program.\n        Downloads all the tickets and comments from Zendesk .\n    \"\"\"\n    parser = ArgumentParser(description=(\"Download ticket from Zendesk.\"))\n    parser.add_argument(\"--no-fetch\", action=\"store_true\", help=\"Don't fetch the tickets.\")\n    parser.add_argument(\"--clean\", action=\"store_true\", help=\"Delete current downloaded tickets.\")\n    args = parser.parse_args()\n\n    print(\"Updating the index...\")\n    df = load_create_index(add_custom_fields=True)\n\n    print(\"Updating the index...\")\n    update_index(df,\n                min_date=MIN_DATE, max_date=MAX_DATE,\n                do_fetch=not args.no_fetch,\n                clean=args.clean)\n\n    print(\"Index created!\")\n\nif __name__ == \"__main__\":\n    main()\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 16.5 seconds, 73 messages, ~20443 tokens
+  key counts (top): map[content:31 is_error:31 text:6 tool_use_id:31 type:37]
+  key counts (all): map[content:31 is_error:31 text:37 tool_use_id:31 type:68]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01PAHJW49r7dvweTmfGZkZZj",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\"\"\" Summarise Zendesk tickets using different LLMs and summarisation prompts.\n\n    The script takes command-line arguments\n        - to specify the LLM model to use,\n        - whether to overwrite existing summaries, and\n        - the maximum number of tickets and size of ticket comments to process.\n    It then loads the specified LLM model, retrieves a list of ticket numbers, and summarise the\n    tickets using the LLM model.\n\n    It saves the resulting summaries to the \"summaries\" directory.\n\n    Command-line arguments:\n    --model: LLM model name. (llama | gemini | claude)\n    --sub: LLM sub-model name. e.g, (opus | sonnet | haiku) for model claude.\n    --overwrite: Overwrite existing summaries.\n    --max_tickets: Maximum number of tickets to process.\n    --max_size: Maximum size of ticket comments in kilobytes.\n    --pattern: Select tickets with this pattern in the comments.\n    --list: List tickets. Don't summarise.\n\"\"\"\nimport sys\nimport time\nfrom argparse import ArgumentParser\nfrom utils import print_exit, match_key\nfrom ticket_processor import ZendeskData, describe_tickets\nfrom models import LLM_MODELS, sub_models, set_best_embedding\nfrom classify_tfdidf import classify_tickets\n\ndef main():\n    \"Summarise Zendesk tickets using different LLMs and summarisation prompts across the command line.\"\n    model_names = f\"({' | '.join(LLM_MODELS.keys())})\"\n    has_submodels = [key for key in LLM_MODELS.keys() if len(LLM_MODELS[key].models) \u003e 1]\n    sub_model_names = f\"[{' | '.join(sub_models(key) for key in has_submodels)}]\"\n\n    parser = ArgumentParser(description=(\"Evaluate different LLMs and summarisation prompts.\"))\n    parser.add_argument('vars', nargs='*')\n    parser.add_argument(\"--model\", type=str, required=False,\n        help=f\"LLM model name. {model_names}\"\n    )\n    parser.add_argument(\"--sub\", type=str, required=False,\n        help=f\"Sub-model name. {sub_model_names}\"\n    )\n\n    parser.add_argument(\"--overwrite\", action=\"store_true\",\n        help=\"Overwrite existing summaries.\")\n    parser.add_argument(\"--max_tickets\", type=int, default=0,\n        help=\"Maximum number of tickets to process.\"\n    )\n    parser.add_argument(\"--max_size\", type=int, default=0,\n        help=\"Maximum size of ticket comments in kilobytes.\"\n    )\n    parser.add_argument(\"--pattern\", type=str, required=False, default=\"\",\n        help=\"Select tickets with this pattern in the comments.\"\n    )\n    parser.add_argument(\"--high\", action=\"store_true\",\n        help=\"Process only high priority tickets.\")\n    parser.add_argument(\"--all\", action=\"store_true\",\n        help=\"Process all tickets.\")\n    parser.add_argument(\"--list\", action=\"store_true\",\n        help=\"List tickets. Don't summarise.\")\n    parser.add_argument(\"--features\", action=\"store_true\",\n        help=\"Summarise tickets for feature classification.\")\n    parser.add_argument(\"--classify\", action=\"store_true\",\n        help=\"Classify tickets.\")\n\n    args = parser.parse_args()\n    positionals = args.vars\n\n    zd = ZendeskData()\n\n    if positionals:\n        ticket_numbers = [int(x) for x in positionals if x.isdigit()]\n        new_numbers, bad_numbers = zd.add_new_tickets(ticket_numbers)\n        if bad_numbers:\n            print(f\"Tickets not found: {bad_numbers}\", file=sys.stderr)\n    else:\n        ticket_numbers = zd.ticket_numbers()\n        priority = \"high\" if args.high else None\n        ticket_numbers = zd.filter_tickets(ticket_numbers, args.pattern, priority,\n                    args.max_size, args.max_tickets)\n\n    ticket_numbers = zd.existing_tickets(ticket_numbers)\n\n    if args.list:\n        metadata_list = [(k, zd.metadata(k)) for k in ticket_numbers]\n        describe_tickets(metadata_list)\n        exit()\n\n    if not args.model:\n        print_exit(\"Model name not specified. Use --model to specify a model\")\n\n    model_name = match_key(LLM_MODELS, args.model)\n    model_type = LLM_MODELS[model_name]\n    if not model_type:\n        print_exit(f\"Unknown model '{args.model}'\")\n\n    set_best_embedding()\n    submodel = None\n    model_instance = model_type()\n    if model_instance.models and args.sub:\n        submodel = match_key(model_type.models, args.sub)\n        if not submodel:\n            print_exit(f\"Unknown submodel '{args.sub}'\")\n        llm, model = model_instance.load(submodel)\n    else:\n        llm, model = model_instance.load()\n\n    do_features = args.features or args.classify\n    summariser = zd.get_summariser(llm, model, do_features)\n\n    if args.classify:\n        # assert ticket_numbers, \"No tickets to classify.\"\n        # data_list = [(zd.metadata(t), zd.comment_paths(t)) for t in ticket_numbers]\n        # data_list = [both for both in data_list if both[1]]\n        # assert ticket_numbers, f\"No comments to classify in {len(ticket_numbers)} tickets.\"\n\n        classify_tickets(zd, summariser, ticket_numbers)\n        exit(0)\n\n    print(\"Zendesk ticket summarisation ==========================================================\")\n    print(f\"  LLM family: {model_name}\")\n    print(f\"  LLM model: {model}\")\n\n    if not any((positionals, args.all, args.high, args.pattern, args.max_size, args.max_tickets)):\n        print_exit(\"Please select a ticket number(s), specify a filter or use the --all flage.\")\n\n    print(f\"Processing {len(ticket_numbers)} tickets with {model} \" +\n        f\"(max {args.max_size} kb {args.max_tickets} tickets)...  \")\n\n    summaryPaths = zd.summarise_tickets(ticket_numbers, summariser, overwrite=args.overwrite)\n\n    print(f\"{len(summaryPaths)} summary paths saved. {summaryPaths[:2]} ...\")\n\nif __name__ == \"__main__\":\n    main()\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.0 seconds, 75 messages, ~21315 tokens
+  key counts (top): map[content:32 is_error:32 text:6 tool_use_id:32 type:38]
+  key counts (all): map[content:32 is_error:32 text:38 tool_use_id:32 type:70]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01NbmjC4pakXJTwP12EC7ovD",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.4 seconds, 77 messages, ~22386 tokens
+  key counts (top): map[content:33 is_error:33 text:6 tool_use_id:33 type:39]
+  key counts (all): map[content:33 is_error:33 text:39 tool_use_id:33 type:72]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_012WcwuEaCD31zKH37pq8Lwq",
+  "is_error": false,
+  "content": [
+    {
+      "text": "{\n  \"repository\": \"RealKIE\",\n  \"path\": \"~/code/ai/RealKIE\",\n  \"files\": [\n    {\n      \"path\": \"charts/Chart.yaml\",\n      \"size\":      270\n    },\n    {\n      \"path\": \"charts/templates/sweeps.yaml\",\n      \"size\":     1830\n    },\n    {\n      \"path\": \"charts/values.yaml\",\n      \"size\":     2219\n    },\n    {\n      \"path\": \"dataset_scripts/dataset_qa.py\",\n      \"size\":     3691\n    },\n    {\n      \"path\": \"dataset_scripts/explore_dataset.py\",\n      \"size\":    15031\n    },\n    {\n      \"path\": \"dataset_scripts/get_all_datasets.sh\",\n      \"size\":     1228\n    },\n    {\n      \"path\": \"dataset_scripts/get_dataset_qa.sh\",\n      \"size\":      341\n    },\n    {\n      \"path\": \"dataset_scripts/get_datasets.py\",\n      \"size\":    10504\n    },\n    {\n      \"path\": \"docker-compose.yml\",\n      \"size\":     1345\n    },\n    {\n      \"path\": \"docs/_config.yml\",\n      \"size\":       27\n    },\n    {\n      \"path\": \"docs/index.md\",\n      \"size\":      919\n    },\n    {\n      \"path\": \"files.json\",\n      \"size\":   753372\n    },\n    {\n      \"path\": \"finetune/Dockerfile\",\n      \"size\":      727\n    },\n    {\n      \"path\": \"finetune/requirements.txt\",\n      \"size\":       10\n    },\n    {\n      \"path\": \"finetune/run_sweeps.sh\",\n      \"size\":      486\n    },\n    {\n      \"path\": \"finetune/train_and_predict.py\",\n      \"size\":     9490\n    },\n    {\n      \"path\": \"helm_scripts/build_helm_dependencies.sh\",\n      \"size\":      645\n    },\n    {\n      \"path\": \"helm_scripts/package_helm_chart.sh\",\n      \"size\":     1534\n    },\n    {\n      \"path\": \"helm_scripts/push_helm_chart.sh\",\n      \"size\":     2674\n    },\n    {\n      \"path\": \"helm_scripts/push_helm_chart.sh~\",\n      \"size\":     2731\n    },\n    {\n      \"path\": \"helm_scripts/update_image_tags.sh\",\n      \"size\":      309\n    },\n    {\n      \"path\": \"helm_scripts/update_image_tags.sh~\",\n      \"size\":      308\n    },\n    {\n      \"path\": \"helm_scripts/upload_helm_charts.sh\",\n      \"size\":      550\n    },\n    {\n      \"path\": \"helm_scripts/upload_helm_charts.sh~\",\n      \"size\":      721\n    },\n    {\n      \"path\": \"helm_scripts/validate_chart.sh\",\n      \"size\":      257\n    },\n    {\n      \"path\": \"huggingface_token_classification/Dockerfile\",\n      \"size\":      985\n    },\n    {\n      \"path\": \"huggingface_token_classification/requirements.txt\",\n      \"size\":      110\n    },\n    {\n      \"path\": \"huggingface_token_classification/run_sweeps.sh\",\n      \"size\":      341\n    },\n    {\n      \"path\": \"huggingface_token_classification/train_and_predict.py\",\n      \"size\":    15345\n    },\n    {\n      \"path\": \"layoutlmv3/Dockerfile\",\n      \"size\":     1334\n    },\n    {\n      \"path\": \"layoutlmv3/requirements.txt\",\n      \"size\":      244\n    },\n    {\n      \"path\": \"layoutlmv3/run_sweeps.sh\",\n      \"size\":      184\n    },\n    {\n      \"path\": \"layoutlmv3/train_and_predict.py\",\n      \"size\":    22671\n    },\n    {\n      \"path\": \"metrics/metrics/__init__.py\",\n      \"size\":        0\n    },\n    {\n      \"path\": \"metrics/metrics/metrics.py\",\n      \"size\":     7955\n    },\n    {\n      \"path\": \"metrics/setup.py\",\n      \"size\":      266\n    },\n    {\n      \"path\": \"README.md\",\n      \"size\":      956\n    },\n    {\n      \"path\": \"repositories.json\",\n      \"size\":   124187\n    },\n    {\n      \"path\": \"results_analysis_scripts/results.py\",\n      \"size\":    10274\n    },\n    {\n      \"path\": \"scripts/get_data.sh\",\n      \"size\":      123\n    },\n    {\n      \"path\": \"scripts/run_sweeps.sh\",\n      \"size\":     2263\n    },\n    {\n      \"path\": \"visualization/visualize_data.py\",\n      \"size\":     3868\n    }\n  ]\n}\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.0 seconds, 79 messages, ~22706 tokens
+  key counts (top): map[content:34 is_error:34 text:6 tool_use_id:34 type:40]
+  key counts (all): map[content:34 is_error:34 text:40 tool_use_id:34 type:74]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01S1NFBSg55ndLHZEWrSsvQX",
+  "is_error": false,
+  "content": [
+    {
+      "text": "# RealKIE - Five Novel Datasets for Enterprise Key Information Extraction\n\n## Accessing the data\n\nRun `aws s3 sync s3://project-fruitfly \u003cdestination\u003e --endpoint-url=https://s3.us-east-2.wasabisys.com --no-sign-request` to pull the data.\n\nA backup copy of our datasets is available at https://zenodo.org/records/13327077 in case of issues with Wasabi.\n\n## Running Baselines\n\nto run the baselines\n```\nbash scripts/get_data.sh\ndocker compose up -d\nbash scripts/run_sweeps.sh\n```\nYou will need to modify the variables at the top of the run_sweeps.sh script to point to the correct Weights and Biases entity and project.\nThe results will be available on Weights and Biases. Some scripts for analysis can be found in `results_analysis_scripts/`\n\n## Visualization\n\nTo visualize the data\n* First download the data to \u003crepo_path\u003e/datasets/\n* install streamlit `pip install streamlit`\n* from the root of the repo run `streamlit run visualization/visualize_data.py`\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 15.8 seconds, 81 messages, ~23111 tokens
+  key counts (top): map[content:35 is_error:35 text:6 tool_use_id:35 type:41]
+  key counts (all): map[content:35 is_error:35 text:41 tool_use_id:35 type:76]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_011E6Y2Zwmba18UwwyQBjwr8",
+  "is_error": false,
+  "content": [
+    {
+      "text": "import json\nimport os\nimport tempfile\nimport traceback\nimport gzip\n\nimport fire\nimport pandas as pd\nimport wandb\n\nimport tensorflow as tf\n\nfrom finetune import DocumentLabeler, SequenceLabeler\nfrom finetune.base_models import (\n    BERTLarge,\n    BERTModelCased,\n    LayoutLM,\n    RoBERTa,\n    ROBERTALarge,\n    XDocBase,\n)\nfrom metrics import metrics\n\nTRAINING_LIB = \"finetune\"\n\n\ndef get_dataset_path(dataset_name, dataset_dir, split):\n    return os.path.join(dataset_dir, dataset_name, f\"{split}.csv\")\n\n\ndef strip_unused_ocr_data(ocr_data: dict):\n    ocr_data.pop(\"chars\", None)\n    ocr_data.pop(\"blocks\", None)\n    for token in ocr_data[\"tokens\"]:\n        token.pop(\"style\", None)\n        token.pop(\"page_offset\", None)\n        token.pop(\"block_offset\", None)\n        token.pop(\"page_num\", None)\n    for page in ocr_data[\"pages\"]:\n        page.pop(\"image\", None)\n        page.pop(\"thumbnail\", None)\n        page.pop(\"ocr_statistics\", None)\n        page.pop(\"page_num\", None)\n    return ocr_data\n\n\ndef fix_page_offsets(doc_ocr):\n    # This doesn't actually change the data in any important way,\n    # but just stops us hitting assertion errors in finetune\n    # Error comes from long strings of empty pages in resource contracts.\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.0 seconds, 83 messages, ~23984 tokens
+  key counts (top): map[content:36 is_error:36 text:6 tool_use_id:36 type:42]
+  key counts (all): map[content:36 is_error:36 text:42 tool_use_id:36 type:78]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01YB34vWbBPrZfBLoj3k9vPj",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.4 seconds, 85 messages, ~24296 tokens
+  key counts (top): map[content:37 is_error:37 text:6 tool_use_id:37 type:43]
+  key counts (all): map[content:37 is_error:37 text:43 tool_use_id:37 type:80]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TdWBTS4TQ8aXidZf6Lyh5d",
+  "is_error": false,
+  "content": [
+    {
+      "text": "{\n  \"repository\": \"bluesky\",\n  \"path\": \"~/code/bluesky\",\n  \"files\": [\n    {\n      \"path\": \"agile_users.jsonl\",\n      \"size\":    14783\n    },\n    {\n      \"path\": \"anime.jsonl\",\n      \"size\":   496495\n    },\n    {\n      \"path\": \"anon_blockers.jsonl\",\n      \"size\":     2606\n    },\n    {\n      \"path\": \"block.py\",\n      \"size\":      919\n    },\n    {\n      \"path\": \"files.json\",\n      \"size\":   176507\n    },\n    {\n      \"path\": \"gig_work2.jsonl\",\n      \"size\":    10986\n    },\n    {\n      \"path\": \"intro.py\",\n      \"size\":      394\n    },\n    {\n      \"path\": \"LICENSE\",\n      \"size\":    11357\n    },\n    {\n      \"path\": \"README.md\",\n      \"size\":      235\n    },\n    {\n      \"path\": \"repositories.json\",\n      \"size\":    62037\n    },\n    {\n      \"path\": \"search.py\",\n      \"size\":     3029\n    }\n  ]\n}\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.9 seconds, 87 messages, ~24426 tokens
+  key counts (top): map[content:38 is_error:38 text:6 tool_use_id:38 type:44]
+  key counts (all): map[content:38 is_error:38 text:44 tool_use_id:38 type:82]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Q1AGqVKRBattaEbLA8bD74",
+  "is_error": false,
+  "content": [
+    {
+      "text": "# bluesky\n\nBluesky utils\n\n1. **introduction.py**: Demonstrates the Client interface.\n1. **search.py**: Searches for users and writes their details to a jsonl file.\n1. **block.py**: Reads user details from a jsonl file and blocks them.\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  4.8 seconds, 89 messages, ~24735 tokens
+  key counts (top): map[content:39 is_error:39 text:6 tool_use_id:39 type:45]
+  key counts (all): map[content:39 is_error:39 text:45 tool_use_id:39 type:84]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Cy9ZrjhiJpv58C9sZ8o2zs",
+  "is_error": false,
+  "content": [
+    {
+      "text": "from atproto import Client, models\nfrom credentials import HANDLE, PASSWORD\nfrom search import act_on_users, USERS_PATH\n\nclient = Client()\nprofile = client.login(HANDLE, PASSWORD)\n\n\ndef block_actor(handle):\n    \"block bluesky actor by handle\"\n    data = client.get_profile(actor=handle)\n    blocked_user_did = data.did\n    display_name = data.display_name\n    block = client.app.bsky.graph.block\n\n    block_record = models.AppBskyGraphBlock.Record(\n        subject=blocked_user_did,\n        created_at=client.get_current_time_iso()\n    )\n    uri = client.app.bsky.graph.block.create(client.me.did, block_record).uri\n    print(f\"Blocked {display_name} ({blocked_user_did}) with uri={uri}\")\n\ndef block_user(user):\n    \"block bluesky for `user` dict from act_on_users\"\n    handle = user[\"handle\"]\n    block_actor(handle)\n\nif __name__ == \"__main__\":\n    with open(USERS_PATH, \"r\") as f:\n        act_on_users(f, block_user)\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.4 seconds, 91 messages, ~25612 tokens
+  key counts (top): map[content:40 is_error:40 text:6 tool_use_id:40 type:46]
+  key counts (all): map[content:40 is_error:40 text:46 tool_use_id:40 type:86]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_011XPJPTsttJbnvfAVVswUpd",
+  "is_error": false,
+  "content": [
+    {
+      "text": "import requests\nimport jsonlines\n\ndef search_bluesky_actors(query, limit=10, cursor=None):\n    # URL for searching actors\n    url = \"https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors\"\n\n    params = {\n        \"q\": query,\n        \"limit\": limit\n    }\n\n    if cursor:\n        params[\"cursor\"] = cursor\n\n    response = requests.get(url, params=params)\n\n    if response.status_code == 200:\n        return response.json()  # Return the JSON response if successful\n    else:\n        raise Exception(f\"Error: {response.status_code} - {response.text}\")\n\ndef get_actor_profile(actor_handle):\n    url = \"https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile\"\n    params = {\n        \"actor\": actor_handle\n    }\n    response = requests.get(url, params=params)\n    if response.status_code == 200:\n        return response.json()\n    else:\n        raise Exception(f\"Error: {response.status_code} - {response.text}\")\n\ndef search_everyone(SEARCH_KEYWORD, fp, max_users=5):\n    cursor = None\n    n = 0\n\n    writer = jsonlines.Writer(fp)\n    while True:\n        results = search_bluesky_actors(SEARCH_KEYWORD, cursor=cursor)\n        for actor in results[\"actors\"]:\n            handle = actor[\"handle\"]\n            # display_name = actor[\"displayName\"]\n            profile = get_actor_profile(handle)\n            bio = profile.get(\"description\", \"\")\n            bio = bio.replace(\"\\n\", \" \")\n            followers = profile.get(\"followersCount\", 0)\n\n            user = {\n                \"handle\": handle,\n                \"followers\": followers,\n                \"display_name\": actor[\"displayName\"],\n                \"bio\": bio,\n            }\n            writer.write(user)\n\n            n += 1\n            if n \u003e= max_users:\n                return\n            if n % 1000 == 1:\n                print(f\"Found {n} users: {handle} {followers} {bio[:100]}\")\n\n        cursor = results.get(\"cursor\")\n        if not cursor:\n            break\n\ndef act_on_users(f, action):\n    \"act_on_users(f, action) calls action(user) for each user in f\"\n    reader = jsonlines.Reader(f)\n    for user in reader:\n        action(user)\n\ndef print_user(user):\n    followers = user[\"followers\"]\n    handle = user[\"handle\"]\n    display_name = user[\"display_name\"]\n    bio = user[\"bio\"]\n    print(f\"{followers:4} {handle:20} {display_name:20} '{bio[:100]}'\")\n\nUSERS_PATH = \"agile_users.jsonl\"\nSEARCH_KEYWORD = \"Agile AND Software\"\n\n# USERS_PATH = \"gig_work.jsonl\"\n# SEARCH_KEYWORD = \"gig AND work\"\n\n# USERS_PATH = \"gig_work2.jsonl\"\n# SEARCH_KEYWORD = \"gig work\"\n\n# USERS_PATH = \"pdf_dev.jsonl\"\n# SEARCH_KEYWORD = \"pdf\"\n\n# USERS_PATH = \"anime.jsonl\"\n# SEARCH_KEYWORD = \"anime\"\n\nUSERS_PATH = \"anon_blockers.jsonl\"\nSEARCH_KEYWORD = \"block anon\"\n\nif __name__ == \"__main__\":\n    print(f\"Searching for '{SEARCH_KEYWORD}'\")\n    print(f\"Saving to {USERS_PATH}\")  \n    if True:\n        with open(USERS_PATH, \"w\") as f:\n            search_everyone(SEARCH_KEYWORD, f, max_users=10_000)\n    else:\n        with open(USERS_PATH, \"r\") as f:\n            act_on_users(f, print_user)\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 12.9 seconds, 93 messages, ~25785 tokens
+  key counts (top): map[content:41 is_error:41 text:6 tool_use_id:41 type:47]
+  key counts (all): map[content:41 is_error:41 text:47 tool_use_id:41 type:88]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01KDe3auErktSsmdKgBEu2A5",
+  "is_error": false,
+  "content": [
+    {
+      "text": "from atproto import Client\nfrom credentials import HANDLE, PASSWORD\n\nclient = Client()\nprofile = client.login(HANDLE, PASSWORD)\nprint(f\"profile={profile}\")\n\n\nclient.actor.searchActors(\"agile\")\n\nresp = None\nwhile True:\n    resp = client.actor.searchActors(\"agile\", cursor=resp.cursor if resp else None)\n    for actor in resp.actors:\n        print(f\"actor={actor}\")\n    if not resp.cursor: break\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.3 seconds, 95 messages, ~26362 tokens
+  key counts (top): map[content:42 is_error:42 text:6 tool_use_id:42 type:48]
+  key counts (all): map[content:42 is_error:42 text:48 tool_use_id:42 type:90]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0178wGhtUHB9rF7j2Ebrpkkg",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.8 seconds, 97 messages, ~26608 tokens
+  key counts (top): map[content:43 is_error:43 text:6 tool_use_id:43 type:49]
+  key counts (all): map[content:43 is_error:43 text:49 tool_use_id:43 type:92]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01YJeACkv5sdyhcDRxjYbZZU",
+  "is_error": false,
+  "content": [
+    {
+      "text": "{\n  \"repository\": \"bug-predict\",\n  \"path\": \"~/code/bug-predict\",\n  \"files\": [\n    {\n      \"path\": \"deep-jit.py\",\n      \"size\":     6679\n    },\n    {\n      \"path\": \"files.json\",\n      \"size\":   127691\n    },\n    {\n      \"path\": \"LICENSE\",\n      \"size\":    11357\n    },\n    {\n      \"path\": \"microsoft-change-risk.py\",\n      \"size\":     3376\n    },\n    {\n      \"path\": \"README.md\",\n      \"size\":       93\n    },\n    {\n      \"path\": \"repositories.json\",\n      \"size\":    47686\n    },\n    {\n      \"path\": \"szz-algorithm.py\",\n      \"size\":     3726\n    }\n  ]\n}\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.5 seconds, 99 messages, ~26702 tokens
+  key counts (top): map[content:44 is_error:44 text:6 tool_use_id:44 type:50]
+  key counts (all): map[content:44 is_error:44 text:50 tool_use_id:44 type:94]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TC8rL27MT8cAYecYU7QL6W",
+  "is_error": false,
+  "content": [
+    {
+      "text": "# bug-predict\nInvestigating methods of predicting  likelihood of git commits producing bugs.\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.1 seconds, 101 messages, ~27746 tokens
+  key counts (top): map[content:45 is_error:45 text:6 tool_use_id:45 type:51]
+  key counts (all): map[content:45 is_error:45 text:51 tool_use_id:45 type:96]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0146dQYWQmVyswjCTpLSFpGr",
+  "is_error": false,
+  "content": [
+    {
+      "text": "import git\nfrom datetime import datetime\nimport re\nfrom typing import List, Dict, Tuple\n\nclass SZZAlgorithm:\n    def __init__(self, repo_path: str):\n        \"\"\"Initialize SZZ with path to git repository.\"\"\"\n        self.repo = git.Repo(repo_path)\n        \n    def find_bug_introducing_commits(self, fix_commit_hash: str) -\u003e List[str]:\n        \"\"\"\n        Find commits that likely introduced the bug that was fixed in the given commit.\n        \n        Args:\n            fix_commit_hash: Hash of the commit that fixed the bug\n            \n        Returns:\n            List of commit hashes that potentially introduced the bug\n        \"\"\"\n        fix_commit = self.repo.commit(fix_commit_hash)\n        bug_introducing_commits = set()\n        \n        # Get the diff of the fix commit\n        diff_index = fix_commit.parents[0].diff(fix_commit)\n        \n        for diff in diff_index:\n            if diff.a_path is None:\n                continue\n                \n            # Get the blamed commits for the modified lines\n            try:\n                blame = self.repo.blame(fix_commit.parents[0], diff.a_path)\n            except:\n                continue\n                \n            # Extract line numbers that were modified in the fix\n            modified_lines = self._get_modified_lines(diff)\n            \n            # Find the commits that last modified these lines\n            for commit, lines in blame:\n                for line_num, line in lines:\n                    if line_num in modified_lines:\n                        bug_introducing_commits.add(commit.hexsha)\n        \n        return list(bug_introducing_commits)\n    \n    def _get_modified_lines(self, diff) -\u003e set:\n        \"\"\"Extract line numbers that were modified in the diff.\"\"\"\n        modified_lines = set()\n        \n        try:\n            # Parse the diff to find modified lines\n            for hunk in diff.diff.decode().split('\\n@@')[1:]:\n                match = re.match(r' -(\\d+),(\\d+) \\+(\\d+),(\\d+)', hunk.split('@@')[0])\n                if match:\n                    start, length = int(match.group(1)), int(match.group(2))\n                    modified_lines.update(range(start, start + length))\n        except:\n            pass\n            \n        return modified_lines\n    \n    def analyze_commit_risk(self, commit_hash: str) -\u003e Dict[str, float]:\n        \"\"\"\n        Analyze the risk factors of a given commit.\n        \n        Returns:\n            Dictionary containing risk metrics\n        \"\"\"\n        commit = self.repo.commit(commit_hash)\n        \n        # Calculate basic metrics\n        stats = commit.stats.total\n        files_changed = len(commit.stats.files)\n        \n        # Calculate time-based risk (higher risk for night commits)\n        commit_hour = datetime.fromtimestamp(commit.committed_date).hour\n        time_risk = 1.0 if (commit_hour \u003c 6 or commit_hour \u003e 22) else 0.0\n        \n        # Calculate complexity risk based on changes\n        complexity_risk = min(1.0, (stats['lines'] / 200))  # Normalize to [0,1]\n        \n        return {\n            'files_changed': files_changed,\n            'lines_added': stats['insertions'],\n            'lines_deleted': stats['deletions'],\n            'time_risk': time_risk,\n            'complexity_risk': complexity_risk,\n            'overall_risk': (complexity_risk * 0.6 + time_risk * 0.4)\n        }\n\ndef example_usage():\n    # Initialize SZZ with repository path\n    szz = SZZAlgorithm(\"/path/to/repo\")\n    \n    # Find bug-introducing commits for a fix\n    bug_commits = szz.find_bug_introducing_commits(\"fix_commit_hash\")\n    \n    # Analyze risk of a specific commit\n    risk_analysis = szz.analyze_commit_risk(\"commit_hash\")\n    \n    return bug_commits, risk_analysis\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.1 seconds, 103 messages, ~29560 tokens
+  key counts (top): map[content:46 is_error:46 text:6 tool_use_id:46 type:52]
+  key counts (all): map[content:46 is_error:46 text:52 tool_use_id:46 type:98]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01EMAJpEdiAPk2M7bYJtCvvp",
+  "is_error": false,
+  "content": [
+    {
+      "text": "import torch\nimport torch.nn as nn\nimport torch.nn.functional as F\nfrom typing import List, Tuple\nimport numpy as np\n\nclass CodeCNN(nn.Module):\n    def __init__(self, vocab_size: int, embedding_dim: int, num_filters: int = 64):\n        super(CodeCNN, self).__init__()\n        self.embedding = nn.Embedding(vocab_size, embedding_dim)\n        \n        # Multiple parallel convolutions with different kernel sizes\n        self.convs = nn.ModuleList([\n            nn.Conv1d(embedding_dim, num_filters, kernel_size)\n            for kernel_size in [2, 3, 4]\n        ])\n        \n        self.dropout = nn.Dropout(0.2)\n        self.fc = nn.Linear(num_filters * 3, 64)\n\n    def forward(self, x):\n        # x shape: (batch_size, seq_length)\n        embedded = self.embedding(x)  # (batch_size, seq_length, embedding_dim)\n        embedded = embedded.permute(0, 2, 1)  # (batch_size, embedding_dim, seq_length)\n        \n        # Apply convolutions and max-pooling\n        conv_outputs = []\n        for conv in self.convs:\n            conv_out = F.relu(conv(embedded))\n            pool_out = F.max_pool1d(conv_out, conv_out.shape[2])\n            conv_outputs.append(pool_out)\n        \n        # Concatenate all conv outputs\n        combined = torch.cat(conv_outputs, dim=1)\n        combined = combined.squeeze(-1)\n        \n        # Final dense layers\n        out = self.dropout(combined)\n        out = F.relu(self.fc(out))\n        \n        return out\n\nclass DeepJIT(nn.Module):\n    def __init__(self, code_vocab_size: int, msg_vocab_size: int, embedding_dim: int = 32):\n        super(DeepJIT, self).__init__()\n        \n        # Separate CNNs for code changes and commit messages\n        self.code_cnn = CodeCNN(code_vocab_size, embedding_dim)\n        self.msg_cnn = CodeCNN(msg_vocab_size, embedding_dim)\n        \n        # Final prediction layers\n        self.final = nn.Sequential(\n            nn.Linear(128, 32),\n            nn.ReLU(),\n            nn.Dropout(0.2),\n            nn.Linear(32, 1),\n            nn.Sigmoid()\n        )\n\n    def forward(self, code_input, msg_input):\n        # Process code changes and commit message\n        code_features = self.code_cnn(code_input)\n        msg_features = self.msg_cnn(msg_input)\n        \n        # Combine features\n        combined = torch.cat([code_features, msg_features], dim=1)\n        \n        # Final prediction\n        return self.final(combined)\n\nclass CommitDataset(torch.utils.data.Dataset):\n    def __init__(self, code_changes: List[str], commit_messages: List[str], labels: List[int]):\n        self.code_changes = code_changes\n        self.commit_messages = commit_messages\n        self.labels = labels\n        \n        # Create vocabularies and tokenize inputs\n        self.code_vocab = self._create_vocabulary(code_changes)\n        self.msg_vocab = self._create_vocabulary(commit_messages)\n        \n        self.tokenized_code = [self._tokenize(change, self.code_vocab) for change in code_changes]\n        self.tokenized_msgs = [self._tokenize(msg, self.msg_vocab) for msg in commit_messages]\n\n    def __len__(self):\n        return len(self.labels)\n\n    def __getitem__(self, idx):\n        return {\n            'code': torch.tensor(self.tokenized_code[idx]),\n            'msg': torch.tensor(self.tokenized_msgs[idx]),\n            'label': torch.tensor(self.labels[idx], dtype=torch.float)\n        }\n    \n    @staticmethod\n    def _create_vocabulary(texts: List[str]) -\u003e dict:\n        \"\"\"Create word-to-index mapping.\"\"\"\n        vocab = {'\u003cPAD\u003e': 0, '\u003cUNK\u003e': 1}\n        for text in texts:\n            for word in text.split():\n                if word not in vocab:\n                    vocab[word] = len(vocab)\n        return vocab\n    \n    def _tokenize(self, text: str, vocab: dict, max_length: int = 512) -\u003e List[int]:\n        \"\"\"Convert text to sequence of indices.\"\"\"\n        tokens = text.split()[:max_length]\n        return [vocab.get(token, vocab['\u003cUNK\u003e']) for token in tokens] + \\\n               [vocab['\u003cPAD\u003e']] * (max_length - len(tokens))\n\ndef train_model(model: DeepJIT, \n                train_loader: torch.utils.data.DataLoader,\n                num_epochs: int = 10,\n                learning_rate: float = 0.001) -\u003e List[float]:\n    \"\"\"\n    Train the DeepJIT model.\n    \n    Returns:\n        List of training losses per epoch\n    \"\"\"\n    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)\n    criterion = nn.BCELoss()\n    losses = []\n    \n    for epoch in range(num_epochs):\n        model.train()\n        epoch_loss = 0.0\n        \n        for batch in train_loader:\n            optimizer.zero_grad()\n            \n            output = model(batch['code'], batch['msg'])\n            loss = criterion(output.squeeze(), batch['label'])\n            \n            loss.backward()\n            optimizer.step()\n            \n            epoch_loss += loss.item()\n        \n        avg_loss = epoch_loss / len(train_loader)\n        losses.append(avg_loss)\n        print(f'Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss:.4f}')\n    \n    return losses\n\ndef predict_bugs(model: DeepJIT, \n                code_changes: List[str],\n                commit_messages: List[str],\n                dataset: CommitDataset) -\u003e List[float]:\n    \"\"\"\n    Predict bug probability for new commits.\n    \n    Returns:\n        List of probabilities for each commit being buggy\n    \"\"\"\n    model.eval()\n    \n    # Tokenize new commits\n    tokenized_code = [dataset._tokenize(change, dataset.code_vocab) for change in code_changes]\n    tokenized_msgs = [dataset._tokenize(msg, dataset.msg_vocab) for msg in commit_messages]\n    \n    # Convert to tensors\n    code_tensor = torch.tensor(tokenized_code)\n    msg_tensor = torch.tensor(tokenized_msgs)\n    \n    with torch.no_grad():\n        predictions = model(code_tensor, msg_tensor)\n    \n    return predictions.squeeze().tolist()\n\ndef example_usage():\n    # Sample data\n    code_changes = [\"def add(a,b): return a+b\", \"print('hello')\"]\n    commit_messages = [\"Add function\", \"Add print\"]\n    labels = [0, 1]  # 0: non-buggy, 1: buggy\n    \n    # Create dataset\n    dataset = CommitDataset(code_changes, commit_messages, labels)\n    \n    # Create data loader\n    train_loader = torch.utils.data.DataLoader(dataset, batch_size=32, shuffle=True)\n    \n    # Initialize model\n    model = DeepJIT(\n        code_vocab_size=len(dataset.code_vocab),\n        msg_vocab_size=len(dataset.msg_vocab)\n    )\n    \n    # Train model\n    losses = train_model(model, train_loader)\n    \n    # Make predictions\n    new_changes = [\"def subtract(a,b): return a-b\"]\n    new_messages = [\"Add subtract function\"]\n    predictions = predict_bugs(model, new_changes, new_messages, dataset)\n    \n    return predictions\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 20.9 seconds, 105 messages, ~30514 tokens
+  key counts (top): map[content:47 is_error:47 text:6 tool_use_id:47 type:53]
+  key counts (all): map[content:47 is_error:47 text:53 tool_use_id:47 type:100]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01XeacKyKtyTSaZHEDHZCvHy",
+  "is_error": false,
+  "content": [
+    {
+      "text": "import numpy as np\nfrom typing import Dict, List, Set\nfrom dataclasses import dataclass\nfrom datetime import datetime, timedelta\n\n@dataclass\nclass CommitMetrics:\n    files_changed: List[str]\n    lines_added: int\n    lines_deleted: int\n    author: str\n    timestamp: datetime\n    complexity_delta: float\n    subsystems_touched: Set[str]\n\nclass MicrosoftChangeRisk:\n    def __init__(self):\n        self.file_history = {}  # File -\u003e List of commits\n        self.author_experience = {}  # Author -\u003e Dict of file -\u003e commit count\n        self.bug_history = {}  # File -\u003e List of bug fixes\n        self.subsystem_coupling = {}  # Subsystem -\u003e Dict of other subsystems -\u003e co-change count\n        \n    def update_history(self, commit_metrics: CommitMetrics, is_bug_fix: bool = False):\n        \"\"\"Update historical data with new commit information.\"\"\"\n        # Update file history\n        for file in commit_metrics.files_changed:\n            if file not in self.file_history:\n                self.file_history[file] = []\n            self.file_history[file].append(commit_metrics)\n            \n            # Update author experience\n            if commit_metrics.author not in self.author_experience:\n                self.author_experience[commit_metrics.author] = {}\n            if file not in self.author_experience[commit_metrics.author]:\n                self.author_experience[commit_metrics.author][file] = 0\n            self.author_experience[commit_metrics.author][file] += 1\n            \n            # Update bug history\n            if is_bug_fix:\n                if file not in self.bug_history:\n                    self.bug_history[file] = []\n                self.bug_history[file].append(commit_metrics)\n        \n        # Update subsystem coupling\n        subsystems = commit_metrics.subsystems_touched\n        for sub1 in subsystems:\n            if sub1 not in self.subsystem_coupling:\n                self.subsystem_coupling[sub1] = {}\n            for sub2 in subsystems:\n                if sub1 != sub2:\n                    if sub2 not in self.subsystem_coupling[sub1]:\n                        self.subsystem_coupling[sub1][sub2] = 0\n                    self.subsystem_coupling[sub1][sub2] += 1\n\n    def calculate_file_risk(self, file: str) -\u003e float:\n        \"\"\"Calculate risk score for a specific file based on its history.\"\"\"\n        if file not in self.file_history:\n            return 0.5  # Default risk for new files\n        \n        # Calculate bug frequency\n        bug_count = len(self.bug_history.get(file, []))\n        commit_count = len(self.file_history[file])\n        bug_frequency = bug_count / max(1, commit_count)\n        \n        # Calculate change frequency\n        recent_changes = sum(1 for commit in self.file_history[file]\n                           if (datetime.now() - commit.timestamp).days \u003c= 30)\n        change_frequency = recent_changes / 30  # Changes per day\n        \n        # Combine metrics with weights\n        risk_score = (bug_frequency * 0.4 + \n                     change_frequency * 0.3 + \n                     (1 if recent_changes \u003e 5 else 0) * 0.3)\n        \n        return min(1.0, risk_score)\n\n    def calculate_author_risk(self, author: str, files: List[str]) -\u003e float:\n        \"\"\"Calculate risk based on author's experience with the changed files.\"\"\"\n        if author not in self.author_experience:\n            return 0.8  #",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 13.7 seconds, 107 messages, ~31178 tokens
+  key counts (top): map[content:48 is_error:48 text:6 tool_use_id:48 type:54]
+  key counts (all): map[content:48 is_error:48 text:54 tool_use_id:48 type:102]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01NLK9bowzYh8VzySWpZyfE7",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 12.1 seconds, 109 messages, ~31811 tokens
+  key counts (top): map[content:49 is_error:49 text:6 tool_use_id:49 type:55]
+  key counts (all): map[content:49 is_error:49 text:55 tool_use_id:49 type:104]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01VegNsiQ6eietmHNo9DQEzF",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+Prompt 4 of 5: Good. We now have a directory called 'repositories' that contains the results of your search. We will now build a search application.
+*User input: Good. We now have a directory called 'repositories' that contains the results of your search. We will now build a search application.
+anthropic call:  8.3 seconds, 111 messages, ~32342 tokens
+  key counts (top): map[content:49 is_error:49 text:7 tool_use_id:49 type:56]
+  key counts (all): map[content:49 is_error:49 text:56 tool_use_id:49 type:105]
+  last message: role=user, content=[{
+  "text": "Good. We now have a directory called 'repositories' that contains the results of your search. We will now build a search application.",
+  "type": "text"
+}]
+Prompt 5 of 5: Create a simple Go program 'bin/repo_search.go' that does a plain text search over all the data in the './repositories' directory. It should respond to queries about the intent of the code, the purpose of the code, and how to use the code. It should also be able to answer questions about the code's functionality and implementation details. If 'bin/repo_search.go' already exists, you started it in a previous run, so just continue where you left off. If 'bin/repo_search.go' doesn't exist, create it from scratch. The program should be able to handle large repositories and should be efficient in its search algorithm.
+*User input: Create a simple Go program 'bin/repo_search.go' that does a plain text search over all the data in the './repositories' directory. It should respond to queries about the intent of the code, the purpose of the code, and how to use the code. It should also be able to answer questions about the code's functionality and implementation details. If 'bin/repo_search.go' already exists, you started it in a previous run, so just continue where you left off. If 'bin/repo_search.go' doesn't exist, create it from scratch. The program should be able to handle large repositories and should be efficient in its search algorithm.
+anthropic call:  6.1 seconds, 113 messages, ~32758 tokens
+  key counts (top): map[content:49 is_error:49 text:8 tool_use_id:49 type:57]
+  key counts (all): map[content:49 is_error:49 text:57 tool_use_id:49 type:106]
+  last message: role=user, content=[{
+  "text": "Create a simple Go program 'bin/repo_search.go' that does a plain text search over all the data in the './repositories' directory. It should respond to queries about the intent of the code, the purpose of the code, and how to use the code. It should also be able to answer questions about the code's functionality and implementation details. If 'bin/repo_search.go' already exists, you started it in a previous run, so just continue where you left off. If 'bin/repo_search.go' doesn't exist, create it from scratch. The program should be able to handle large repositories and should be efficient in its search algorithm.",
+  "type": "text"
+}]
+anthropic call: 23.5 seconds, 115 messages, ~32875 tokens
+  key counts (top): map[content:50 is_error:50 text:8 tool_use_id:50 type:58]
+  key counts (all): map[content:50 is_error:50 text:58 tool_use_id:50 type:108]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_014LakCZBdMV4X2jHfRgnuAd",
+  "is_error": false,
+  "content": [
+    {
+      "text": "[\"analyze_repos.sh\",\"analyze_repos_fixed.sh\",\"find_git_repos.sh\",\"find_small_git_repos.sh\"]",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 16.7 seconds, 117 messages, ~32982 tokens
+  key counts (top): map[content:51 is_error:51 text:8 tool_use_id:51 type:59]
+  key counts (all): map[content:51 is_error:51 text:59 tool_use_id:51 type:110]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01MzWJL2x6gJz5trTadrQ5t3",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.3 seconds, 119 messages, ~33066 tokens
+  key counts (top): map[content:52 is_error:52 text:8 tool_use_id:52 type:60]
+  key counts (all): map[content:52 is_error:52 text:60 tool_use_id:52 type:112]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01UfZ3JCoRHSGpp5b14DJ5a1",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.1 seconds, 121 messages, ~33144 tokens
+  key counts (top): map[content:53 is_error:53 text:8 tool_use_id:53 type:61]
+  key counts (all): map[content:53 is_error:53 text:61 tool_use_id:53 type:114]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01J86UkFXEzQb7sWsRCGzKPz",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.8 seconds, 123 messages, ~33228 tokens
+  key counts (top): map[content:54 is_error:54 text:8 tool_use_id:54 type:62]
+  key counts (all): map[content:54 is_error:54 text:62 tool_use_id:54 type:116]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01DbfAN1Rp2kStXjgFUHCezP",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.8 seconds, 125 messages, ~33312 tokens
+  key counts (top): map[content:55 is_error:55 text:8 tool_use_id:55 type:63]
+  key counts (all): map[content:55 is_error:55 text:63 tool_use_id:55 type:118]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Cu48T2kQQaQLexdRvoqJaW",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.2 seconds, 127 messages, ~33773 tokens
+  key counts (top): map[content:56 is_error:56 text:8 tool_use_id:56 type:64]
+  key counts (all): map[content:56 is_error:56 text:64 tool_use_id:56 type:120]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01LLGFnjLTzEYSygRJW5RnUY",
+  "is_error": false,
+  "content": [
+    {
+      "text": "[\"bin/\",\"bin/analyze_repos.sh\",\"bin/analyze_repos_fixed.sh\",\"bin/find_git_repos.sh\",\"bin/find_small_git_repos.sh\",\"bin0/\",\"bin0/example.txt\",\"bin0/find_git_repos.sh\",\"bin0/hello.go\",\"bin0/new_bin_file.txt\",\"bin0/new_file.txt\",\"bin0/placeholder.txt\",\"bin0/repo_search.go.new\",\"bin0/repo_search_tool.go\",\"bin0/search_repo.go\",\"bin0/test.txt\",\"data/\",\"data/example.json\",\"data/new_data.json\",\"go.mod\",\"go.sum\",\"logs/\",\"logs/log.0.txt\",\"logs/log.e.0.txt\",\"logs.directory_contents/\",\"logs.directory_contents/log.1.txt\",\"logs.directory_contents/log.e.1.txt\",\"logs.fizzbuzz/\",\"logs.fizzbuzz/log.1.txt\",\"logs.fizzbuzz/log.e.1.txt\",\"logs.search/\",\"logs.search/log.1.txt\",\"logs.search/log.e.1.txt\",\"main.go\",\"repositories/\",\"repositories/files.RealKIE.json\",\"repositories/files.agent.json\",\"repositories/files.aoc2023a-old.json\",\"repositories/files.bluesky.json\",\"repositories/files.bug-predict.json\",\"repositories/files.build-pdfium.json\",\"repositories/files.courses.json\",\"repositories/files.zendesk.json\",\"repositories/repo.RealKIE.json\",\"repositories/repo.agent.json\",\"repositories/repo.aoc2023a-old.json\",\"repositories/repo.bluesky.json\",\"repositories/repo.bug-predict.json\",\"repositories/repo.build-pdfium.json\",\"repositories/repo.courses.json\",\"repositories/repo.zendesk.json\",\"repositories/summary.json\",\"run_directory_contents.sh\",\"run_fizzbuzz.sh\",\"run_search.sh\",\"utils.go\"]",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  5.6 seconds, 129 messages, ~33868 tokens
+  key counts (top): map[content:57 is_error:57 text:8 tool_use_id:57 type:65]
+  key counts (all): map[content:57 is_error:57 text:65 tool_use_id:57 type:122]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TNLaE8nVuaB66Mt6nr7wgN",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 14.8 seconds, 131 messages, ~34710 tokens
+  key counts (top): map[content:58 is_error:58 text:8 tool_use_id:58 type:66]
+  key counts (all): map[content:58 is_error:58 text:66 tool_use_id:58 type:124]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01QJU1X64MxHKqbetwEqxG9J",
+  "is_error": false,
+  "content": [
+    {
+      "text": "package main\n\nimport (\n\t\"flag\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// Repository represents the metadata for a code repository\ntype Repository struct {\n\tName             string    `json:\"name\"`\n\tPath             string    `json:\"path\"`\n\tDescription      string    `json:\"description\"`\n\tPrograms         []Program `json:\"programs\"`\n\tPurpose          string    `json:\"purpose\"`\n\tUsageSuggestions []string  `json:\"usage_suggestions\"`\n}\n\n// Program represents metadata about a program in a repository\ntype Program struct {\n\tName          string `json:\"name\"`\n\tPurpose       string `json:\"purpose\"`\n\tFunctionality string `json:\"functionality\"`\n\tUsage         string `json:\"usage\"`\n}\n\n// File represents a file in a repository\ntype File struct {\n\tName string `json:\"name\"`\n\tPath string `json:\"path\"`\n\tSize int    `json:\"size\"`\n}\n\n// FileList represents a list of files in a repository\ntype FileList struct {\n\tRepository string `json:\"repository\"`\n\tPath       string `json:\"path\"`\n\tFiles      []File `json:\"files\"`\n\tTotalSize  int    `json:\"total_size\"`\n\tFileCount  int    `json:\"file_count\"`\n}\n\n// SearchResult represents a search result item\ntype SearchResult struct {\n\tRepository  string\n\tType        string // \"purpose\", \"functionality\", \"usage\", \"code\", etc.\n\tProgramName string\n\tContent     string\n\tRelevance   int\n\tFilePath    string // Only for code search results\n\tLineNumber  int    // Only for code search results\n}\n\nfunc main() {\n\t// Define command line flags\n\tquery := flag.String(\"q\", \"\", \"Search query\")\n\tfilterType := flag.String(\"type\", \"\", \"Filter by type: purpose, intent, usage, functionality, implementation\")\n\trepoName := flag.String(\"repo\", \"\", \"Filter by repository name\")\n\tinteractive := flag.Bool(\"i\", false, \"Interactive mode\")\n\tflag.Parse()\n\n\t// Load all repositories\n\trepos, err := loadRepositories()\n\tif err != nil {\n\t\tfmt.Fprintf(os.Stderr, \"Error loading repositories: %v\\n\", err)\n\t\tos.Exit(1)\n\t}\n\n\t// Interactive mode\n\tif *interactive {\n\t\trunInteractiveMode(repos)\n\t\treturn\n\t}\n\n\t// If query is provided, search and display results\n\tif *query != \"\" {\n\t\tresults := searchRepositories(repos, *query, *filterType, *repoName)\n\t\tdisplayResults(results)\n\t\treturn\n\t}\n\n\t// If no query or interactive mode, show usage\n\tfmt.Println(\"Repository Search Tool\")\n\tfmt.Println(\"====================\")\n\tfmt.Println(\"Usage:\")\n\tfmt.Println(\"  -q \u003cquery\u003e       : Search for content matching query\")\n\tfmt.Println(\"  -type \u003ctype\u003e     : Filter by type (purpose, intent, usage, functionality, implementation)\")\n\tfmt.Println(\"  -repo \u003cname\u003e     : Filter by repository name\")\n\tfmt.Println(\"  -i               : Interactive mode\")\n\tfmt.Println()\n\tfmt.Println(\"Examples:\")\n\tfmt.Println(\"  ./repo_search_tool -q \\\"AI agent\\\" -type purpose\")\n\tfmt.Println(\"  ./repo_search_tool -repo agent -q functionality\")\n\tfmt.Println(\"  ./repo_search_tool -i\")\n}\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 13.1 seconds, 133 messages, ~34769 tokens
+  key counts (top): map[content:59 is_error:59 text:8 tool_use_id:59 type:67]
+  key counts (all): map[content:59 is_error:59 text:67 tool_use_id:59 type:126]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_014NtwVUo1C7inextnhhpuGc",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 13.8 seconds, 135 messages, ~34889 tokens
+  key counts (top): map[content:60 is_error:60 text:8 tool_use_id:60 type:68]
+  key counts (all): map[content:60 is_error:60 text:68 tool_use_id:60 type:128]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_015WcRw1yzxtnNKK1wXFcW3C",
+  "is_error": true,
+  "content": [
+    {
+      "text": "command failed: exit status 1. Output: cat: \u003e: No such file or directory\ncat: bin/repo_search.go: No such file or directory\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 12.6 seconds, 137 messages, ~34970 tokens
+  key counts (top): map[content:61 is_error:61 text:8 tool_use_id:61 type:69]
+  key counts (all): map[content:61 is_error:61 text:69 tool_use_id:61 type:130]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_015WNGDt2nDThJ2iW9zCGGzQ",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 25.6 seconds, 139 messages, ~35070 tokens
+  key counts (top): map[content:62 is_error:62 text:8 tool_use_id:62 type:70]
+  key counts (all): map[content:62 is_error:62 text:70 tool_use_id:62 type:132]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_019DpqLRYVAtvs1va3RYqn8W",
+  "is_error": false,
+  "content": [
+    {
+      "text": "[\"analyze_repos.sh\",\"analyze_repos_fixed.sh\",\"find_git_repos.sh\",\"find_small_git_repos.sh\",\"repo_search.go\"]",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.2 seconds, 141 messages, ~35156 tokens
+  key counts (top): map[content:63 is_error:63 text:8 tool_use_id:63 type:71]
+  key counts (all): map[content:63 is_error:63 text:71 tool_use_id:63 type:134]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01LkqkDggZWVAjdfFdiraCc1",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.1 seconds, 143 messages, ~35238 tokens
+  key counts (top): map[content:64 is_error:64 text:8 tool_use_id:64 type:72]
+  key counts (all): map[content:64 is_error:64 text:72 tool_use_id:64 type:136]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01BETGorQLR8FXHpxsy6N2mr",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.4 seconds, 145 messages, ~35326 tokens
+  key counts (top): map[content:65 is_error:65 text:8 tool_use_id:65 type:73]
+  key counts (all): map[content:65 is_error:65 text:73 tool_use_id:65 type:138]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TnDrSX6dSx9eD41FpkeKgo",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.9 seconds, 147 messages, ~35429 tokens
+  key counts (top): map[content:66 is_error:66 text:8 tool_use_id:66 type:74]
+  key counts (all): map[content:66 is_error:66 text:74 tool_use_id:66 type:140]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01H6mxmATFNeTjsKjZKeatYb",
+  "is_error": false,
+  "content": [
+    {
+      "text": "// repo_search.go \u003e bin/repo_search.go\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.0 seconds, 149 messages, ~35519 tokens
+  key counts (top): map[content:67 is_error:67 text:8 tool_use_id:67 type:75]
+  key counts (all): map[content:67 is_error:67 text:75 tool_use_id:67 type:142]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01BsbMjwvSBFChxNAMMdAFp8",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.3 seconds, 151 messages, ~35588 tokens
+  key counts (top): map[content:68 is_error:68 text:8 tool_use_id:68 type:76]
+  key counts (all): map[content:68 is_error:68 text:76 tool_use_id:68 type:144]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_018bmxEQME18gS8wVZxtgqJy",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.9 seconds, 153 messages, ~35671 tokens
+  key counts (top): map[content:69 is_error:69 text:8 tool_use_id:69 type:77]
+  key counts (all): map[content:69 is_error:69 text:77 tool_use_id:69 type:146]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_013kcU8HfkeQjPsQ8KBxqinF",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.7 seconds, 155 messages, ~35765 tokens
+  key counts (top): map[content:70 is_error:70 text:8 tool_use_id:70 type:78]
+  key counts (all): map[content:70 is_error:70 text:78 tool_use_id:70 type:148]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TZwsf5xKy45phYVBnxf6ad",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.9 seconds, 157 messages, ~35856 tokens
+  key counts (top): map[content:71 is_error:71 text:8 tool_use_id:71 type:79]
+  key counts (all): map[content:71 is_error:71 text:79 tool_use_id:71 type:150]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_012d1TcB2du4rK5hsr3BtTPb",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.5 seconds, 159 messages, ~35942 tokens
+  key counts (top): map[content:72 is_error:72 text:8 tool_use_id:72 type:80]
+  key counts (all): map[content:72 is_error:72 text:80 tool_use_id:72 type:152]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_015bdJWNYppQioU32YsSsWzr",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.5 seconds, 161 messages, ~36011 tokens
+  key counts (top): map[content:73 is_error:73 text:8 tool_use_id:73 type:81]
+  key counts (all): map[content:73 is_error:73 text:81 tool_use_id:73 type:154]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01PfAgPCiHWgAYvRmqwph8Mt",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.9 seconds, 163 messages, ~36095 tokens
+  key counts (top): map[content:74 is_error:74 text:8 tool_use_id:74 type:82]
+  key counts (all): map[content:74 is_error:74 text:82 tool_use_id:74 type:156]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_019QzocGkREBaXeyrnuQwPUK",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.3 seconds, 165 messages, ~36181 tokens
+  key counts (top): map[content:75 is_error:75 text:8 tool_use_id:75 type:83]
+  key counts (all): map[content:75 is_error:75 text:83 tool_use_id:75 type:158]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Q72FdL6ovqmLgwmnUywHo3",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.4 seconds, 167 messages, ~36297 tokens
+  key counts (top): map[content:76 is_error:76 text:8 tool_use_id:76 type:84]
+  key counts (all): map[content:76 is_error:76 text:84 tool_use_id:76 type:160]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01T7t6qFhZByB3UKnoitTrcT",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.9 seconds, 169 messages, ~36385 tokens
+  key counts (top): map[content:77 is_error:77 text:8 tool_use_id:77 type:85]
+  key counts (all): map[content:77 is_error:77 text:85 tool_use_id:77 type:162]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01542MP72S8SEXkJERWtBex2",
+  "is_error": false,
+  "content": [
+    {
+      "text": "// This is a repository search tool\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.3 seconds, 171 messages, ~36481 tokens
+  key counts (top): map[content:78 is_error:78 text:8 tool_use_id:78 type:86]
+  key counts (all): map[content:78 is_error:78 text:86 tool_use_id:78 type:164]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_016QTWUGRQdJLyfAeUg3cEZS",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.9 seconds, 173 messages, ~36570 tokens
+  key counts (top): map[content:79 is_error:79 text:8 tool_use_id:79 type:87]
+  key counts (all): map[content:79 is_error:79 text:87 tool_use_id:79 type:166]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01CnQ7kAsTKRdLcWyeCHVQAr",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.1 seconds, 175 messages, ~36653 tokens
+  key counts (top): map[content:80 is_error:80 text:8 tool_use_id:80 type:88]
+  key counts (all): map[content:80 is_error:80 text:88 tool_use_id:80 type:168]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01R5NR8DWPCuzY5Zgh2VsbeE",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.3 seconds, 177 messages, ~36737 tokens
+  key counts (top): map[content:81 is_error:81 text:8 tool_use_id:81 type:89]
+  key counts (all): map[content:81 is_error:81 text:89 tool_use_id:81 type:170]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01KMyenHkiSFkAQYxKfCdE5E",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.4 seconds, 179 messages, ~36815 tokens
+  key counts (top): map[content:82 is_error:82 text:8 tool_use_id:82 type:90]
+  key counts (all): map[content:82 is_error:82 text:90 tool_use_id:82 type:172]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01X2gKUXzY7WHCxFcTqZyEkP",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.9 seconds, 181 messages, ~36935 tokens
+  key counts (top): map[content:83 is_error:83 text:8 tool_use_id:83 type:91]
+  key counts (all): map[content:83 is_error:83 text:91 tool_use_id:83 type:174]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01WZGFdhpaBmzt8x6gzg5jU3",
+  "is_error": true,
+  "content": [
+    {
+      "text": "command failed: exit status 1. Output: cat: \u003e: No such file or directory\ncat: repo_search_content.txt: No such file or directory\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.6 seconds, 183 messages, ~37009 tokens
+  key counts (top): map[content:84 is_error:84 text:8 tool_use_id:84 type:92]
+  key counts (all): map[content:84 is_error:84 text:92 tool_use_id:84 type:176]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01XFhUsyPMTCt2JrCV9ATUQi",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.8 seconds, 185 messages, ~37132 tokens
+  key counts (top): map[content:85 is_error:85 text:8 tool_use_id:85 type:93]
+  key counts (all): map[content:85 is_error:85 text:93 tool_use_id:85 type:178]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0149YQ1i39LWYNmoBweViWSv",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 13.1 seconds, 187 messages, ~37242 tokens
+  key counts (top): map[content:86 is_error:86 text:8 tool_use_id:86 type:94]
+  key counts (all): map[content:86 is_error:86 text:94 tool_use_id:86 type:180]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_018A8ugZQgXhqkbAPUfuquo5",
+  "is_error": false,
+  "content": [
+    {
+      "text": "package main\n\nimport (\n\t\"encoding/json\"\n\t\"flag\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"strings\"\n\t\"time\"\n)\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.0 seconds, 189 messages, ~37675 tokens
+  key counts (top): map[content:87 is_error:87 text:8 tool_use_id:87 type:95]
+  key counts (all): map[content:87 is_error:87 text:95 tool_use_id:87 type:182]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_014eTcbrnEZ7bXWRcXuw1Sco",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.6 seconds, 191 messages, ~37743 tokens
+  key counts (top): map[content:88 is_error:88 text:8 tool_use_id:88 type:96]
+  key counts (all): map[content:88 is_error:88 text:96 tool_use_id:88 type:184]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_015ucY7zeyg1A8qTd5a2eHqq",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.0 seconds, 193 messages, ~37815 tokens
+  key counts (top): map[content:89 is_error:89 text:8 tool_use_id:89 type:97]
+  key counts (all): map[content:89 is_error:89 text:97 tool_use_id:89 type:186]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01BVw3JW8DMwVGwfvGLBvNx3",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 14.2 seconds, 195 messages, ~37887 tokens
+  key counts (top): map[content:90 is_error:90 text:8 tool_use_id:90 type:98]
+  key counts (all): map[content:90 is_error:90 text:98 tool_use_id:90 type:188]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01XowRnm1Zm7Sza6dkAzjPW8",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.7 seconds, 197 messages, ~38442 tokens
+  key counts (top): map[content:91 is_error:91 text:8 tool_use_id:91 type:99]
+  key counts (all): map[content:91 is_error:91 text:99 tool_use_id:91 type:190]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Hr1Xmru1Q19eta1EB6mFyc",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.7 seconds, 199 messages, ~38513 tokens
+  key counts (top): map[content:92 is_error:92 text:8 tool_use_id:92 type:100]
+  key counts (all): map[content:92 is_error:92 text:100 tool_use_id:92 type:192]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0199qQ8cfKeYsUktGM5Haruw",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.2 seconds, 201 messages, ~38583 tokens
+  key counts (top): map[content:93 is_error:93 text:8 tool_use_id:93 type:101]
+  key counts (all): map[content:93 is_error:93 text:101 tool_use_id:93 type:194]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01S9nZjwG7j38d7NrkUDWzk4",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.4 seconds, 203 messages, ~38655 tokens
+  key counts (top): map[content:94 is_error:94 text:8 tool_use_id:94 type:102]
+  key counts (all): map[content:94 is_error:94 text:102 tool_use_id:94 type:196]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01GNWqidpZ5wkEtevet3gDTJ",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.3 seconds, 205 messages, ~38731 tokens
+  key counts (top): map[content:95 is_error:95 text:8 tool_use_id:95 type:103]
+  key counts (all): map[content:95 is_error:95 text:103 tool_use_id:95 type:198]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TMXqDdHQc9GojXAiBe2p18",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 16.9 seconds, 207 messages, ~38807 tokens
+  key counts (top): map[content:96 is_error:96 text:8 tool_use_id:96 type:104]
+  key counts (all): map[content:96 is_error:96 text:104 tool_use_id:96 type:200]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_015s8ZsNpRQZBijT4tdoFJ5M",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.2 seconds, 209 messages, ~38878 tokens
+  key counts (top): map[content:97 is_error:97 text:8 tool_use_id:97 type:105]
+  key counts (all): map[content:97 is_error:97 text:105 tool_use_id:97 type:202]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01HD34HkVSzdwFGXgBN4gyob",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.8 seconds, 211 messages, ~38950 tokens
+  key counts (top): map[content:98 is_error:98 text:8 tool_use_id:98 type:106]
+  key counts (all): map[content:98 is_error:98 text:106 tool_use_id:98 type:204]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01RNRnTZsLnFUJ7Z6B5tpxno",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.8 seconds, 213 messages, ~39022 tokens
+  key counts (top): map[content:99 is_error:99 text:8 tool_use_id:99 type:107]
+  key counts (all): map[content:99 is_error:99 text:107 tool_use_id:99 type:206]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01X4nyg5UqCy3tAFSyUdQtba",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.4 seconds, 215 messages, ~39094 tokens
+  key counts (top): map[content:100 is_error:100 text:8 tool_use_id:100 type:108]
+  key counts (all): map[content:100 is_error:100 text:108 tool_use_id:100 type:208]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_011dMymUujeFZR5CG6wGyKE6",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.7 seconds, 217 messages, ~39175 tokens
+  key counts (top): map[content:101 is_error:101 text:8 tool_use_id:101 type:109]
+  key counts (all): map[content:101 is_error:101 text:109 tool_use_id:101 type:210]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Ba9qhKwWMmyhoZWarBrgH9",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.3 seconds, 219 messages, ~39255 tokens
+  key counts (top): map[content:102 is_error:102 text:8 tool_use_id:102 type:110]
+  key counts (all): map[content:102 is_error:102 text:110 tool_use_id:102 type:212]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01U72KGGKopupjKcNeZj51Sc",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.7 seconds, 221 messages, ~39327 tokens
+  key counts (top): map[content:103 is_error:103 text:8 tool_use_id:103 type:111]
+  key counts (all): map[content:103 is_error:103 text:111 tool_use_id:103 type:214]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0175Aq7tSH1egBfaJyxTM5mr",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.8 seconds, 223 messages, ~39403 tokens
+  key counts (top): map[content:104 is_error:104 text:8 tool_use_id:104 type:112]
+  key counts (all): map[content:104 is_error:104 text:112 tool_use_id:104 type:216]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01WGhaw7Qxpd4fwKg1xazR1F",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.8 seconds, 225 messages, ~39484 tokens
+  key counts (top): map[content:105 is_error:105 text:8 tool_use_id:105 type:113]
+  key counts (all): map[content:105 is_error:105 text:113 tool_use_id:105 type:218]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_019wq42biQJdX7hj6UaxYAxK",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.4 seconds, 227 messages, ~39558 tokens
+  key counts (top): map[content:106 is_error:106 text:8 tool_use_id:106 type:114]
+  key counts (all): map[content:106 is_error:106 text:114 tool_use_id:106 type:220]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01RuRzz5SNDJZzo7BTdjShYM",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.1 seconds, 229 messages, ~39630 tokens
+  key counts (top): map[content:107 is_error:107 text:8 tool_use_id:107 type:115]
+  key counts (all): map[content:107 is_error:107 text:115 tool_use_id:107 type:222]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01VdF2sC9an177hu54LQd1R4",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.5 seconds, 231 messages, ~39709 tokens
+  key counts (top): map[content:108 is_error:108 text:8 tool_use_id:108 type:116]
+  key counts (all): map[content:108 is_error:108 text:116 tool_use_id:108 type:224]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01LriEpXsRYiXtxngMtbh6rq",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.8 seconds, 233 messages, ~39780 tokens
+  key counts (top): map[content:109 is_error:109 text:8 tool_use_id:109 type:117]
+  key counts (all): map[content:109 is_error:109 text:117 tool_use_id:109 type:226]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01XMzxEUg3r9MoVgLiDQgaeS",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.4 seconds, 235 messages, ~39856 tokens
+  key counts (top): map[content:110 is_error:110 text:8 tool_use_id:110 type:118]
+  key counts (all): map[content:110 is_error:110 text:118 tool_use_id:110 type:228]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TWWt2JHg77nZPAbvgLKAxj",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  6.9 seconds, 237 messages, ~39941 tokens
+  key counts (top): map[content:111 is_error:111 text:8 tool_use_id:111 type:119]
+  key counts (all): map[content:111 is_error:111 text:119 tool_use_id:111 type:230]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01WzKgGo9t4Vjr5nrHS6yg6u",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.4 seconds, 239 messages, ~40015 tokens
+  key counts (top): map[content:112 is_error:112 text:8 tool_use_id:112 type:120]
+  key counts (all): map[content:112 is_error:112 text:120 tool_use_id:112 type:232]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01LQH28uZGGVmxzQg79DQ2pZ",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.5 seconds, 241 messages, ~40097 tokens
+  key counts (top): map[content:113 is_error:113 text:8 tool_use_id:113 type:121]
+  key counts (all): map[content:113 is_error:113 text:121 tool_use_id:113 type:234]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01VmFnSQueCHbRtY1fek8Xqs",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.7 seconds, 243 messages, ~40172 tokens
+  key counts (top): map[content:114 is_error:114 text:8 tool_use_id:114 type:122]
+  key counts (all): map[content:114 is_error:114 text:122 tool_use_id:114 type:236]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01EPv2TmkNBrQ41SZgj4DS7X",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.0 seconds, 245 messages, ~40293 tokens
+  key counts (top): map[content:115 is_error:115 text:8 tool_use_id:115 type:123]
+  key counts (all): map[content:115 is_error:115 text:123 tool_use_id:115 type:238]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01GsrtacXHmDYmP2DS32ndCK",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.4 seconds, 247 messages, ~40377 tokens
+  key counts (top): map[content:116 is_error:116 text:8 tool_use_id:116 type:124]
+  key counts (all): map[content:116 is_error:116 text:124 tool_use_id:116 type:240]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01CixUZ8YahZiNkUYXPxeZYS",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.0 seconds, 249 messages, ~40468 tokens
+  key counts (top): map[content:117 is_error:117 text:8 tool_use_id:117 type:125]
+  key counts (all): map[content:117 is_error:117 text:125 tool_use_id:117 type:242]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_013xe7SNhLT61xouFDnG15nx",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  8.8 seconds, 251 messages, ~41366 tokens
+  key counts (top): map[content:118 is_error:118 text:8 tool_use_id:118 type:126]
+  key counts (all): map[content:118 is_error:118 text:126 tool_use_id:118 type:244]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01QXgR3CzRDtFZFxWqVFqqg9",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\n// Repository represents the repository metadata and analysis\ntype Repository struct {\n\tName     string `json:\"name\"`\n\tPath     string `json:\"path\"`\n\tAnalysis struct {\n\t\tDescription string `json:\"description\"`\n\t\tPrograms    []struct {\n\t\t\tName          string `json:\"name\"`\n\t\t\tDescription   string `json:\"description\"`\n\t\t\tFunctionality string `json:\"functionality\"`\n\t\t} `json:\"programs\"`\n\t\tSuggestion string `json:\"suggestion\"`\n\t} `json:\"analysis\"`\n}\n\n// FileList represents the file information for a repository\ntype FileList struct {\n\tRepository string `json:\"repository\"`\n\tPath       string `json:\"path\"`\n\tFiles      []struct {\n\t\tPath string `json:\"path\"`\n\t\tSize int    `json:\"size\"`\n\t} `json:\"files\"`\n}\n\n// Summary represents the summary information for all repositories\ntype Summary struct {\n\tAnalysisDate     string   `json:\"analysis_date\"`\n\tTotalRepositories int      `json:\"total_repositories\"`\n\tRepositories     []struct {\n\t\tName            string `json:\"name\"`\n\t\tDescription     string `json:\"description\"`\n\t\tPrimaryLanguage string `json:\"primary_language\"`\n\t\tKeyFunctionality string `json:\"key_functionality\"`\n\t} `json:\"repositories\"`\n\tCommonThemes     []string `json:\"common_themes\"`\n\tPrimaryLanguages map[string]int `json:\"primary_languages\"`\n}\n\n// SearchResult represents a single search result\ntype SearchResult struct {\n\tRepository    string\n\tType          string // purpose, functionality, code, etc.\n\tComponent     string // could be a program name, file name, etc.\n\tContent       string\n\tScore         float64\n}\n\n// loadSummary loads the summary data from the repositories directory\nfunc loadSummary(repoDir string) (*Summary, error) {\n\tsummaryPath := filepath.Join(repoDir, \"summary.json\")\n\tdata, err := ioutil.ReadFile(summaryPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read summary file: %v\", err)\n\t}\n\t\n\tvar summary Summary\n\tif err := json.Unmarshal(data, \u0026summary); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse summary: %v\", err)\n\t}\n\t\n\treturn \u0026summary, nil\n}\n\n// loadRepository loads a specific repository metadata\nfunc loadRepository(repoDir, repoName string) (*Repository, error) {\n\trepoPath := filepath.Join(repoDir, \"repo.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(repoPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read repository file: %v\", err)\n\t}\n\t\n\tvar repo Repository\n\tif err := json.Unmarshal(data, \u0026repo); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse repository: %v\", err)\n\t}\n\t\n\treturn \u0026repo, nil\n}\n\n// loadFileList loads file information for a specific repository\nfunc loadFileList(repoDir, repoName string) (*FileList, error) {\n\tfilePath := filepath.Join(repoDir, \"files.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(filePath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read file list: %v\", err)\n\t}\n\t\n\tvar fileList FileList\n\tif err := json.Unmarshal(data, \u0026fileList); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse file list: %v\", err)\n\t}\n\t\n\treturn \u0026fileList, nil\n}\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.6 seconds, 253 messages, ~41526 tokens
+  key counts (top): map[content:119 is_error:119 text:8 tool_use_id:119 type:127]
+  key counts (all): map[content:119 is_error:119 text:127 tool_use_id:119 type:246]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_017MhzeGKkAkpqaLQSM2DpaG",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.2 seconds, 255 messages, ~41613 tokens
+  key counts (top): map[content:120 is_error:120 text:8 tool_use_id:120 type:128]
+  key counts (all): map[content:120 is_error:120 text:128 tool_use_id:120 type:248]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01GLqZ1uNKLAQXVh6aaEK66L",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.5 seconds, 257 messages, ~41708 tokens
+  key counts (top): map[content:121 is_error:121 text:8 tool_use_id:121 type:129]
+  key counts (all): map[content:121 is_error:121 text:129 tool_use_id:121 type:250]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_014nsQvsJSq8iZ8oxDGXqX1L",
+  "is_error": true,
+  "content": [
+    {
+      "text": "old_str not found in file",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.1 seconds, 259 messages, ~42638 tokens
+  key counts (top): map[content:122 is_error:122 text:8 tool_use_id:122 type:130]
+  key counts (all): map[content:122 is_error:122 text:130 tool_use_id:122 type:252]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01M3n5XrW938ozq6Yx9AfLWX",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\npackage main\n\nimport (\n\t\"encoding/json\"\n\t\"flag\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"regexp\"\n\t\"sort\"\n\t\"strings\"\n\t\"time\"\n)\n\n// Repository represents the repository metadata and analysis\ntype Repository struct {\n\tName     string `json:\"name\"`\n\tPath     string `json:\"path\"`\n\tAnalysis struct {\n\t\tDescription string `json:\"description\"`\n\t\tPrograms    []struct {\n\t\t\tName          string `json:\"name\"`\n\t\t\tDescription   string `json:\"description\"`\n\t\t\tFunctionality string `json:\"functionality\"`\n\t\t} `json:\"programs\"`\n\t\tSuggestion string `json:\"suggestion\"`\n\t} `json:\"analysis\"`\n}\n\n// FileList represents the file information for a repository\ntype FileList struct {\n\tRepository string `json:\"repository\"`\n\tPath       string `json:\"path\"`\n\tFiles      []struct {\n\t\tPath string `json:\"path\"`\n\t\tSize int    `json:\"size\"`\n\t} `json:\"files\"`\n}\n\n// Summary represents the summary information for all repositories\ntype Summary struct {\n\tAnalysisDate     string   `json:\"analysis_date\"`\n\tTotalRepositories int      `json:\"total_repositories\"`\n\tRepositories     []struct {\n\t\tName            string `json:\"name\"`\n\t\tDescription     string `json:\"description\"`\n\t\tPrimaryLanguage string `json:\"primary_language\"`\n\t\tKeyFunctionality string `json:\"key_functionality\"`\n\t} `json:\"repositories\"`\n\tCommonThemes     []string `json:\"common_themes\"`\n\tPrimaryLanguages map[string]int `json:\"primary_languages\"`\n}\n\n// SearchResult represents a single search result\ntype SearchResult struct {\n\tRepository    string\n\tType          string // purpose, functionality, code, etc.\n\tComponent     string // could be a program name, file name, etc.\n\tContent       string\n\tScore         float64\n}\n\n// loadSummary loads the summary data from the repositories directory\nfunc loadSummary(repoDir string) (*Summary, error) {\n\tsummaryPath := filepath.Join(repoDir, \"summary.json\")\n\tdata, err := ioutil.ReadFile(summaryPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read summary file: %v\", err)\n\t}\n\t\n\tvar summary Summary\n\tif err := json.Unmarshal(data, \u0026summary); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse summary: %v\", err)\n\t}\n\t\n\treturn \u0026summary, nil\n}\n\n// loadRepository loads a specific repository metadata\nfunc loadRepository(repoDir, repoName string) (*Repository, error) {\n\trepoPath := filepath.Join(repoDir, \"repo.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(repoPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read repository file: %v\", err)\n\t}\n\t\n\tvar repo Repository\n\tif err := json.Unmarshal(data, \u0026repo); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse repository: %v\", err)\n\t}\n\t\n\treturn \u0026repo, nil\n}\n\n// loadFileList loads file information for a specific repository\nfunc loadFileList(repoDir, repoName string) (*FileList, error) {\n\tfilePath := filepath.Join(repoDir, \"files.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(filePath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read file list: %v\", err)\n\t}\n\t\n\tvar fileList FileList\n\tif err := json.Unmarshal(data, \u0026fileList); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse file list: %v\", err)\n\t}\n\t\n\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.7 seconds, 261 messages, ~42756 tokens
+  key counts (top): map[content:123 is_error:123 text:8 tool_use_id:123 type:131]
+  key counts (all): map[content:123 is_error:123 text:131 tool_use_id:123 type:254]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01HErnfLZChCULapHNk5KJjB",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.0 seconds, 263 messages, ~42880 tokens
+  key counts (top): map[content:124 is_error:124 text:8 tool_use_id:124 type:132]
+  key counts (all): map[content:124 is_error:124 text:132 tool_use_id:124 type:256]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01C6STsGDo1ZSQMiEgrBGesK",
+  "is_error": true,
+  "content": [
+    {
+      "text": "old_str not found in file",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  8.6 seconds, 265 messages, ~43765 tokens
+  key counts (top): map[content:125 is_error:125 text:8 tool_use_id:125 type:133]
+  key counts (all): map[content:125 is_error:125 text:133 tool_use_id:125 type:258]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01XkjLTKaPqMnxxSiZqiYziH",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\npackage main\n\nimport (\n\t\"encoding/json\"\n\t\"flag\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"regexp\"\n\t\"sort\"\n\t\"strings\"\n\t\"time\"\n)\n\n// Repository represents the repository metadata and analysis\ntype Repository struct {\n\tName     string `json:\"name\"`\n\tPath     string `json:\"path\"`\n\tAnalysis struct {\n\t\tDescription string `json:\"description\"`\n\t\tPrograms    []struct {\n\t\t\tName          string `json:\"name\"`\n\t\t\tDescription   string `json:\"description\"`\n\t\t\tFunctionality string `json:\"functionality\"`\n\t\t} `json:\"programs\"`\n\t\tSuggestion string `json:\"suggestion\"`\n\t} `json:\"analysis\"`\n}\n\n// FileList represents the file information for a repository\ntype FileList struct {\n\tRepository string `json:\"repository\"`\n\tPath       string `json:\"path\"`\n\tFiles      []struct {\n\t\tPath string `json:\"path\"`\n\t\tSize int    `json:\"size\"`\n\t} `json:\"files\"`\n}\n\n// Summary represents the summary information for all repositories\ntype Summary struct {\n\tAnalysisDate     string   `json:\"analysis_date\"`\n\tTotalRepositories int      `json:\"total_repositories\"`\n\tRepositories     []struct {\n\t\tName            string `json:\"name\"`\n\t\tDescription     string `json:\"description\"`\n\t\tPrimaryLanguage string `json:\"primary_language\"`\n\t\tKeyFunctionality string `json:\"key_functionality\"`\n\t} `json:\"repositories\"`\n\tCommonThemes     []string `json:\"common_themes\"`\n\tPrimaryLanguages map[string]int `json:\"primary_languages\"`\n}\n\n// SearchResult represents a single search result\ntype SearchResult struct {\n\tRepository    string\n\tType          string // purpose, functionality, code, etc.\n\tComponent     string // could be a program name, file name, etc.\n\tContent       string\n\tScore         float64\n}\n\n// loadSummary loads the summary data from the repositories directory\nfunc loadSummary(repoDir string) (*Summary, error) {\n\tsummaryPath := filepath.Join(repoDir, \"summary.json\")\n\tdata, err := ioutil.ReadFile(summaryPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read summary file: %v\", err)\n\t}\n\t\n\tvar summary Summary\n\tif err := json.Unmarshal(data, \u0026summary); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse summary: %v\", err)\n\t}\n\t\n\treturn \u0026summary, nil\n}\n\n// loadRepository loads a specific repository metadata\nfunc loadRepository(repoDir, repoName string) (*Repository, error) {\n\trepoPath := filepath.Join(repoDir, \"repo.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(repoPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read repository file: %v\", err)\n\t}\n\t\n\tvar repo Repository\n\tif err := json.Unmarshal(data, \u0026repo); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse repository: %v\", err)\n\t}\n\t\n\treturn \u0026repo, nil\n}\n\n// loadFileList loads file information for a specific repository\nfunc loadFileList(repoDir, repoName string) (*FileList, error) {\n\tfilePath := filepath.Join(repoDir, \"files.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(filePath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read file list: %v\", err)\n\t}\n\t\n\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  9.4 seconds, 267 messages, ~43898 tokens
+  key counts (top): map[content:126 is_error:126 text:8 tool_use_id:126 type:134]
+  key counts (all): map[content:126 is_error:126 text:134 tool_use_id:126 type:260]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01SkpmezzRJv6uKoXc9Jhj3e",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.4 seconds, 269 messages, ~44135 tokens
+  key counts (top): map[content:127 is_error:127 text:8 tool_use_id:127 type:135]
+  key counts (all): map[content:127 is_error:127 text:135 tool_use_id:127 type:262]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_017UrVdiky4A4Vr2Bv3XsFX3",
+  "is_error": true,
+  "content": [
+    {
+      "text": "old_str not found in file",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 20.1 seconds, 271 messages, ~44967 tokens
+  key counts (top): map[content:128 is_error:128 text:8 tool_use_id:128 type:136]
+  key counts (all): map[content:128 is_error:128 text:136 tool_use_id:128 type:264]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_016VYWQ9SNkRePkhTuAkdX1v",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\npackage main\n\nimport (\n\t\"encoding/json\"\n\t\"flag\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"regexp\"\n\t\"sort\"\n\t\"strings\"\n\t\"time\"\n)\n\n// Repository represents the repository metadata and analysis\ntype Repository struct {\n\tName     string `json:\"name\"`\n\tPath     string `json:\"path\"`\n\tAnalysis struct {\n\t\tDescription string `json:\"description\"`\n\t\tPrograms    []struct {\n\t\t\tName          string `json:\"name\"`\n\t\t\tDescription   string `json:\"description\"`\n\t\t\tFunctionality string `json:\"functionality\"`\n\t\t} `json:\"programs\"`\n\t\tSuggestion string `json:\"suggestion\"`\n\t} `json:\"analysis\"`\n}\n\n// FileList represents the file information for a repository\ntype FileList struct {\n\tRepository string `json:\"repository\"`\n\tPath       string `json:\"path\"`\n\tFiles      []struct {\n\t\tPath string `json:\"path\"`\n\t\tSize int    `json:\"size\"`\n\t} `json:\"files\"`\n}\n\n// Summary represents the summary information for all repositories\ntype Summary struct {\n\tAnalysisDate     string   `json:\"analysis_date\"`\n\tTotalRepositories int      `json:\"total_repositories\"`\n\tRepositories     []struct {\n\t\tName            string `json:\"name\"`\n\t\tDescription     string `json:\"description\"`\n\t\tPrimaryLanguage string `json:\"primary_language\"`\n\t\tKeyFunctionality string `json:\"key_functionality\"`\n\t} `json:\"repositories\"`\n\tCommonThemes     []string `json:\"common_themes\"`\n\tPrimaryLanguages map[string]int `json:\"primary_languages\"`\n}\n\n// SearchResult represents a single search result\ntype SearchResult struct {\n\tRepository    string\n\tType          string // purpose, functionality, code, etc.\n\tComponent     string // could be a program name, file name, etc.\n\tContent       string\n\tScore         float64\n}\n\n// loadSummary loads the summary data from the repositories directory\nfunc loadSummary(repoDir string) (*Summary, error) {\n\tsummaryPath := filepath.Join(repoDir, \"summary.json\")\n\tdata, err := ioutil.ReadFile(summaryPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read summary file: %v\", err)\n\t}\n\t\n\tvar summary Summary\n\tif err := json.Unmarshal(data, \u0026summary); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse summary: %v\", err)\n\t}\n\t\n\treturn \u0026summary, nil\n}\n\n// loadRepository loads a specific repository metadata\nfunc loadRepository(repoDir, repoName string) (*Repository, error) {\n\trepoPath := filepath.Join(repoDir, \"repo.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(repoPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read repository file: %v\", err)\n\t}\n\t\n\tvar repo Repository\n\tif err := json.Unmarshal(data, \u0026repo); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse repository: %v\", err)\n\t}\n\t\n\treturn \u0026repo, nil\n}\n\n// loadFileList loads file information for a specific repository\nfunc loadFileList(repoDir, repoName string) (*FileList, error) {\n\n\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 25.9 seconds, 273 messages, ~45215 tokens
+  key counts (top): map[content:129 is_error:129 text:8 tool_use_id:129 type:137]
+  key counts (all): map[content:129 is_error:129 text:137 tool_use_id:129 type:266]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Aioadajd3XYe9fnjVePCWK",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.2 seconds, 275 messages, ~45301 tokens
+  key counts (top): map[content:130 is_error:130 text:8 tool_use_id:130 type:138]
+  key counts (all): map[content:130 is_error:130 text:138 tool_use_id:130 type:268]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01SQ7DaK5NKPPgMTx9qwBgqS",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.6 seconds, 277 messages, ~45397 tokens
+  key counts (top): map[content:131 is_error:131 text:8 tool_use_id:131 type:139]
+  key counts (all): map[content:131 is_error:131 text:139 tool_use_id:131 type:270]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Wd3So957pJcvnb1L87kLZ5",
+  "is_error": true,
+  "content": [
+    {
+      "text": "old_str not found in file",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.9 seconds, 279 messages, ~46323 tokens
+  key counts (top): map[content:132 is_error:132 text:8 tool_use_id:132 type:140]
+  key counts (all): map[content:132 is_error:132 text:140 tool_use_id:132 type:272]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_0147JtrMPx2bHqifYcd9oEWG",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\npackage main\n\nimport (\n\t\"encoding/json\"\n\t\"flag\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"regexp\"\n\t\"sort\"\n\t\"strings\"\n\t\"time\"\n)\n\n// Repository represents the repository metadata and analysis\ntype Repository struct {\n\tName     string `json:\"name\"`\n\tPath     string `json:\"path\"`\n\tAnalysis struct {\n\t\tDescription string `json:\"description\"`\n\t\tPrograms    []struct {\n\t\t\tName          string `json:\"name\"`\n\t\t\tDescription   string `json:\"description\"`\n\t\t\tFunctionality string `json:\"functionality\"`\n\t\t} `json:\"programs\"`\n\t\tSuggestion string `json:\"suggestion\"`\n\t} `json:\"analysis\"`\n}\n\n// FileList represents the file information for a repository\ntype FileList struct {\n\tRepository string `json:\"repository\"`\n\tPath       string `json:\"path\"`\n\tFiles      []struct {\n\t\tPath string `json:\"path\"`\n\t\tSize int    `json:\"size\"`\n\t} `json:\"files\"`\n}\n\n// Summary represents the summary information for all repositories\ntype Summary struct {\n\tAnalysisDate     string   `json:\"analysis_date\"`\n\tTotalRepositories int      `json:\"total_repositories\"`\n\tRepositories     []struct {\n\t\tName            string `json:\"name\"`\n\t\tDescription     string `json:\"description\"`\n\t\tPrimaryLanguage string `json:\"primary_language\"`\n\t\tKeyFunctionality string `json:\"key_functionality\"`\n\t} `json:\"repositories\"`\n\tCommonThemes     []string `json:\"common_themes\"`\n\tPrimaryLanguages map[string]int `json:\"primary_languages\"`\n}\n\n// SearchResult represents a single search result\ntype SearchResult struct {\n\tRepository    string\n\tType          string // purpose, functionality, code, etc.\n\tComponent     string // could be a program name, file name, etc.\n\tContent       string\n\tScore         float64\n}\n\n// loadSummary loads the summary data from the repositories directory\nfunc loadSummary(repoDir string) (*Summary, error) {\n\tsummaryPath := filepath.Join(repoDir, \"summary.json\")\n\tdata, err := ioutil.ReadFile(summaryPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read summary file: %v\", err)\n\t}\n\t\n\tvar summary Summary\n\tif err := json.Unmarshal(data, \u0026summary); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse summary: %v\", err)\n\t}\n\t\n\treturn \u0026summary, nil\n}\n\n// loadRepository loads a specific repository metadata\nfunc loadRepository(repoDir, repoName string) (*Repository, error) {\n\trepoPath := filepath.Join(repoDir, \"repo.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(repoPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read repository file: %v\", err)\n\t}\n\t\n\tvar repo Repository\n\tif err := json.Unmarshal(data, \u0026repo); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse repository: %v\", err)\n\t}\n\t\n\treturn \u0026repo, nil\n}\n\n// loadFileList loads file information for a specific repository\nfunc loadFileList(repoDir, repoName string) (*FileList, error) {\n\tfilePath := filepath.Join(repoDir, \"files.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(filePath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read file list: %v\", err)\n\t}\n\t\n\tvar fileList FileList\n\tif err := json.Unmarshal(data, \u0026fileList); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse file list: %v\", err)\n\t}\n\t\n\n\n\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.3 seconds, 281 messages, ~46435 tokens
+  key counts (top): map[content:133 is_error:133 text:8 tool_use_id:133 type:141]
+  key counts (all): map[content:133 is_error:133 text:141 tool_use_id:133 type:274]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01PoRgc79YNCEhF8XNsq7DRg",
+  "is_error": false,
+  "content": [
+    {
+      "text": "OK",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  7.5 seconds, 283 messages, ~46551 tokens
+  key counts (top): map[content:134 is_error:134 text:8 tool_use_id:134 type:142]
+  key counts (all): map[content:134 is_error:134 text:142 tool_use_id:134 type:276]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_014Feu6KCBHvKSP5RMk2QKr4",
+  "is_error": true,
+  "content": [
+    {
+      "text": "old_str not found in file",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 20.1 seconds, 285 messages, ~47443 tokens
+  key counts (top): map[content:135 is_error:135 text:8 tool_use_id:135 type:143]
+  key counts (all): map[content:135 is_error:135 text:143 tool_use_id:135 type:278]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Tyna3H3EfkeFkosdHqBBMP",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\npackage main\n\nimport (\n\t\"encoding/json\"\n\t\"flag\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"regexp\"\n\t\"sort\"\n\t\"strings\"\n\t\"time\"\n)\n\n// Repository represents the repository metadata and analysis\ntype Repository struct {\n\tName     string `json:\"name\"`\n\tPath     string `json:\"path\"`\n\tAnalysis struct {\n\t\tDescription string `json:\"description\"`\n\t\tPrograms    []struct {\n\t\t\tName          string `json:\"name\"`\n\t\t\tDescription   string `json:\"description\"`\n\t\t\tFunctionality string `json:\"functionality\"`\n\t\t} `json:\"programs\"`\n\t\tSuggestion string `json:\"suggestion\"`\n\t} `json:\"analysis\"`\n}\n\n// FileList represents the file information for a repository\ntype FileList struct {\n\tRepository string `json:\"repository\"`\n\tPath       string `json:\"path\"`\n\tFiles      []struct {\n\t\tPath string `json:\"path\"`\n\t\tSize int    `json:\"size\"`\n\t} `json:\"files\"`\n}\n\n// Summary represents the summary information for all repositories\ntype Summary struct {\n\tAnalysisDate     string   `json:\"analysis_date\"`\n\tTotalRepositories int      `json:\"total_repositories\"`\n\tRepositories     []struct {\n\t\tName            string `json:\"name\"`\n\t\tDescription     string `json:\"description\"`\n\t\tPrimaryLanguage string `json:\"primary_language\"`\n\t\tKeyFunctionality string `json:\"key_functionality\"`\n\t} `json:\"repositories\"`\n\tCommonThemes     []string `json:\"common_themes\"`\n\tPrimaryLanguages map[string]int `json:\"primary_languages\"`\n}\n\n// SearchResult represents a single search result\ntype SearchResult struct {\n\tRepository    string\n\tType          string // purpose, functionality, code, etc.\n\tComponent     string // could be a program name, file name, etc.\n\tContent       string\n\tScore         float64\n}\n\n// loadSummary loads the summary data from the repositories directory\nfunc loadSummary(repoDir string) (*Summary, error) {\n\tsummaryPath := filepath.Join(repoDir, \"summary.json\")\n\tdata, err := ioutil.ReadFile(summaryPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read summary file: %v\", err)\n\t}\n\t\n\tvar summary Summary\n\tif err := json.Unmarshal(data, \u0026summary); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse summary: %v\", err)\n\t}\n\t\n\treturn \u0026summary, nil\n}\n\n// loadRepository loads a specific repository metadata\nfunc loadRepository(repoDir, repoName string) (*Repository, error) {\n\trepoPath := filepath.Join(repoDir, \"repo.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(repoPath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read repository file: %v\", err)\n\t}\n\t\n\tvar repo Repository\n\tif err := json.Unmarshal(data, \u0026repo); err != nil {\n\t\treturn nil, fmt.Errorf(\"could not parse repository: %v\", err)\n\t}\n\t\n\treturn \u0026repo, nil\n}\n\n// loadFileList loads file information for a specific repository\nfunc loadFileList(repoDir, repoName string) (*FileList, error) {\n\tfilePath := filepath.Join(repoDir, \"files.\"+repoName+\".json\")\n\tdata, err := ioutil.ReadFile(filePath)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"could not read file list: %v\", err)\n\t}\n\t\n\tvar fileList FileList\n\n\n\n\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.1 seconds, 287 messages, ~47514 tokens
+  key counts (top): map[content:136 is_error:136 text:8 tool_use_id:136 type:144]
+  key counts (all): map[content:136 is_error:136 text:144 tool_use_id:136 type:280]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01V7717v21R2tg9ZA4TBPvY9",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.9 seconds, 289 messages, ~47590 tokens
+  key counts (top): map[content:137 is_error:137 text:8 tool_use_id:137 type:145]
+  key counts (all): map[content:137 is_error:137 text:145 tool_use_id:137 type:282]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01RqoCsT6oWhiNVJ5WCFE47Q",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.4 seconds, 291 messages, ~47664 tokens
+  key counts (top): map[content:138 is_error:138 text:8 tool_use_id:138 type:146]
+  key counts (all): map[content:138 is_error:138 text:146 tool_use_id:138 type:284]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_018PgUn9JTrnbQTAESp9oYgc",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.8 seconds, 293 messages, ~47755 tokens
+  key counts (top): map[content:139 is_error:139 text:8 tool_use_id:139 type:147]
+  key counts (all): map[content:139 is_error:139 text:147 tool_use_id:139 type:286]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01TjBiKFzSuxmsLgD1B8kmE3",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.3 seconds, 295 messages, ~47854 tokens
+  key counts (top): map[content:140 is_error:140 text:8 tool_use_id:140 type:148]
+  key counts (all): map[content:140 is_error:140 text:148 tool_use_id:140 type:288]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_014NYgxxA1NKVvMfmLPPLdX8",
+  "is_error": true,
+  "content": [
+    {
+      "text": "command failed: exit status 1. Output: cat: \u003e: No such file or directory\ncat: bin/repo_search.go: No such file or directory\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.7 seconds, 297 messages, ~47924 tokens
+  key counts (top): map[content:141 is_error:141 text:8 tool_use_id:141 type:149]
+  key counts (all): map[content:141 is_error:141 text:149 tool_use_id:141 type:290]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01LZCL9TREi4ZeQSrvsfHZ6b",
+  "is_error": false,
+  "content": [
+    {
+      "text": "\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 29.0 seconds, 299 messages, ~48007 tokens
+  key counts (top): map[content:142 is_error:142 text:8 tool_use_id:142 type:150]
+  key counts (all): map[content:142 is_error:142 text:150 tool_use_id:142 type:292]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Fak9V55Xh14wJ2pceBvouu",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  8.9 seconds, 301 messages, ~48083 tokens
+  key counts (top): map[content:143 is_error:143 text:8 tool_use_id:143 type:151]
+  key counts (all): map[content:143 is_error:143 text:151 tool_use_id:143 type:294]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01F1oVb1wJUTpqtwjv4tfP4j",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 15.6 seconds, 303 messages, ~48168 tokens
+  key counts (top): map[content:144 is_error:144 text:8 tool_use_id:144 type:152]
+  key counts (all): map[content:144 is_error:144 text:152 tool_use_id:144 type:296]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01QeXVuMw6EexiEgNE4wx8uX",
+  "is_error": true,
+  "content": [
+    {
+      "text": "invalid input parameters",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.0 seconds, 305 messages, ~48240 tokens
+  key counts (top): map[content:145 is_error:145 text:8 tool_use_id:145 type:153]
+  key counts (all): map[content:145 is_error:145 text:153 tool_use_id:145 type:298]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_012okzHRSTaskRArcvRMKBkA",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 17.9 seconds, 307 messages, ~48316 tokens
+  key counts (top): map[content:146 is_error:146 text:8 tool_use_id:146 type:154]
+  key counts (all): map[content:146 is_error:146 text:154 tool_use_id:146 type:300]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_015Yb6dMUbhE8VxbcQScbMMw",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.7 seconds, 309 messages, ~48391 tokens
+  key counts (top): map[content:147 is_error:147 text:8 tool_use_id:147 type:155]
+  key counts (all): map[content:147 is_error:147 text:155 tool_use_id:147 type:302]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01X2XGpU2v2WzAt2fVBE1MyR",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 29.6 seconds, 311 messages, ~48472 tokens
+  key counts (top): map[content:148 is_error:148 text:8 tool_use_id:148 type:156]
+  key counts (all): map[content:148 is_error:148 text:156 tool_use_id:148 type:304]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01EvJZ3mBLQjMBB8guou7LXp",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 20.4 seconds, 313 messages, ~48529 tokens
+  key counts (top): map[content:149 is_error:149 text:8 tool_use_id:149 type:157]
+  key counts (all): map[content:149 is_error:149 text:157 tool_use_id:149 type:306]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_013fwASavVsie4a6kcAbaJim",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 19.5 seconds, 315 messages, ~48606 tokens
+  key counts (top): map[content:150 is_error:150 text:8 tool_use_id:150 type:158]
+  key counts (all): map[content:150 is_error:150 text:158 tool_use_id:150 type:308]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01JN6kc5AREiUtaf9GnZHasS",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  8.7 seconds, 317 messages, ~48702 tokens
+  key counts (top): map[content:151 is_error:151 text:8 tool_use_id:151 type:159]
+  key counts (all): map[content:151 is_error:151 text:159 tool_use_id:151 type:310]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01372TScqwrWmzMKT3rCf8jD",
+  "is_error": false,
+  "content": [
+    {
+      "text": "",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call:  9.9 seconds, 319 messages, ~48829 tokens
+  key counts (top): map[content:152 is_error:152 text:8 tool_use_id:152 type:160]
+  key counts (all): map[content:152 is_error:152 text:160 tool_use_id:152 type:312]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_013ErXsPYiWBc6QciRwxTToH",
+  "is_error": true,
+  "content": [
+    {
+      "text": "command failed: exit status 1. Output: cat: \u003e: No such file or directory\ncat: \u003c\u003cEOF: No such file or directory\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 21.4 seconds, 321 messages, ~49044 tokens
+  key counts (top): map[content:153 is_error:153 text:8 tool_use_id:153 type:161]
+  key counts (all): map[content:153 is_error:153 text:161 tool_use_id:153 type:314]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01Y69rbYUdjLhhhXnHjanXQ4",
+  "is_error": false,
+  "content": [
+    {
+      "text": "package main\n\nimport (\n\t\"encoding/json\"\n\t\"flag\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"regexp\"\n\t\"sort\"\n\t\"strings\"\n)\n\nfunc main() {\n\tfmt.Println(\"Repository Search Tool\")\n\tfmt.Println(\"======================\")\n}\n\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]
+anthropic call: 18.6 seconds, 323 messages, ~49262 tokens
+  key counts (top): map[content:154 is_error:154 text:8 tool_use_id:154 type:162]
+  key counts (all): map[content:154 is_error:154 text:162 tool_use_id:154 type:316]
+  last message: role=user, content=[{
+  "tool_use_id": "toolu_01E4LcBFowzM4tjRrBLc1XL5",
+  "is_error": false,
+  "content": [
+    {
+      "text": "package main\n\nimport (\n\t\"encoding/json\"\n\t\"flag\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"regexp\"\n\t\"sort\"\n\t\"strings\"\n)\n\nfunc main() {\n\tfmt.Println(\"Repository Search Tool\")\n\tfmt.Println(\"======================\")\n}\n",
+      "type": "text"
+    }
+  ],
+  "type": "tool_result"
+}]

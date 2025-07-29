@@ -84,7 +84,7 @@ func main() {
 		"If you create a new data file, such as JSON file, put it in the ./data directory.",
 		"If you create a program, check that it works by running it first.",
 	})
-	getUserMessage = wrapAndSavePrompts(getUserMessage, "prompts.txt")
+	getUserMessage = wrapSavePrompts(getUserMessage, "prompts.txt")
 
 	tools := []ToolDefinition{readFileDefinition, listFilesDefinition, editFileDefinition,
 		execProgramDefinition}
